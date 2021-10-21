@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/faviconmanifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/script/script.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid p-2 p-sm-4 m-0">
+        <div class="container d-sm-none">
+            <h1>Web Design &amp; Publishing Tutorial</h1>
+            <p>본 과정은 디자인 콘셉트에 맞춰서 그래픽 활용 프로그램인 일러스트레이터와 포토샵으로 시안을 제작하고 디자인된 시안에 대해 웹 프로그래밍 언어인 HTML, CSS,
+                Javascript(jQuery)로 웹사이트를 구성 및 구축하는 과정을 소개합니다.</p>
+        </div>
+        <div class="container d-none d-sm-block">
+            <div id="demo" class="carousel slide" data-ride="carousel" data-interval="20000">
+                <!-- Indicators -->
+                <ul class="carousel-indicators d-none d-sm-flex">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                </ul>
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h1>Web Design &amp; Publishing Tutorial</h1>
+                        <p>본 과정은 디자인 콘셉트에 맞춰서 그래픽 활용 프로그램인 일러스트레이터와 포토샵으로 시안을 제작하고 디자인된 시안에 대해 웹 프로그래밍 언어인 HTML, CSS,
+                            Javascript(jQuery)로 웹사이트를 구성 및 구축하는 과정을 소개합니다.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>Adobe Illustrator &amp; Photoshop Tutorial</h1>
+                        <p>최신 기술을 통한 일러스트레이션 제작 업계 표준의 벡터 그래픽 소프트웨어를 사용하면 인쇄, 웹, 동영상 및 모바일에 적합한 로고, 아이콘, 드로잉, 타이포그래피 및
+                            일러스트레이션을 제작할 수 있습니다. 세계 최고의 이미징 및 그래픽 디자인 소프트웨어인 Photoshop를 사용하면 머릿속 상상을 현실화할 수 있습니다. 사진,
+                            일러스트레이션 및 3D 아트웍을 제작 및 향상시킬 수 있습니다. 웹 사이트 및 모바일 앱을 디자인할 수 있고, 비디오를 편집하고 실제 페인팅 작업을 시뮬레이션할 수
+                            있습니다. Photoshop은 아이디어를 구현하는 데 필요한 모든 것을 제공합니다.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>HTML5 &amp; CSS3 Tutorial</h1>
+                        <p>HTML은 웹 페이지의 표준 마크 업 언어입니다. HTML을 사용하여 자신의 웹 사이트를 만들 수 있습니다. 이 튜토리얼은 최신 HTML5 표준을 따릅니다. HTML은
+                            배우기 쉽습니다. 당신은 그것을 즐길 것입니다! CSS는 HTML 문서의 스타일을 지정하는 데 사용하는 언어입니다. CSS는 HTML 요소가 표시되는 방식을
+                            설명합니다. 이 튜토리얼은 기본에서 고급까지 CSS를 가르칩니다.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>Javascript &amp; jQuery Tutorial</h1>
+                        <p>JavaScript는 세계에서 가장 널리 사용되는 프로그래밍 언어입니다. JavaScript는 웹의 프로그래밍 언어입니다. JavaScript는 배우기 쉽습니다. 이
+                            튜토리얼은 기본에서 고급까지 JavaScript를 가르칩니다. jQuery는 JavaScript 라이브러리입니다. jQuery는 JavaScript 프로그래밍을 크게
+                            단순화합니다. jQuery는 배우기 쉽습니다.</p>
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="/index.html"><i class="fas fa-home"></i></a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/sub/youtube.html">YouTube</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/module.html">Module</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/reference.html">Reference</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/benchmark.html">Benchmark</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/psd.html">PSD</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/gtq.html">GTQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/ai.html">Ai</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/gtqi.html">GTQi</a></li>
+            <li class="nav-item"><a class="nav-link" href="/w3school/html5.html">HTML</a></li>
+            <li class="nav-item"><a class="nav-link" href="/w3school/css3.html">CSS</a></li>
+            <li class="nav-item"><a class="nav-link" href="/w3school/js.html">JS</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/cwd.html">Craftsman Web Design</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/portfolio.html">Portfolio</a></li>
+        </ul>
+    </div>
+
+    <div class="container" id="tabs8">
+        <div class="row py-5">
+            <div class="col">
+                <h2 class="pb-3"><a href="https://license.kpc.or.kr/nasec/qlfint/qlfint/selectGtqinfomg.do"
+                        target="_blank">GTQ 그래픽기술자격 - KPC한국생산성본부</a></h2>
+                <ul>
+                    <li><a href="note/[2011]GTQ_문제풀이팁.pdf" target="_blank">GTQ 문제풀이팁</a></li>
+                    <li><a href="https://adobe-illust.github.io/ai/module/GTQ 기출문제풀이_포토샵1급.pdf" target="_blank">GTQ 포토샵
+                            1급 기출문제풀이(샘플)</a></li>
+                    <li><a href="note/gtq/샘플.pdf" target="_blank">GTQ 포토샵 1급 기출문제(샘플)</a> .......... <a
+                            href="note/gtq/샘플.zip" target="_blank">소스파일</a></li>
+                </ul>
+                <div class="row">
+                    <div class="col col-sm-6">
+                        <ul>
+                            <li><a href="note/gtq/2021/GP06-1A.pdf" target="_blank">2021년 6월 26일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2021/GP06-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2021/GP06-1B.pdf" target="_blank">2021년 6월 26일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2021/GP06-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2021/GP05-1A.pdf" target="_blank">2021년 5월 22일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2021/GP05-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2021/GP05-1B.pdf" target="_blank">2021년 5월 22일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2021/GP05-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2021/GP04-1A.pdf" target="_blank">2021년 4월 24일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2021/GP04-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2021/GP04-1B.pdf" target="_blank">2021년 4월 24일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2021/GP04-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2021/GP03-1A(A3).pdf" target="_blank">2021년 3월 27일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2021/GP03-1A(A3).zip"
+                                    target="_blank">소스파일</a></li>
+                            <li><a href="note/gtq/2021/GP03-1B(A3).pdf" target="_blank">2021년 3월 27일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2021/GP03-1B(A3).zip"
+                                    target="_blank">소스파일</a></li>
+                            <li><a href="note/gtq/2021/GP02-1A(A3).pdf" target="_blank">2021년 2월 27일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2021/GP02-1A(A3).zip"
+                                    target="_blank">소스파일</a></li>
+                            <li><a href="note/gtq/2021/GP02-1B(A3).pdf" target="_blank">2021년 2월 27일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2021/GP02-1B(A3).zip"
+                                    target="_blank">소스파일</a></li>
+                            <li><a href="note/gtq/2021/GP01-1A(A3).pdf" target="_blank">2021년 1월 23일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2021/GP01-1A(A3).zip"
+                                    target="_blank">소스파일</a></li>
+                            <li><a href="note/gtq/2021/GP01-1B(A3).pdf" target="_blank">2021년 1월 23일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2021/GP01-1B(A3).zip"
+                                    target="_blank">소스파일</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="note/gtq/2020/GP08-1A(A3).pdf" target="_blank">2020년 8월 22일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2020/GP08-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP08-1B(A3).pdf" target="_blank">2020년 8월 22일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2020/GP08-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP07-1A(A3).pdf" target="_blank">2020년 7월 25일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2020/GP07-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP07-1B(A3).pdf" target="_blank">2020년 7월 25일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2020/GP07-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP06-1A(A3).pdf" target="_blank">2020년 6월 27일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2020/GP06-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP06-1B(A3).pdf" target="_blank">2020년 6월 27일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2020/GP06-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP05-1A(A3).pdf" target="_blank">2020년 5월 23일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2020/GP05-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP05-1B(A3).pdf" target="_blank">2020년 5월 23일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2020/GP05-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP05-1C(A3).pdf" target="_blank">2020년 5월 23일 GTQ(포토샵) 1급
+                                    기출문제(C형)</a> .......... <a href="note/gtq/2020/GP05-1C.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP02-1A(A3).pdf" target="_blank">2020년 2월 22일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2020/GP02-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP02-1B(A3).pdf" target="_blank">2020년 2월 22일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2020/GP02-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP01-1A(A3).pdf" target="_blank">2020년 1월 18일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2020/GP01-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP01-1B(A3).pdf" target="_blank">2020년 1월 18일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2020/GP01-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><a href="note/gtq/2019/GP09-1A(A3).pdf" target="_blank">2019년 9월 28일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP09-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP09-1B(A3).pdf" target="_blank">2019년 9월 28일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP09-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP08-1A(A3).pdf" target="_blank">2019년 8월 24일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP08-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP08-1B(A3).pdf" target="_blank">2019년 8월 24일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP08-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP07-1A(A3).pdf" target="_blank">2019년 7월 27일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP07-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP07-1B(A3).pdf" target="_blank">2019년 7월 27일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP07-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP06-1A(A3).pdf" target="_blank">2019년 6월 22일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP06-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP06-1B(A3).pdf" target="_blank">2019년 6월 22일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP06-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP05-1A(A3).pdf" target="_blank">2019년 5월 25일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP05-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP05-1B(A3).pdf" target="_blank">2019년 5월 25일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP05-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP04-1A(A3).pdf" target="_blank">2019년 4월 27일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP04-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP04-1B(A3).pdf" target="_blank">2019년 4월 27일 GTQ(포토샵) 1급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP04-1B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP03-1A(A3).pdf" target="_blank">2019년 3월 23일 GTQ(포토샵) 1급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP03-1A.zip" target="_blank">소스파일</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col col-sm-6">
+                        <ul>
+                            <li><a href="note/gtq/2021/GP06-2A.pdf" target="_blank">2021년 6월 26일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2021/GP06-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2021/GP06-2B.pdf" target="_blank">2021년 6월 26일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2021/GP06-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2021/GP05-2A.pdf" target="_blank">2021년 5월 22일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2021/GP05-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2021/GP05-2B.pdf" target="_blank">2021년 5월 22일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2021/GP05-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2021/GP04-2A.pdf" target="_blank">2021년 4월 24일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2021/GP04-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2021/GP04-2B.pdf" target="_blank">2021년 4월 24일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2021/GP04-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2021/GP03-2A(A3).pdf" target="_blank">2021년 3월 27일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2021/GP03-2A(A3).zip"
+                                    target="_blank">소스파일</a></li>
+                            <li><a href="note/gtq/2021/GP03-2B(A3).pdf" target="_blank">2021년 3월 27일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2021/GP03-2B(A3).zip"
+                                    target="_blank">소스파일</a></li>
+                            <li><a href="note/gtq/2021/GP02-2A(A3).pdf" target="_blank">2021년 2월 27일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2021/GP02-2A(A3).zip"
+                                    target="_blank">소스파일</a></li>
+                            <li><a href="note/gtq/2021/GP02-2B(A3).pdf" target="_blank">2021년 2월 27일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2021/GP02-2B(A3).zip"
+                                    target="_blank">소스파일</a></li>
+                            <li><a href="note/gtq/2021/GP01-2A(A3).pdf" target="_blank">2021년 1월 23일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2021/GP01-2A(A3).zip"
+                                    target="_blank">소스파일</a></li>
+                            <li><a href="note/gtq/2021/GP01-2B(A3).pdf" target="_blank">2021년 1월 23일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2021/GP01-2B(A3).zip"
+                                    target="_blank">소스파일</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="note/gtq/2020/GP08-2A(A3).pdf" target="_blank">2020년 8월 22일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2020/GP08-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP08-2B(A3).pdf" target="_blank">2020년 8월 22일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2020/GP08-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP07-2A(A3).pdf" target="_blank">2020년 7월 25일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2020/GP07-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP07-2B(A3).pdf" target="_blank">2020년 7월 25일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2020/GP07-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP06-2A(A3).pdf" target="_blank">2020년 6월 27일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2020/GP06-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP06-2B(A3).pdf" target="_blank">2020년 6월 27일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2020/GP06-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP05-2A(A3).pdf" target="_blank">2020년 5월 23일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2020/GP05-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP05-2B(A3).pdf" target="_blank">2020년 5월 23일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2020/GP05-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP05-2C(A3).pdf" target="_blank">2020년 5월 23일 GTQ(포토샵) 2급
+                                    기출문제(C형)</a> .......... <a href="note/gtq/2020/GP05-2C.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP02-2A(A3).pdf" target="_blank">2020년 2월 22일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2020/GP02-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP02-2B(A3).pdf" target="_blank">2020년 2월 22일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2020/GP02-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP01-2A(A3).pdf" target="_blank">2020년 1월 18일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2020/GP01-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2020/GP01-2B(A3).pdf" target="_blank">2020년 1월 18일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2020/GP01-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><a href="note/gtq/2019/GP09-2A(A3).pdf" target="_blank">2019년 9월 28일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP09-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP09-2B(A3).pdf" target="_blank">2019년 9월 28일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP09-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP08-2A(A3).pdf" target="_blank">2019년 8월 24일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP08-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP08-2B(A3).pdf" target="_blank">2019년 8월 24일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP08-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP07-2A(A3).pdf" target="_blank">2019년 7월 27일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP07-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP07-2B(A3).pdf" target="_blank">2019년 7월 27일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP07-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP06-2A(A3).pdf" target="_blank">2019년 6월 22일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP06-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP06-2B(A3).pdf" target="_blank">2019년 6월 22일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP06-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP05-2A(A3).pdf" target="_blank">2019년 5월 25일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP05-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP05-2B(A3).pdf" target="_blank">2019년 5월 25일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP05-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP04-2A(A3).pdf" target="_blank">2019년 4월 27일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP04-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP04-2B(A3).pdf" target="_blank">2019년 4월 27일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP04-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP03-2A(A3).pdf" target="_blank">2019년 3월 23일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP03-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP03-2B(A3).pdf" target="_blank">2019년 3월 23일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP03-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP02-2A(A3).pdf" target="_blank">2019년 2월 23일 GTQ(포토샵) 2급
+                                    기출문제(A형)</a> .......... <a href="note/gtq/2019/GP02-2A.zip" target="_blank">소스파일</a>
+                            </li>
+                            <li><a href="note/gtq/2019/GP02-2B(A3).pdf" target="_blank">2019년 2월 23일 GTQ(포토샵) 2급
+                                    기출문제(B형)</a> .......... <a href="note/gtq/2019/GP02-2B.zip" target="_blank">소스파일</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div><img src="images/gtq.png" alt="GTQ 일정표"></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p class="text-center my-5">&copy; 2021 WDS. All Rights Reserved.</p>
+    </div>
+</body>
+
+</html>

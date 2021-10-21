@@ -1,0 +1,231 @@
+<!-- 문서 형식: HTML5 -->
+<!-- 형식: <태그명 속성> -->
+<!doctype html>
+<!-- 형식: <태그명 속성="값"> -->
+<html lang="ko">
+    <!-- 문서의 정보 -->
+    <head>
+        <!-- 형식: <태그명 속성="값" 속성="값"> -->
+        <!-- 설명글, 키워드, 제작자, 인코딩방식 -->
+        <meta name="description" content="HTML, CSS학습하기">
+        <meta name="keywords" content="html5, css3">
+        <meta name="author" content="hong gil-dong">
+        <meta charset="utf-8">
+        <!-- 형식: <시작태그명>내용</종료태그명> -->
+        <!-- 웹브라우저의 제목 표시줄에 표시되는 내용 -->
+        <title>HTML 문서의 제목</title>
+        <!-- 외부 CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
+        <link rel="stylesheet" href="style.css">
+        <!-- 내부 CSS -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+            @import url("style.css");            
+            /* 형식: 선택자 {속성:값;} */
+            /* 타입(태그, 요소) 선택자: HTML 태그 */
+            p {font-family: 'Noto Sans KR', sans-serif;}
+            /* #id선택자: HTML의 id속성 */
+            #ctxt {color:blue;}
+            /* .class선택자: HTML의 class속성 */
+            .ctxt {color:blue;}
+            * {color:blue;}
+
+            /* html,body,h1,h2,h3,h4,h5,h6,p,ul,li,section,article,aside,header,footer,nav,img,a,mark,strong,em,b,i {color:blue;} */
+
+            /* 부모 하위(자식, 손자) */
+            .ctxt2 p {background-color:red;}
+            /* 부모>자식 */
+            .ctxt2 > p {color:white;}
+
+            /* 큰자식 ~ 작은자식 */
+            /* h1 ~ p {color: aqua;} */
+            /* 큰자식 + 작은자식 */
+            h1 + p {color: aqua;}
+
+            /* 
+                [HTML속성]
+                [HTML속성="값"]
+
+                h1 중에서 HTML 속성이 class인 모든 요소 선택하여
+                글자색을 blueviolet을 지정한다.
+            */
+            h1[class] {color:blueviolet;}
+            h1[class="logo2"] {background-color:violet;}
+
+            /*  
+                a:link          방문전
+                a:visited       방문후
+                선택자:hover    마우스를 올렸을 때
+                선택자:active   마우스로 누르고 있을 때
+            */
+            a:link {color:#000;}
+            a:visited {color:gold;}
+            a:hover {color:#f00;}
+            a:active {color:green;}
+
+            .box {border:1px solid blue;}
+            /* ::before는 시작태그 바로 다음에 content 값을 표시 */
+            .box::before {content:"시작태그 바로 다음";}
+            /* ::after는 종료태그 바로 이전에 content 값을 표시 */
+            .box::after {content:"종료태그 바로 이전";}
+            /* p요소의 첫 글자의 크기를 400%로 지정한다. */
+            p:first-letter {font-size:400%;}
+            
+            p:first-line {
+                background-color:red;
+            }
+            /* class가 line인 p요소의 두께 1px, 색상이 빨강인 테두리 지정 */
+            p {
+
+                /* 속성:값 값 값; --> 속기형(축약형) */
+                border:1px solid red;
+
+                /* border-top:1px solid red;
+                border-right:1px solid red;
+                border-bottom:1px solid red;
+                border-left:1px solid red; */
+
+                /* border-width:1px;
+                border-style:solid;
+                border-color:red; */
+            }
+            /* 첫번째 p요소의 테두리를 제거 */
+            /* p:first-child {border:none;} */
+            /* p:nth-child(1) {border:none;} */
+            p:nth-of-type(1) {border:none;}
+            /* 마지막 번째 p요소의 테두리를 제거 */
+            /* p:last-child {border:none;} */
+            /* 3번째 p요소의 테두리를 제거(타입 구별하지 않는다.) */
+            p:nth-child(3) {border:none;}
+            /* 3번째 p요소의 테두리를 제거(타입 구별한다.) */
+            /* p:nth-of-type(3) {border:none;} */
+        </style>
+    </head>
+
+    <!-- 문서의 내용 -->
+    <!-- 인라인 CSS -->
+    <body style="background-color:yellow;">
+
+        <div class="box">
+            <h1>슈도 클래스</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae accusantium voluptate, omnis tenetur ut nihil distinctio esse veniam magni consequatur minus ipsum tempora quas illo nam aliquid! Quod, rem nobis.</p>
+            <p class="line">Lorem ipsum</p>
+            <p>SERVICE</p>
+            <div>항목을 선택해주세요.</div>
+        </div>
+
+
+        <ul>
+            <li><a href="#">COMPANY</a></li>
+            <li><a href="#">PRODUCT</a></li>
+            <li><a href="http://www.naver.com">네이버</a></li>
+        </ul>
+
+        <h1 class="logo">서울특별시</h1>
+        <p>주소록을 작성합니다.</p>
+        <h1 class="logo2">경기도</h1>
+        <p>전화번호부를 작성합니다.</p>
+
+        <h1>큰제목</h1>
+        <p>책자를 배부하고 있습니다.</p>
+        <p>안내데스크를 활용하기 바랍니다.</p>
+        <p>책자를 배부하고 있습니다.</p>
+        <p>안내데스크를 활용하기 바랍니다.</p>
+
+        <ul>
+            <li class="ctxt2">
+                <p>7월의 여행자</p>
+                <ul>
+                    <li>
+                        <p>8월의 여행자</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>내년의 여행자</p>
+
+        <!-- 콘텐츠 제목 -->
+        <h1 id="ctxt">제목</h1>
+        <h2 class="ctxt">제목</h2>
+        <h3>제목</h3>
+        <h4>제목</h4>
+        <h5>제목</h5>
+        <h6>제목</h6>
+
+        <h2>단락</h2>
+        <!-- 단락 -->
+        <p>이것은 단락 입니다.</p>
+        <p><strong>강한 중요성을 나타내는 텍스트</strong> dolor sit <em>화면 판독기로 읽을 필요가 있는 강조할 텍스트</em> adipisicing elit. <b>중요성이 없는 굵게 표시할 텍스트</b> similique quisquam <i>다른 언어, 생각, 배의 이름과 같은 전문 용어</i> tempora modi <mark>reprehenderit cumque</mark> alias, consequuntur cupiditate architecto facilis aperiam quasi accusamus dignissimos magnam itaque nihil.</p>
+
+        <!-- 구분선 -->
+        <hr>
+
+        <!-- 블록 레벨 요소와 인라인 요소 -->
+        <h2>블록 레벨 요소</h2>
+        <ul>
+            <li>줄바꿈이 된다.(세로 배치)</li>
+            <li>가로 크기는 100%</li>
+            <li>블록레벨요소 또는 인라인요소를 넣을 수 있다.(단, 예외가 있다.)</li>
+            <li>html, body, h1~h6, p, br, ul, li, section, article, aside, nav, header, footer</li>
+        </ul>
+
+        <h2>인라인 요소</h2>
+        <ul>
+            <li>줄바꿈이 안된다.(가로 배치)</li>
+            <li>가로 크기는 내용의 크기</li>
+            <li>인라인요소는 넣을 수 있고, 블록레벨요소는 넣을 수 없다.(단, 예외가 있다.)</li>
+            <li>img, a, strong, em, b, i, mark</li>
+        </ul>
+
+        <!-- 문자 엔티티(entity_name) -->
+        <h2>문자 엔티티</h2>
+        <p>&copy; 2021 HGD. All rights reserved.</p>
+        <p>&lt;p&gt; 태그는 단락 태그이다.</p>
+        <p>&lt; &amp; &#60;는 같은 기호이다.</p>
+
+        <h2>이미지</h2>
+        <!-- <시작태그명 속성="값" 속성="값" ...> -->
+        <img src="images/facebook.png" alt="페이스북">
+        <img src="map.png" alt="아이콕스 위치, 오목교역 2번 출구에서 직진, 방송회관 사거리에서 우회전, 한국시티은행 옆 현대드림타워빌딩 13층">
+
+        <h2>링크</h2>
+        <p>a 태그 내에 인터랙티브 콘텐츠(input, button, a)를 제외하고 어떤 요소든 포함할 수 있다.</p>
+        <!-- 
+            형식: <a href="http://웹주소">내용</a> -> 현재 페이지로 열린다.
+            형식: <a href="http://웹주소" target="_black">내용</a> -> 새 페이지로 열린다.
+            형식: <a href="mailto:이메일주소">내용</a>
+            형식: <a href="tel:전화번호">내용</a>
+            형식: <a href="파일명">내용</a> 
+        -->
+        <a href="http://validator.w3.org" title="마크업 유효성 검사">w3c 유효성 검사</a>
+        <a href="mailto:hong@naver.com">이메일: hong@naver.com</a>
+        <a href="tel:010-1111-2222">전화: 010-1111-2222</a>
+        <a href="#">현재 문서</a>
+        <a href="https://www.w3schools.com/html/default.asp" target="_blank"><img src="w3school.png" alt="w3school 로고"></a>
+
+        <!-- 순서없는 목록: ul, li -->
+        <h2>목록</h2>
+        <p>ul태그에는 li태그만 사용할 수 있다.</p>
+        <ul>
+            <li>메인메뉴1</li>
+            <li>메인메뉴2
+                <ul>
+                    <li>서브메뉴1</li>
+                    <li>서브메뉴2</li>
+                    <li>서브메뉴2</li>
+                </ul>
+            </li>
+            <li>메인메뉴3</li>
+        </ul>
+
+        <h2>레이아웃</h2>
+        <div>
+            <header>헤더</header>
+            <div>
+                <section>섹션</section>
+                <aside>사이드 콘텐츠</aside>
+            </div>
+            <footer>푸터</footer>
+        </div>
+    </body>
+</html>

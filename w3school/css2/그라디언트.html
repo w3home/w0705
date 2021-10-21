@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그라디언트</title>
+    <style>
+        /* 
+            밴더 프리픽스(vendor prefix)
+            -webkit-    크롬92.x, 사파리 
+            -ms-        IE
+            -o-         오페라
+            -moz-       파이어폭스
+
+
+            -------------- 선형 그라디언트 ---------------
+
+            background-image: linear-gradient([to 방향,] 색1, 색2, ...);
+            방향: 위 -> 아래(기본값)
+            예) background-image: linear-gradient(red, yellow);
+            예) background-image: linear-gradient(to right, red, yellow);
+            예) background-image: linear-gradient(to bottom right, red, yellow);
+
+            background-image: linear-gradient([각도deg,] 색1, 색2);
+            예) background-image: linear-gradient(180deg, red, yellow);
+
+            예) background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+        
+        */
+
+        p {width:400px; height:200px;}
+        p:nth-of-type(1) {background-image:-webkit-linear-gradient(red, yellow);}
+        p:nth-of-type(1) {background-image:-ms-linear-gradient(red, yellow);}
+        p:nth-of-type(1) {background-image:linear-gradient(red, yellow);}
+
+        /* 사파리5.x */
+        p:nth-of-type(2) {background-image:-webkit-linear-gradient(bottom, red, yellow)}
+        p:nth-of-type(3) {background-image:-webkit-linear-gradient(top, red, yellow)}
+        p:nth-of-type(4) {background-image:-webkit-linear-gradient(right, red, yellow)}
+        p:nth-of-type(5) {background-image:-webkit-linear-gradient(left, red, yellow)}
+        p:nth-of-type(6) {background-image:-webkit-linear-gradient(bottom right, red, yellow)}
+        p:nth-of-type(7) {background-image:-webkit-linear-gradient(right bottom, red, yellow)}
+
+        p:nth-of-type(2) {background-image:linear-gradient(to bottom, red, yellow)}
+        p:nth-of-type(3) {background-image:linear-gradient(to top, red, yellow)}
+        p:nth-of-type(4) {background-image:linear-gradient(to right, red, yellow)}
+        p:nth-of-type(5) {background-image:linear-gradient(to left, red, yellow)}
+        p:nth-of-type(6) {background-image:linear-gradient(to bottom right, red, yellow)}
+        p:nth-of-type(7) {background-image:linear-gradient(to right bottom, red, yellow)}
+        
+        p:nth-of-type(8) {background-image:linear-gradient(180deg, red, yellow)}
+        p:nth-of-type(9) {background-image:linear-gradient(0deg, red, yellow)}
+        p:nth-of-type(10) {background-image:linear-gradient(90deg, red, yellow)}
+        p:nth-of-type(11) {background-image:linear-gradient(270deg, red, yellow)}
+
+        p:nth-of-type(12) {background-image:linear-gradient(red, yellow, green)}
+        p:nth-of-type(13) {background-image:linear-gradient(rgba(255,0,0,0), rgba(255,0,0,1))}
+        p:nth-of-type(14) {background-image:linear-gradient(red, yellow 10%, green 20%)}
+        p:nth-of-type(15) {background-image:repeating-linear-gradient(red, yellow 10%, green 20%)}
+        
+        /* 
+        -------------- 방사형 그라디언트 ---------------
+        
+        background-image: radial-gradient([모양 크기 at 위치,] 색1, 색2, ...);
+        모양: 타원(기본값, 생략), circle(원형)
+        크기: closest-side(가장 가까운 변), farthest-side(가장 먼 변), 
+        closest-corner(가장 가까운 모서리), farthest-corner(가장 먼 모서리)
+        at 위치: 원의 중심점
+        예) background-image: radial-gradient(red, yellow, green);
+        예) background-image: radial-gradient(circle, red, yellow, green);
+        */
+        
+        p:nth-of-type(16) {background-image:radial-gradient(red, yellow, green);}
+        p:nth-of-type(17) {background-image:radial-gradient(red 5%, yellow 15%, green 60%);}
+        p:nth-of-type(18) {background-image:radial-gradient(circle, red, yellow, green);}
+
+        p {width:200px;}
+        /* 사파리5.x */
+        p:nth-of-type(19) {background-image:-webkit-radial-gradient(60% 55%, closest-side, red, yellow, green);}
+        p:nth-of-type(20) {background-image:-webkit-radial-gradient(60% 55%, farthest-side, red, yellow, green);}
+        p:nth-of-type(21) {background-image:-webkit-radial-gradient(60% 55%, closest-corner, red, yellow, green);}
+        p:nth-of-type(22) {background-image:-webkit-radial-gradient(60% 55%, farthest-corner, red, yellow, green);}
+
+        p:nth-of-type(19) {background-image:radial-gradient(closest-side at 60% 55%, red, yellow, green);}
+        p:nth-of-type(20) {background-image:radial-gradient(farthest-side at 60% 55%, red, yellow, green);}
+        p:nth-of-type(21) {background-image:radial-gradient(closest-corner at 60% 55%, red, yellow, green);}
+        p:nth-of-type(22) {background-image:radial-gradient(farthest-corner at 60% 55%, red, yellow, green);}
+
+        p:nth-of-type(23) {background-image:radial-gradient(60% 55%, red, yellow, green);}
+        p:nth-of-type(24) {background-image:repeating-radial-gradient(red, yellow 10%, green 15%);}
+
+        p:nth-of-type(25) {background-image:linear-gradient(red 33.33%, yellow 33.33%, yellow 66.66%, green 66.66%);}
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+<body>
+    <h1>그라디언트</h1>
+    <h2>선형 그라디언트</h2>
+    <p>background-image:linear-gradient(red, yellow);</p>
+    <p>background-image:linear-gradient(to bottom, red, yellow);</p>
+    <p>background-image:linear-gradient(to top, red, yellow);</p>
+    <p>background-image:linear-gradient(to right, red, yellow);</p>
+    <p>background-image:linear-gradient(to left, red, yellow);</p>
+    <p>background-image:linear-gradient(to bottom right, red, yellow);</p>
+    <p>background-image:linear-gradient(to right bottom, red, yellow);</p>
+
+    <p>background-image:linear-gradient(180deg, red, yellow);</p>
+    <p>background-image:linear-gradient(0deg, red, yellow);</p>
+    <p>background-image:linear-gradient(90deg, red, yellow);</p>
+    <p>background-image:linear-gradient(270deg, red, yellow);</p>
+
+    <p>background-image:linear-gradient(red, yellow, green);</p>
+    <p>background-image:linear-gradient(rgba(255,0,0,0), rgba(255,0,0,1));</p>
+    <p>background-image:linear-gradient(red, yellow 10%, green 20%);</p>
+    <p>background-image:repeating-linear-gradient(red, yellow 10%, green 20%);</p>
+    
+    <h2>방사형 그라디언트</h2>
+    <p>background-image:radial-gradient(red, yellow, green);</p>
+    <p>background-image:radial-gradient(red 5%, yellow 15%, green 60%);</p>
+    <p>background-image:radial-gradient(circle, red, yellow, green);</p>
+
+    <p>background-image:radial-gradient(closest-side at 60% 55%, red, yellow, green);</p>
+    <p>background-image:radial-gradient(farthest-side at 60% 55%, red, yellow, green);</p>
+    <p>background-image:radial-gradient(closest-corner at 60% 55%, red, yellow, green);</p>
+    <p>background-image:radial-gradient(farthest-corner at 60% 55%, red, yellow, green);</p>
+
+    <p>background-image:radial-gradient(at 60% 55%, red, yellow, green);</p>
+    <p>background-image:repeating-radial-gradient(red, yellow 10%, green 15%);</p>
+
+    <p>background-image:linear-gradient(red, yellow 10%, green 15%);</p>
+
+</body>
+</html>

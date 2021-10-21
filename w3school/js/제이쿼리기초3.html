@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>제이쿼리</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.theTitle').html('<a href="#">요소 객체 조작</a>');
+            // $('.theTitle').text('<a href="#">요소 객체 조작</a>');
+            $('.obj1').text('리스트2');
+
+            /*
+                A를 기준으로 B를 추가(삽입)
+
+                A.append(B): 종료 태그 바로 위에 추가
+                A.prepend(B): 시작 태그 바로 아래 추가
+
+                B.appendTo(A): 종료 태그 바로 위에 추가
+                B.prependTo(A): 시작 태그 바로 아래 추가
+                B.insertBefore(A): 위에 추가
+                B.insertAfter(A): 아래 추가
+
+            */
+            $('#list3').append('<li>목록6</li>');
+            $('<li>목록6</li>').appendTo('#list3');
+            // 시작 태그 밑에 추가
+            $('#list3').prepend('<li>목록1</li>');
+            $('<li>목록1</li>').prependTo('#list3');
+            
+            $('<li>목록0</li>').insertBefore('#list3 li:eq(4)');
+            $('<li>목록7</li>').insertAfter('#list3 li:eq(4)');
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>탐색 선택자 및 HTML 조작</h1>
+        <h2 class="theTitle">HTML 조작</h2>
+        <ul id="list3">
+            <li class="obj1">목록2</li>
+            <li>목록3</li>
+            <li>목록4</li>
+            <li>목록5</li>
+        </ul>
+    </div>
+</body>
+
+</html>

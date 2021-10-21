@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃</title>
+    <style>
+        body, p {margin:0;}
+        body {margin:10px; font:12px/1.5 "굴림",Gulim;}
+        ul {margin:0; padding:0; list-style-type:none;}
+        #container {
+            /* float:left; */
+            overflow:auto; width:530px;
+            background:#fdf;
+        }
+        .menu {float:left; padding:10px; width:130px;}
+        .content {float:right; padding:10px;width:350px; border-left:1px solid #ccc;}
+
+        /* 다섯 번째 방법 */
+        /* #container::after {
+            content:"";
+            display:block;
+            clear:both;
+        } */
+
+        /* 첫 번째 방법 */
+        #footer {clear:both;}
+        #footer p {padding:10px;}
+    </style>
+</head>
+<body>
+    <div id="container">
+      <div class="menu">
+          <ul>
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">제품안내</a></li>
+              <li><a href="#">커뮤니티</a></li>
+          </ul>
+      </div>
+      <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore totam cupiditate minima eos. Nobis quas perferendis obcaecati unde voluptas. Voluptas inventore dicta sed? Eum temporibus porro dolores eligendi architecto sit.</p>
+      </div>  
+    </div> <!--//#contianer -->
+    <div id="footer">
+        <p>&copy; 2021. All rights reserved.</p>
+    </div>
+</body>
+</html>

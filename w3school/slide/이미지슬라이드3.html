@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 이미지</title>
+    <style>
+        /* reset */
+        * {margin:0; padding:0; box-sizing:border-box;}
+        ul {list-style:none;}
+
+        /* slide */
+        #slide {position:relative; width:1200px; height:300px; overflow:hidden;}
+        #slide li {position:absolute;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            var num = 0;
+
+            /* 
+                1) 함수 생성
+                function 함수명(){
+                    //실행문;
+                }
+
+                2) 함수 호출: 함수를 실행
+                함수명();
+            */    
+        
+            // start 함수 호출
+            start();
+
+            function start(){
+                $('#slide li').eq(num-1).css({top:-300});
+                
+                /* 
+                    setInterval 함수                //시간 마다 반복
+                    clearInterval 함수              //반복 제거
+
+                    setInterval(함수, 시간);
+                    var 변수 = setInterval(function(){
+                        //실행문
+                    }, 시간);
+
+                    clearInterval(변수명);
+                */
+            
+                //2초 마다 slide() 함수를 호출
+                setInterval(function(){slide();},2000);
+            }
+
+            function slide(){
+                if(num == 2) {
+                    num = 0;
+                } else {
+                    num = num + 1;
+                }
+                $('#slide li').eq(num-1).animate({top:300},1000,function(){
+                    $('#slide li').eq(num-1).css({top:-300});
+                });
+                $('#slide li').eq(num).animate({top:0},1000);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="slide">
+        <ul>
+            <li><img src="https://placeimg.com/1200/300/arch" alt="이미지1"></li>
+            <li><img src="https://placeimg.com/1200/300/tech" alt="이미지1"></li>
+            <li><img src="https://placeimg.com/1200/300/nature" alt="이미지1"></li>
+        </ul>
+    </div>
+</body>
+</html>

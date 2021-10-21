@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <style>
+        div {width:50%; background:yellow;}
+        /* If the screen size is 601px or more, set the font-size of <div> to 80px */
+        @media only screen and (min-width: 601px) {
+            div.example {
+                font-size: 5vw;
+            }
+        }
+
+        /* If the screen size is 600px or less, set the font-size of <div> to 30px */
+        @media only screen and (max-width: 600px) {
+            div.example {
+                font-size: 10vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="example">박스</div>
+    <div>박스</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼각형</title>
+    <style>
+        .ribbon{position:relative; width:300px; height:40px; text-align:center; line-height:40px; background:#ba89b6; margin:50px;}
+        .ribbon:after, .ribbon:before{position:absolute; content:""; display:inline-block; border: 20px solid #986794; top:10px; z-index:-2;}
+        .ribbon:before{left:-30px; border-left-color:transparent;}
+        .ribbon:after{right:-30px; border-right-color:transparent;}
+
+        .ribbon p{width:100%; height:100%; padding:0; margin:0;}
+        .ribbon p:after, .ribbon p:before{position: absolute; content:""; top: 40px; border: 5px solid #804f7c; z-index:-1;}
+        .ribbon p:after{right:0px; border-right-color: transparent; border-bottom-color: transparent;}
+        .ribbon p:before{left:0px; border-left-color: transparent; border-bottom-color: transparent;}
+
+        p {width:40px; height:40px; background:red;}
+        p:after{
+            position: absolute; content:""; top: 40px; border: 5px solid #804f7c; z-index:-1;
+            right:0px; border-right-color: transparent; border-bottom-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="ribbon">
+        <p>hello</p>
+    </div>
+
+    <p></p>
+</body>
+</html>

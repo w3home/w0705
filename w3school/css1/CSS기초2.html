@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta name="description" content="HTML, CSS학습하기">
+        <meta name="keywords" content="html5, css3">
+        <meta name="author" content="hong gil-dong">
+        <meta charset="utf-8">
+        <title>CSS의 선택자</title>
+        <!-- 내부 CSS -->
+        <style>
+            /* 선택자 {속성:값;} */
+            /* 태그(타입, 요소) */
+            /* p태그 선택해서 배경색을 노랑으로 지정한다. */
+            p {background-color:yellow;}
+            /* 
+                아이디와 클래스 이름
+                1. 첫 글자는 영문자로 한다.
+                2. 영문의 대소를 구별한다.
+            */
+            /*
+                .클래스
+                1. 중복 사용 가능
+                2. HTML의 속성값을 1개이상 지정
+            */
+            .bg {background-color:red;}
+            .ctxt {color:white;}
+            /* 
+                #아이디
+                1. 중복 사용X
+                2. HTML의 속성값은 1개만 지정
+            */
+
+            #bg {background-color:blue;}
+
+            /* 
+                전체 선택자:
+                body에 있는 모든 태그의 여백을 0px로 지정한다.
+                하위 선택자: 부모 하위(자식, 손자)
+            */
+            body * {margin:0; padding:0;}
+            body {font-size:14px;}
+
+            /* 그룹 선택자 */
+            /* h1,h2,p 태그의 글자 크기를 20px로 지정한다. */
+            h1,h2,p {font-size:20px;}
+
+            /* 
+                하위 선택자와 자식 선택자
+                부모 하위
+                부모>자식
+            */
+            div p {border:2px solid red;}
+            div>p {border:2px solid blue;}
+
+            /* 
+                형제 선택자와 인접형제 선택자
+                형제~형제: h2태그 밑에 있는 모든 p태그의 폰트 굵기를 bold로 한다.
+                형제+형제: h2태그 바로 밑에 인접한 p태그의 폰트 스타일을 italic으로 한다.
+            */
+            h2~p {font-weight:bold;}
+            h2+p {font-style:italic;}
+
+            /* 가상클래스 */
+            /* 
+                li태그 안에 하위 요소인 p태그에 마우스를 올리면
+                배경색을 brown으로 지정한다.
+             */
+            li p:hover {background-color:brown;}
+            /* 
+                nth-of-type(n)
+                n: 숫자, 수열(2n, 2n+1)
+                5번째 p태그에 폰트 크기를 30px로 지정한다.
+            */
+            p:nth-of-type(2n+1) {font-size:30px;}
+
+            /* 가상 요소 */
+            /* div 종료태그의 바로 앞에 content의 값을 추가 */
+            div::after {content:"가상 요소를 이후에 추가한다."}
+            /* div 시작태그의 바로 뒤에 content의 값을 추가 */
+            div::before {content:"가상 요소를 이전에 추가한다."}
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h1>제목</h1>
+            <h2>부제목</h2>
+            <p>이것은 단락이다.</p>
+            <p class="bg ctxt">이것은 단락이다.</p>
+            <p id="bg">이것은 단락이다.</p>
+            <p class="bg">이것은 단락이다.</p>
+            <p>이것은 단락이다.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae delectus eos ipsa doloribus deleniti iusto eveniet, fugit consequuntur id nisi aperiam magni saepe! Qui iste odit eos quod architecto repudiandae!</p>
+
+            <ul>
+                <li>목록1</li>
+                <li>목록2
+                    <p>이것은 단락이다.</p>
+                </li>
+                <li>목록3</li>
+            </ul>
+        </div>
+    </body>
+</html>

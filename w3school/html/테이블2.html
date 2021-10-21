@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블</title>
+    <style>
+        .table1, .table1 th, .table1 td {border:1px solid #ccc;}
+        .table1 {
+            width:100%;
+            /* 접힌 테이블 테두리 */
+            border-collapse:collapse;
+        }
+        .table1 tr:nth-of-type(2n) {background:#ccc;}
+        .table1 th {text-align:left; padding:10px;}
+        .table1 td {padding:10px;}
+
+        .table2 {border-collapse: collapse;}
+        .table2 td {
+            width:100px; height:30px;
+            background:#96d4d4;
+            text-align:center;
+            border:4px solid white;
+        }
+
+        .table3 {
+            border:1px solid #333;
+            border-radius: 10px;
+        }
+        .table3 td {
+            width:100px; height:30px;
+            text-align:center;
+            border:1px solid #333;
+            border-radius: 10px;
+        }
+
+        .table4 {
+            width:200px; height:60px;
+            border:1px solid #333;
+            border-collapse: collapse;
+        }
+        .table4 td {
+            text-align:center;
+            border:1px solid #333;
+        }
+        .table4 td:nth-child(2) {width:70%; background:#96d4d4;}
+
+        .table5 {
+            width:200px; height:60px;
+            border:1px solid #333;
+            border-collapse: collapse;
+        }
+        .table5 td {
+            text-align:center;
+            border:1px solid #333;
+        }
+        .table5 tr:nth-child(2) {height:100px; background:#96d4d4;}
+
+        .table6 {
+            width:200px; height:60px;
+            border:1px solid #333;
+            border-collapse: collapse;
+        }
+        .table6 th, .table6 td {
+            border:1px solid #333;
+            padding:15px;
+        }
+
+        .table7 {
+            border:1px solid #333;
+            /* 셀 사이의 간격 */
+            border-spacing: 20px;
+        }
+        .table7 th, .table7 td {
+            border:1px solid #333;
+        }
+
+        .table8 {
+            width:300px;
+            border:1px solid #333;
+            border-collapse: collapse;
+        }
+        .table8 td {
+            width:100px; height:30px;
+            border:1px solid #333;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .table9 {
+            width:400px;
+        }
+        .table9 td {
+            width:100px; height:30px;
+        }
+        .table9 td:nth-child(2n) {
+            background:#D6EEEE;
+        }
+
+        .table10 {
+            width:400px;
+        }
+        .table10 td {
+            width:100px; height:30px;
+        }
+        .table10 tr:nth-child(even) {
+            background:rgba(150, 212, 212, 0.4);
+        }
+        .table10 td:nth-child(even) {
+            background:rgba(150, 212, 212, 0.4);
+        }
+
+        .table11 {
+            width:400px;
+            border-collapse: collapse;
+        }
+        .table11 td {
+            width:100px; height:30px;
+        }
+        .table11 tr {
+            border-bottom:1px solid #ddd;
+        }
+
+        .table12 {
+            width:400px;
+            border-collapse: collapse;
+        }
+        .table12 td {
+            width:100px; height:30px;
+        }
+        .table12 tr {
+            border-bottom:1px solid #ddd;
+        }
+        .table12 tr:hover {
+            background:#d6eeee;
+        }
+
+        .table13 {
+            width:400px;
+            border-collapse: collapse;
+            border:1px solid #333;
+        }
+        .table13 th, .table13 td {
+            width:100px; height:30px;
+            border:1px solid #333;
+        }
+        .table13 col:nth-of-type(2) {
+            background:pink;
+        }
+        .table13 col:nth-of-type(4) {
+            background:#d6eeee;
+        }
+
+        .table14 {
+            width:400px;
+            border-collapse: collapse;
+            border:1px solid #333;
+        }
+        .table14 th, .table14 td {
+            width:100px; height:30px;
+            border:1px solid #333;
+        }
+        .table14 col:nth-of-type(2) {
+            background:pink;
+            /* 열 숨기기 */
+            visibility: collapse;
+        }
+        .table14 col:nth-of-type(4) {
+            background:#d6eeee;
+        }
+
+        .table15 {
+            width:300px;
+            border-collapse: collapse;
+            border:1px solid #333;
+        }
+        .table15 th, .table15 td {
+            width:100px; height:70px;
+            border:1px solid #333;
+        }
+        .table15 tr:nth-of-type(2) {
+            text-align:center;
+            vertical-align:bottom;
+        }
+        .table15 tr:nth-of-type(3) td:nth-of-type(2) {
+            text-align:right;
+            vertical-align:top;
+        }
+    </style>
+</head>
+<body>
+    <h1>표 만들기</h1>
+    <h2>접힌 테이블 테두리</h2>
+    <p>border-collapse 속성은 이중 테두리가 발생하지 않도록 하는 속성이다. 속성 값은 기본값이 seperate이고, collapse로 지정하면 단일 테두리로 축소된다. border-collapse 속성은 table 태그에만 지정한다.</p>
+    <table class="table1">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+    </table>
+
+    <h2>스타일 테이블 테두리</h2>
+    <table class="table2">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    <h2>원형 테이블 테두리</h2>
+    <table class="table3">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    <h2>표의 열 너비</h2>
+    <table class="table4">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    <h2>표의 행 높이</h2>
+    <table class="table5">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    <h2>셀 패딩</h2>
+    <table class="table6">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <h2>셀 간격</h2>
+    <p>border-spacing 속성은 table 태그의 속성으로 table의 셀(cell) 사이의 간격을 지정하는 속성이다. 기본값은 2px 이다.</p>
+    <table class="table7">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <h2>셀 병합</h2>
+    <p>colspan과 rowspan은 셀(th, td 태그)에 적용하는 속성으로 여러 열에 걸쳐 셀을 만들려면(즉, 좌우 셀을 병합 할 경우) colspan, 여러 행에 걸려 셀을 만들려면(즉, 상하 셀을 병합할 경우) rowspan을 사용한다. 속성의 값을 확장할 열/행의 개수 지정한다.</p>
+    <table class="table8">
+        <tr>
+            <td colspan="3">2022년</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">축제</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h2>세로 줄무늬</h2>
+    <table class="table9">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+    </table>
+
+    <h2>가로 및 세로 줄무늬</h2>
+    <table class="table10">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </table>
+
+    <h2>수평 디바이더</h2>
+    <p>tr 요소에 border 속성을 지정하려면, table 요소에 border-collapse 값을 collapse로 지정해야한다.</p>
+    <table class="table11">
+        <tr>
+            <th>이름</th>
+            <th>성</th>
+            <th>저금</th>
+        </tr>
+        <tr>
+            <td>베드로</td>
+            <td>그리핀</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>로이스</td>
+            <td>스완슨</td>
+            <td>$150</td>
+        </tr>
+    </table>
+
+    <h2>호버 테이블</h2>
+    <table class="table12">
+        <tr>
+            <th>이름</th>
+            <th>성</th>
+            <th>저금</th>
+        </tr>
+        <tr>
+            <td>베드로</td>
+            <td>그리핀</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>로이스</td>
+            <td>스완슨</td>
+            <td>$150</td>
+        </tr>
+    </table>
+
+    <h2>열 그룹</h2>
+    <p>span 속성은 col 태그에 지정하는 속성으로 2개 이상의 열을 하나로 그룹핑하는 사용하는 속성이다. 값은 그룹핑할 열의 개수를 숫자로 지정한다.</p>
+    <table class="table13">
+        <colgroup>
+            <col>
+            <col span="3">
+            <col>
+            <col span="2">
+        </colgroup>
+        <tr>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th>토</th>
+            <th>일</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+        </tr>
+    </table>
+
+    <h2>열 숨기기</h2>
+    <p>CSS의 visibility 속성은 요소를 보이거나(visible) 숨기는(hidden) 속성으로 속성 값으로 collapse를 지정하면 표의 특정 열을 숨길 수 있다.</p>
+    <table class="table14">
+        <colgroup>
+            <col>
+            <col span="3">
+            <col>
+            <col span="2">
+        </colgroup>
+        <tr>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th>토</th>
+            <th>일</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+        </tr>
+    </table>
+    
+    <h2>셀 데이터의 수평/수직 정렬</h2>
+    <p>CSS의 text-align 속성으로 셀 데이터의 수평 정렬을 지정한다. 속성 값은 left, right, center 이다. th 요소는 기본값이 center 이고, td 요소는 기본값이 left 이다. CSS의 vertical-align 속성으로 셀 데이터의 수직 정렬을 지정할 수 있다. 속성 값은 top, bottom, middle 이다. th, td 요소의 기본값은 middle 이다.</p>
+    <table class="table15">
+        <tr>
+            <th>이름</th>
+            <th>성</th>
+            <th>저금</th>
+        </tr>
+        <tr>
+            <td>베드로</td>
+            <td>그리핀</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>로이스</td>
+            <td>스완슨</td>
+            <td>$150</td>
+        </tr>
+    </table>
+</body>
+</html>

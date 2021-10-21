@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윤곽선</title>
+    <style>
+        /*
+            윤곽선 
+            outline
+
+            outline-width
+            outline-style
+            outline-color
+            outline-offset  outline과 border 사이에 공간을 추가
+
+            상하좌우 개별면 속성은 없다.
+            윤곽선은 모서리 둥글게 기능 없다.
+        */
+
+        .outline {
+            width:400px;
+            padding:30px 0;
+            margin:50px;
+            text-align:center;
+            border:1px solid black;
+            outline:10px solid green;
+            outline-offset: 10px;
+        }
+
+        .border {
+            width:400px;
+            padding:10px 10px;
+            margin:30px;
+            text-align:center;
+            border:10px solid green;
+        }
+        .border p {
+            margin:0;
+            padding:30px 0;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>윤곽선</h1>
+    <p>테두리와 달리 윤곽선(outline)은 요소의 테두리 외부에 그려지며 다른 내용과 겹칠 수 있다. 요소의 전체 너비와 높이는 윤곽선 크기에 영향을 받지 않는다.</p>
+
+    <h2>테두리와 윤곽선으로 2개의 라인 표현하기</h2>
+    <p class="outline">outline:10px solid green;</p>
+
+    <h2>테두리로 2개의 라인 표현하기</h2>
+    <div class="border">
+        <p>border:1px solid black;</p>
+    </div>
+</body>
+</html>

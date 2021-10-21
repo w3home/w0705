@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션</title>
+    <style>
+        body {
+            font:12px/1.5 '굴림', gulim;
+            margin:20px; background:url('images/bg_grid.gif');
+        }
+        .box {width:550px; background:yellow;}
+        .myp {width:130px; height:80px; margin:0; padding:10px; color:#fff;}
+        .myred {background:red;}
+        .myblue {background:blue;}
+        .mygreen {background:green;}
+        .myorange {background:orange;}
+
+        /* 
+            left, top을 지정하기 전의 위치를 기준(요소 자신의 위치)으로
+            오른쪽으로 30px, 아래로 20px 이동하여 배치된다.
+        */
+        .box1 .mygreen {
+            position:relative; 
+            left:30px; top:20px;
+        }
+
+        .box2 {position:relative;}
+        .box2 .myblue {
+            position:absolute; 
+            left:50px; top:30px;
+        }
+        
+        .box3 {
+            position:relative;
+            background:rgba(0,0,0,0.7);
+        }
+        /* 
+            기준: position이 지정된 조상(부모)
+            left:50px;  왼쪽에서 오른쪽으로 50px
+            top:30px;   위에서 아래로 30px
+        */
+        /* .box3 .myred {visibility: hidden;} */
+        .box3 .myblue {position:absolute; left:50px; top:30px;
+            z-index:1;
+        }
+        .box3 .mygreen {
+            position:relative;
+        }
+
+        .box4 {
+            position:relative;
+            /* overflow:auto; */
+            height:300px;
+        }
+        .box4 .myp {position:absolute;}
+        /* 
+            position이 지정된 조상(부모) 기준으로
+            left:30px   오른쪽으로 30px
+            left:-30px  왼쪽으로 30px
+            top:20px    아래쪽으로 20px
+            top:-20px    위쪽으로 20px
+        */
+        .box4 .myred {left:30px; top:20px;}
+        .box4 .myblue {left:-30px; top:-20px;}
+
+        /* 
+            position이 지정된 조상(부모) 기준으로
+            right:30px   왼쪽으로 30px
+            right:-30px  오른쪽으로 30px
+            bottom:20px    위쪽으로 20px
+            bottom:-20px    아래쪽으로 20px
+        */
+        .box4 .mygreen {right:30px; bottom:20px;}
+        .box4 .myorange {right:-30px; bottom:-20px;}
+
+        /* .box5 {position:relative;} */
+        .box5 .myred {position:static;}
+        .box5 .myblue {position:relative;}
+        .box5 .mygreen {position:absolute; left:30px; top:20px;}
+        .box5 .myorange {position:fixed; left:130px; top:20px;}
+    </style>
+</head>
+<body>
+    <h1>포지션</h1>
+    <p>position 속성의 값을 relative, absolute, fixed로 지정하면 요소의 위치를 나타내는 속성(left, right, top, bottom)을 지정할 수 있다. position의 속성 값은 static, relative, absolute, fixed로서 기본 값은 static이다.</p>
+
+    <h2>position:static;</h2>
+    <div class="box">
+        <p class="myred myp">박스의 크기와 위치를 살펴보아야 합니다.</p>
+        <p class="myblue myp">박스의 포지션 속성 값을 바꿔가며 테스트해 보아야 합니다.</p>
+        <p class="mygreen myp">포지션을 이해하기 위해서는 시험해보고 관찰해 보는 것이 절대적으로 필요합니다.</p>
+    </div>
+
+    <h2>position:relative;</h2>
+    <p>기준: 위치 속성을 지정하지 않을 때의 위치(요소 자신의 위치)를 기준으로 left, top을 지정한다.</p>
+    
+    <div class="box box1">
+        <p class="myred myp">박스의 크기와 위치를 살펴보아야 합니다.</p>
+        <p class="myblue myp">박스의 포지션 속성 값을 바꿔가며 테스트해 보아야 합니다.</p>
+        <p class="mygreen myp">포지션을 이해하기 위해서는 시험해보고 관찰해 보는 것이 절대적으로 필요합니다.</p>
+    </div>
+
+    <h2>position:absolute;</h2>
+    <p>기준: position을 지정한(relative, absolute, fixed) 조상(부모)을 기준으로  left, top, right, bottom을 지정한다. 만약, 조상(부모) 요소에 position을 지정하지 않으면 뷰포트를 기준으로 left, top, right, bottom이 지정된다.</p>
+
+    <div class="box box2">
+        <p class="myred myp">박스의 크기와 위치를 살펴보아야 합니다.</p>
+        <p class="myblue myp">박스의 포지션 속성 값을 바꿔가며 테스트해 보아야 합니다.</p>
+        <p class="mygreen myp">포지션을 이해하기 위해서는 시험해보고 관찰해 보는 것이 절대적으로 필요합니다.</p>
+    </div>
+
+    <h2>z-index</h2>
+    <p>요소가 position에 의해 겹쳐있을 경우 position 속성 값이 absolute, relative, fixed로 지정된 요소와 지정되지 않은 요소 사이의 깊이(depth)는 지정된 요소가 위로 올라간다. 겹쳐 있는 요소 모두 position이 지정되어 있을 경우 코드 상에 아래쪽에 기록되어 있는 요소가 위로 지정된다. 이때 z-index 속성을 이용하여 요소의 깊이를 조정할 수 있다.</p>
+
+    <div class="box box3">
+        <p class="myred myp">박스의 크기와 위치를 살펴보아야 합니다.</p>
+        <p class="myblue myp">박스의 포지션 속성 값을 바꿔가며 테스트해 보아야 합니다.</p>
+        <p class="mygreen myp">포지션을 이해하기 위해서는 시험해보고 관찰해 보는 것이 절대적으로 필요합니다.</p>
+    </div>
+
+    <h2>left, top, right, bottom</h2>
+    <p>position이 relative, absolute, fixed로 지정되어 있을 때 left, top, right, bottom 속성을 사용할 수 있다. 속성 값은 양수/음수 모두 지정 가능하다. 예를 들어 left의 경우 양수이면 왼쪽에서 오른쪽으로 위치를 지정하고, 음수이면 오른쪽에서 왼쪽으로 위치를 지정한다. top의 경우 양수이면 위에서 아래로, 음수이면 아래에서 위로 위치를 지정한다.</p>
+
+    <div class="box box4">
+        <p class="myred myp">left:30px; top:20px;</p>
+        <p class="myblue myp">left:-30px; top:-20px;</p>
+        <p class="mygreen myp">right:30px; bottom:20px;</p>
+        <p class="myorange myp">right:-30px; bottom:-20px;</p>
+    </div>
+
+    <h2>position:fixed;</h2>
+    <p>position 속성 값 중 relative는 static의 특징을 가지면서 left, top, right, bottom, z-index 속성을 지정할 수 있다. absolute와 fixed가 유사하다.</p>
+
+    <div class="box box5">
+        <p class="myred myp">position:static;</p>
+        <p class="myblue myp">position:relative;</p>
+        <p class="mygreen myp">position:absolute;</p>
+        <p class="myorange myp">position:fixed;</p>
+    </div>
+</body>
+</html>

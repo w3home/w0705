@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>제이쿼리</title>
+    <style>
+        body {margin:0;}
+        div {
+            position:relative;
+            width:100px;
+            height:100px;
+            margin:20px;
+            background-color:#ff0;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        // 실행문;
+        // 객체.메서드();
+        // 이벤트 메서드(함수);
+        // 문서가 준비되면 함수를 실행
+
+        /*
+            메소드(객체);
+            css({속성:값, 속성:값, ...});
+            메소드(객체, 숫자(문자열), 함수);
+            animate({속성:값, 속성:값, ...}[, 속도][, 콜백함수]);
+            stop();
+        */
+
+
+        $(document).ready(function(){
+            $('#box1').animate({
+                left:500,
+                width:200,
+                height:200,
+                opacity:0.5
+            }, 2000).animate({
+                left:0,
+                width:100,
+                height:100,
+                opacity:1
+            },1000);
+
+            $('#rightBtn').click(function(){
+                $('#box2').stop().animate({
+
+                    /* 
+                        a += 100;
+                        a = a + 100;
+
+                        left:'+=100'    //left 속성 값이 100씩 증가
+                        left += 100;
+                        left = left + 100;
+
+                        left: 100       //left 속성 값은 100
+                    */
+
+                    left:'+=100'
+                }, 500);
+            }); //$('#rightBtn').click
+
+            $('#leftBtn').click(function(){
+                $('#box2').stop().animate({
+                    left:'-=100'
+                }, 500);
+            });
+
+            $('#colorBtn').click(function(){
+                $('#box3').animate({backgroundColor:'red'},500);
+            });
+
+            $('#box4+p button').click(function(){
+                $('#box4').animate({
+                    height:'toggle'       // 'show', 'hide', 'toggle'
+                });
+            });
+
+            // 대기큐는 객체 별로 생성된다.
+            $('#box6+p button').click(function(){
+                var div1 = $('#box5');
+                var div2 = $('#box6');
+                div1.animate({height:300, opacity:0.4});
+                div1.animate({width:300, opacity:0.8});
+                div1.animate({height:100, opacity:0.4});
+                div1.animate({width:100, opacity:0.8});
+                div2.animate({height:300, opacity:0.4});
+                div2.animate({width:300, opacity:0.8});
+                div2.animate({height:100, opacity:0.4});
+                div2.animate({width:100, opacity:0.8});
+            });
+
+            // 메서드 체이닝
+            $('#box7+p button').click(function(){
+                var div = $('#box7');
+                div.animate({left:100}).animate({width:200}).animate({fontSize:'3em'});
+            });
+
+            // 콜백 함수
+            /* 
+                hide()
+                hide(속도)
+                hide(콜백함수)
+                hide(속도, 콜백함수)
+                hide(1000, function(){})
+            */
+            $('#box8+p button').click(function(){
+                $('#box8').hide(1000, function(){
+                    alert("사라진 후 경고창이 나타난다.");
+                });
+            });
+
+            /* 
+                animate({속성:값, ...}[,시간][,이징][,콜백함수]);
+            */
+           $('#box11+p button').click(function(){
+               $('#box9').animate({left:300}, 1000, 'swing');
+               $('#box10').animate({left:300}, 1000, 'linear');
+               $('#box11').animate({left:300}, 1000, 'easeOutBounce');
+           });
+
+        }); //$(document).ready
+    </script>
+</head>
+<body>
+    <h1>animate 메서드</h1>
+    <div id="box1">박스1</div>
+    <p>CSS의 position 속성에는 static, relative, absolute, fixed가 있다.position 속성의 기본값은 static이다. static 일때는 left, right, top, bottom 속성을 사용할 수 없다. position 속성의 값이 relative, absolute, fixed 일때는 left, right, top, bottom 속성을 사용할 수 있다.</p>
+    <p>CSS의 opacity 속성은 0(투명)에서 1(불투명) 사이의 값을 갖는다.</p>
+    
+    <div id="box2">박스2</div>
+    <p>
+        <button id="leftBtn">left</button>
+        <button id="rightBtn">right</button>
+    </p>
+
+    <p>제이쿼리 라이브러리에는 색상 애니메이션이 포함되어 있지 않습니다.</p>
+    <div id="box3">박스3</div>
+    <p><button id="colorBtn">배경색 바꾸기</button></p>
+
+    <h2>'show', 'hide', 'toggle' 키워드</h2>
+    <div id="box4">박스4</div>
+    <p><button>slideUp/Down을 animate로</button></p>
+
+    <h2>대기큐</h2>
+    <div id="box5">박스5</div>
+    <div id="box6">박스6</div>
+    <p><button>크기 변경</button></p>
+
+    <h2>대기큐 응용</h2>
+    <div id="box7">박스7</div>
+    <p><button>로고의 움직임</button></p>
+
+    <h2>콜백 함수</h2>
+    <div id="box8">박스8</div>
+    <p><button>내용이 사라진 후, 경고창</button></p>
+
+    <h2>이징</h2>
+    <div id="box9">박스9</div>
+    <div id="box10">박스10</div>
+    <div id="box11">박스11</div>
+    <p><button>가속도 비교</button></p>
+
+    <p style="height:500px;"></p>
+</body>
+</html>

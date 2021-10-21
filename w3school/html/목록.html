@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록</title>
+    <style>
+        /*
+            목록
+            list-style: type position image;
+            예) list-style: square inside url("sqpurple.gif");
+
+            list-style-type     목록 항목 마커
+            목록 값: none
+            순서없는 목록 값: disc, circle, square
+            순서있는 목록 값: decimal, upper-alpha, lower-alpha, upper-roman, lower-roman, ...
+
+            list-style-image    목록 항목 마커로서의 이미지
+            값: url('경로/이미지명')
+
+            list-style-position 목록 항목 마커의 위치
+            값: outside, inside
+        */
+
+        /* 글머리 기호 */
+        .ul1 {
+            list-style-type:disc;
+            list-style-position:outside;
+            background:yellow;
+            padding:20px;
+        }
+        .ul1 li {
+            background:lightblue;
+            margin:5px;
+        }
+        
+        .ul2 {
+            list-style-type:circle;
+            list-style-position:inside;
+            margin:0;
+        }
+        .ul2 li {background:lightcoral;}
+
+        .ul3 {
+            list-style-type:none;
+            margin-top:0;
+            margin-bottom:0;
+            padding-left:0;
+            background:yellow;
+        }
+        .ul3 li {background:lightgreen;}
+
+        .ul4 {
+            margin:0;
+            list-style-image:url('images/arrow.png');
+        }
+        .ul5 {list-style-image:url('images/arrow2.svg');}
+
+        /* 숫자 또는 문자 기호 */
+        .ol1 {list-style-type:decimal;}
+        .ol2 {list-style-type:lower-alpha;}
+        .ol3 {list-style-type:upper-alpha;}
+        .ol4 {list-style-type:lower-roman;}
+        .ol5 {list-style-type:upper-roman;}
+    </style>
+</head>
+<body>
+    <!-- 
+        비순차 목록(unordered list)
+        <ul>
+            <li>목록1</li>
+        </ul>
+
+        순차 목록(ordered list)
+        <ol>
+            <li>목록1</li>
+        </ol>
+
+        정의 목록(definition list)
+        <dl>
+            <dt>단어</dt>
+            <dd>설명</dd>
+        </dl>
+    -->
+
+    <h1>목록 만들기</h1>
+    <h2>순서없는 목록</h2>
+    <p>ul 요소는 블록 레벨 요소이며 li 요소 이외의 다른 요소는 포함할 수 없다. li 요소는 블록 레벨 요소이며, 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있다.</p>
+
+    <ul class="ul1">
+        <li>커피</li>
+        <li>티</li>
+        <li>코카콜라</li>
+    </ul>
+    <ul class="ul2">
+        <li>커피</li>
+        <li>티</li>
+        <li>코카콜라</li>
+    </ul>
+    <ul class="ul3">
+        <li>커피</li>
+        <li>티</li>
+        <li>코카콜라</li>
+    </ul>
+    <ul class="ul4">
+        <li>커피</li>
+        <li>티</li>
+        <li>코카콜라</li>
+    </ul>
+    <ul class="ul5">
+        <li>커피</li>
+        <li>티</li>
+        <li>코카콜라</li>
+    </ul>
+
+    <ol class="ol1">
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+    </ol>
+    <ol class="ol2">
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+    </ol>
+    <ol class="ol3">
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+    </ol>
+    <ol class="ol4">
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+    </ol>
+    <ol class="ol5">
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+    </ol>
+</body>
+</html>

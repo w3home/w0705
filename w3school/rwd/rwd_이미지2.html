@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형</title>
+    <style>
+        /* For width smaller than 400px: */
+        body {
+            background: url('img_smallflower.jpg') no-repeat 0 0/cover;
+        }
+
+        /* For width 400px and larger: */
+        @media only screen and (min-width: 600px) {
+            body {
+                background: url('img_flowers.jpg') no-repeat 0 0/contain;
+                height:100px;
+            }
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>

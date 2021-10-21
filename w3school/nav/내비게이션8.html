@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션</title>
+    <style>
+        /* reset */
+        * {margin:0; padding:0; box-sizing:border-box;}
+        ul {list-style:none;}
+        a {text-decoration:none; color:#333;}
+
+        /* typo */
+        body {font-size:14px;}
+
+        /* nav */
+        #nav {
+            position:relative;
+            width:1200px; height:30px;
+            text-align:center;
+            background:darkblue;
+        }
+        .nav_bg {
+            z-index:-1;
+            position:absolute; left:0; top:30px;
+            width:100%; height:0px;
+            background:lightslategray;
+        }
+        #nav a {display:block;}
+
+        /* 1depth */
+        .main {position:absolute; right:0;}
+        .main > li {float:left; width:160px;}
+        .main > li > a {color:#fff; line-height:30px;}
+        .main > li > a:hover {background:#ccc; color:#333;}
+
+        /* 2depth */
+        .sub {display:none; padding-top:15px;}
+        .sub a {padding:3px 0px; color:#fff;}
+        .sub a:hover {background:lightblue; color:#333;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $('.main > li > a').mouseenter(function(){
+                $('.sub').stop().slideDown();
+                $('.nav_bg').stop().animate({height:150});
+            });
+            $('#nav').mouseleave(function(){
+                $('.sub').stop().slideUp();
+                $('.nav_bg').stop().animate({height:0});
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="nav">
+        <ul class="main">
+            <li><a href="#">회사소개</a>
+                <ul class="sub">
+                    <li><a href="#">기업정보</a></li>
+                    <li><a href="#">지속가능경영</a></li>
+                    <li><a href="#">R&amp;D</a></li>
+                    <li><a href="#">투자정보</a></li>
+                </ul>
+            </li>
+            <li><a href="#">사업분야</a>
+                <ul class="sub">
+                    <li><a href="#">토목</a></li>
+                    <li><a href="#">플랜트</a></li>
+                    <li><a href="#">건축</a></li>
+                    <li><a href="#">주택</a></li>
+                </ul>
+            </li>
+            <li><a href="#">홍보센터</a>
+                <ul class="sub">
+                    <li><a href="#">공고</a></li>
+                    <li><a href="#">CI / BI</a></li>
+                    <li><a href="#">캐릭터</a></li>
+                </ul>
+            </li>
+            <li><a href="#">고객센터</a>
+                <ul class="sub">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">고객상담실</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="nav_bg"></div>
+    </div><!-- //#nav -->
+</body>
+</html>

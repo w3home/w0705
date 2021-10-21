@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+        video {
+            width:400px;
+            background:yellow;
+        }
+
+        iframe {
+            /* width:516px; height:315px; */
+            width:400px; height:225px;
+            border:0;
+            background:yellow;
+        }
+
+        .video2 {
+            position:relative;
+            width:400px; height:225px;
+        }
+        .video2 i {
+            position:absolute; left:50%; top:50%;
+            width:50px; height:50px; margin:-25px 0 0 -25px;
+            font-size:50px;
+            cursor: pointer;
+            /* display:none; */
+            opacity:0; transition:0.5s;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // .video1 중에서 첫 번째 비디오를 vid 변수에 저장
+            var vid = $('.video1').get(0);
+            // 일지정시 버튼을 클릭하면
+            $('.pauseBtn').click(function(){
+                // vid가 일시정지된다.
+                vid.pause();
+            });
+            // 실행 버튼을 클릭하면
+            $('.playBtn').click(function(){
+                // vid가 실행된다.
+                vid.play();
+            });
+            // 정지 버튼을 클릭하면
+            $('.stopBtn').click(function(){
+                // vid가 처음으로 되돌아 가서 실행된다.
+                vid.load();
+                // vid가 일시정지된다.
+                vid.pause();
+            });
+
+            // flag 변수를 선언하여 0 값을 할당한다.
+            // 두 가지 상태(0과 1의 상태)
+            // flag가 0이면 정지되어 있고, 1이면 실행되고 있는 상태
+            var flag = 0;
+            var vid2 = $('.video2 video').get(0);
+            
+            $('.video2').mouseenter(function(){
+                $('.video2 i').css({opacity:1});
+            });
+            $('.video2').mouseleave(function(){
+                $('.video2 i').css({opacity:0});
+            });
+
+            $('.video2 i').click(function(){
+                // flag가 0과 같은가?
+                if (flag == 0) {
+                    // 버튼의 class 속성 값을 'far fa-pause-circle'로 바꾼다.
+                    $(this).attr({class:'far fa-pause-circle'});
+                    // 비디오 실행
+                    vid2.play();
+                    // flag 값을 1로 지정
+                    flag = 1;
+                } else {
+                    // 버튼의 class 속성 값을 'far fa-play-circle'로 바꾼다.
+                    $(this).attr({class:'far fa-play-circle'});
+                    // 비디오 일시정지
+                    vid2.pause();
+                    // flag 값을 0으로 지정
+                    flag = 0;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>비디오</h1>
+    <h2>컨트롤바</h2>
+    <video src="video/mov_bbb.mp4" controls></video>
+
+    <video controls>
+        <source src="video/mov_bbb.mp4" type="video/mp4">
+        <source src="video/mov_bbb.ogg" type="video/ogg">
+        <source src="video/mov_bbb.webm" type="video/webm">
+        당신의 브라우저는 비디오를 지원하지 않는다.
+    </video>
+
+    <h2>자동 재생 + 음소거</h2>
+    <video controls autoplay muted>
+        <source src="video/mov_bbb.mp4" type="video/mp4">
+        당신의 브라우저는 비디오를 지원하지 않는다.
+    </video>
+
+    <h2>무한 반복</h2>
+    <video controls autoplay muted loop>
+        <source src="video/mov_bbb.mp4" type="video/mp4">
+        당신의 브라우저는 비디오를 지원하지 않는다.
+    </video>
+
+    <h2>비디오 제어 + 폰트어썸</h2>
+    <div class="video2">
+        <video loop>
+            <source src="video/mov_bbb.mp4" type="video/mp4">
+            당신의 브라우저는 비디오를 지원하지 않는다.
+        </video>
+        <i class="far fa-play-circle"></i>
+    </div>
+
+    <h2>비디오 제어</h2>
+    <p>get(숫자)는 숫자에 해당하는 비디오를 가져온다. play()는 해당 비디오를 실행한다. pause()는 해당 비디오를 일시정지 한다.load()는 해당 비디오를 처음으로 다시 불러온다.</p>
+    <video autoplay muted loop class="video1">
+        <source src="video/mov_bbb.mp4" type="video/mp4">
+        당신의 브라우저는 비디오를 지원하지 않는다.
+    </video>
+    <video autoplay muted loop class="video1">
+        <source src="video/mov_bbb.mp4" type="video/mp4">
+        당신의 브라우저는 비디오를 지원하지 않는다.
+    </video>
+    <button class="pauseBtn">일시정지</button>
+    <button class="playBtn">실행</button>
+    <button class="stopBtn">정지</button>
+
+    <h2>유튜브</h2>
+    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+
+    <h2>유튜브: 자동 재생 + 음소거</h2>
+    <iframe src="https://www.youtube.com/embed/ixiV66KV7k4?autoplay=1&mute=1"></iframe>
+
+    <h2>유튜브: 자동 재생 + 음소거 + 무한 반복</h2>
+    <iframe src="https://www.youtube.com/embed/ixiV66KV7k4?autoplay=1&mute=1&loop=1"></iframe>
+
+    <h2>유튜브: 자동 재생 + 음소거 + 무한 반복 + 컨트롤바</h2>
+    <iframe src="https://www.youtube.com/embed/ixiV66KV7k4?autoplay=1&mute=1&loop=1&controls=0"></iframe>
+
+
+</body>
+</html>

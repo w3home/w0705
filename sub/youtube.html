@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/faviconmanifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/script/script.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid p-2 p-sm-4 m-0">
+        <div class="container d-sm-none">
+            <h1>Web Design &amp; Publishing Tutorial</h1>
+            <p>본 과정은 디자인 콘셉트에 맞춰서 그래픽 활용 프로그램인 일러스트레이터와 포토샵으로 시안을 제작하고 디자인된 시안에 대해 웹 프로그래밍 언어인 HTML, CSS, Javascript(jQuery)로 웹사이트를 구성 및 구축하는 과정을 소개합니다.</p>
+        </div>
+        <div class="container d-none d-sm-block">
+            <div id="demo" class="carousel slide" data-ride="carousel" data-interval="20000">
+                <!-- Indicators -->
+                <ul class="carousel-indicators d-none d-sm-flex">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                </ul>
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h1>Web Design &amp; Publishing Tutorial</h1>
+                        <p>본 과정은 디자인 콘셉트에 맞춰서 그래픽 활용 프로그램인 일러스트레이터와 포토샵으로 시안을 제작하고 디자인된 시안에 대해 웹 프로그래밍 언어인 HTML, CSS, Javascript(jQuery)로 웹사이트를 구성 및 구축하는 과정을 소개합니다.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>Adobe Illustrator &amp; Photoshop Tutorial</h1>
+                        <p>최신 기술을 통한 일러스트레이션 제작 업계 표준의 벡터 그래픽 소프트웨어를 사용하면 인쇄, 웹, 동영상 및 모바일에 적합한 로고, 아이콘, 드로잉, 타이포그래피 및 일러스트레이션을 제작할 수 있습니다. 세계 최고의 이미징 및 그래픽 디자인 소프트웨어인 Photoshop를 사용하면 머릿속 상상을 현실화할 수 있습니다. 사진, 일러스트레이션 및 3D 아트웍을 제작 및 향상시킬 수 있습니다. 웹 사이트 및 모바일 앱을 디자인할 수 있고, 비디오를 편집하고 실제 페인팅 작업을 시뮬레이션할 수 있습니다. Photoshop은 아이디어를 구현하는 데 필요한 모든 것을 제공합니다.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>HTML5 &amp; CSS3 Tutorial</h1>
+                        <p>HTML은 웹 페이지의 표준 마크 업 언어입니다. HTML을 사용하여 자신의 웹 사이트를 만들 수 있습니다. 이 튜토리얼은 최신 HTML5 표준을 따릅니다. HTML은 배우기 쉽습니다. 당신은 그것을 즐길 것입니다! CSS는 HTML 문서의 스타일을 지정하는 데 사용하는 언어입니다. CSS는 HTML 요소가 표시되는 방식을 설명합니다. 이 튜토리얼은 기본에서 고급까지 CSS를 가르칩니다.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>Javascript &amp; jQuery Tutorial</h1>
+                        <p>JavaScript는 세계에서 가장 널리 사용되는 프로그래밍 언어입니다. JavaScript는 웹의 프로그래밍 언어입니다. JavaScript는 배우기 쉽습니다. 이 튜토리얼은 기본에서 고급까지 JavaScript를 가르칩니다. jQuery는 JavaScript 라이브러리입니다. jQuery는 JavaScript 프로그래밍을 크게 단순화합니다. jQuery는 배우기 쉽습니다.</p>
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="/index.html"><i class="fas fa-home"></i></a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/sub/youtube.html">YouTube</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/module.html">Module</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/reference.html">Reference</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/benchmark.html">Benchmark</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/psd.html">PSD</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/gtq.html">GTQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/ai.html">Ai</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/gtqi.html">GTQi</a></li>
+            <li class="nav-item"><a class="nav-link" href="/w3school/html5.html">HTML</a></li>
+            <li class="nav-item"><a class="nav-link" href="/w3school/css3.html">CSS</a></li>
+            <li class="nav-item"><a class="nav-link" href="/w3school/js.html">JS</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/cwd.html">Craftsman Web Design</a></li>
+            <li class="nav-item"><a class="nav-link" href="/sub/portfolio.html">Portfolio</a></li>
+        </ul>
+    </div>
+
+    <div class="container" id="tabs2">
+        <div class="row my-3">
+            <div class="col">
+                <h3 class="my-3">HTML, CSS, Javascript, jQuery 의 기초 및 응용 영상</h3>
+                <p>※ 이전에 촬영한 영상을 참고하여 반복 학습해 보세요.</p>
+                <p><i class="fas fa-book"></i><a href="note/일일노트.pdf" target="_blank">요약 노트 보기1</a></p>
+                <p><i class="fas fa-book"></i><a href="note/일일노트2.pdf" target="_blank">요약 노트 보기2</a></p>
+                <div id="accordion">
+                    <h2>VSCode 설치 및 실행 테스트</h2>
+                    <div><iframe src="https://www.youtube.com/embed/OmxMGR-e-Io"></iframe></div>
+                    <h2>HTML 태그 작성 형식</h2>
+                    <div><iframe src="https://www.youtube.com/embed/A1WTQBsVO4M"></iframe></div>
+                    <h2>FTP 프로그램 테스트</h2>
+                    <div><iframe src="https://www.youtube.com/embed/Lm-mKynWuAk"></iframe></div>
+                    <h2>크롬 확장 프로그램 설치</h2>
+                    <div><iframe src="https://www.youtube.com/embed/pTumNVXnjnU"></iframe></div>
+                    <!-- HTML -->
+                    <h2>HTML 기본 형식1</h2>
+                    <div><iframe src="https://www.youtube.com/embed/A1WTQBsVO4M"></iframe></div>
+                    <h2>HTML 기본 형식2 - 태그, 속성, 속성 값</h2>
+                    <div><iframe src="https://www.youtube.com/embed/BBR6QpXf0pA"></iframe></div>
+                    <h2>HTML 기본 형식3 - 태그, 속성, 속성 값</h2>
+                    <div><iframe src="https://www.youtube.com/embed/2bskpD2TD-U"></iframe></div>
+                    <h2>HTML 문서 구조</h2>
+                    <div><iframe src="https://www.youtube.com/embed/XEDJpb_TkBg"></iframe></div>
+                    <h2>HTML 제목과 문단 - h1~h6, p</h2>
+                    <div><iframe src="https://www.youtube.com/embed/cAWqX5LJYqA"></iframe></div>
+                    <h2>HTML 목록 만들기 - ul, li</h2>
+                    <div><iframe src="https://www.youtube.com/embed/pVFmoHzZITw"></iframe></div>
+                    <h2>HTML 태그 정리 - html, head, body, meta, title, style, link, h1~h6, p, div, header, nav,
+                        section, article, aside, footer, ul, li, i, b, mark</h2>
+                    <div><iframe src="https://www.youtube.com/embed/9-6QEx70T2M"></iframe></div>
+                    <h2>HTML 속성 정리 - lang, charset, src, alt, width, height, class, id, style</h2>
+                    <div><iframe src="https://www.youtube.com/embed/t9A3FTPdLcY"></iframe></div>
+                    <h2>HTML 하이퍼 링크 - &lt;a&gt;, href, target</h2>
+                    <div><iframe src="https://www.youtube.com/embed/i0E_AYoGGZU"></iframe></div>
+                    <!-- CSS -->
+                    <h2>CSS 기본 형식</h2>
+                    <div><iframe src="https://www.youtube.com/embed/hwOOD2mdmag"></iframe></div>
+                    <h2>CSS 속성 - color, background-color, width, height, border, margin, padding</h2>
+                    <div><iframe src="https://www.youtube.com/embed/3yrFX34wK1U"></iframe></div>
+                    <h2>주석과 CSS 기본 형식 정리</h2>
+                    <div><iframe src="https://www.youtube.com/embed/N8N0Zc_icas"></iframe></div>
+                    <h2>CSS 기록 방식</h2>
+                    <div><iframe src="https://www.youtube.com/embed/4mdQBEKmyFs"></iframe></div>
+                    <h2>CSS 선택자1 - 요소(태그), 클래스(.), 아이디(#)</h2>
+                    <div><iframe src="https://www.youtube.com/embed/nUdF5WkTmA4"></iframe></div>
+                    <h2>CSS 선택자2 - 그룹(,), 범용(*)</h2>
+                    <div><iframe src="https://www.youtube.com/embed/8zwDbyPv694"></iframe></div>
+                    <h2>CSS 선택자4 - 하위(공백), 자식(&gt;)</h2>
+                    <div><iframe src="https://www.youtube.com/embed/KP2jqtgolaU"></iframe></div>
+                    <h2>CSS 선택자5 - :nth-of-type(n)</h2>
+                    <div><iframe src="https://www.youtube.com/embed/l3l7k-lmZ34"></iframe></div>
+                    <h2>CSS 박스 모델 속성, 블록레벨요소와 인라인요소</h2>
+                    <div><iframe src="https://www.youtube.com/embed/1vYVDig8NtQ"></iframe></div>
+                    <h2>CSS 플로트 속성1 - float, clear</h2>
+                    <div><iframe src="https://www.youtube.com/embed/opDgKONheQo"></iframe></div>
+                    <h2>CSS 플로트 속성2 - float, clear</h2>
+                    <div><iframe src="https://www.youtube.com/embed/p4Stm0eGtZU"></iframe></div>
+                    <h2><mark>레이아웃(웹디자인기능사 유형1) - float, clear</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/lOs1n8mTBXU"></iframe></div>
+                    <h2><mark>레이아웃(Br_Architects) - float, clear</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/T7bWNCAGIOQ"></iframe></div>
+                    <h2>CSS 포지션 속성1 - position:absolute;</h2>
+                    <div><iframe src="https://www.youtube.com/embed/pthm-lXzMBA"></iframe></div>
+                    <h2>CSS 포지션 속성2 - position:relative;</h2>
+                    <div><iframe src="https://www.youtube.com/embed/R8S1KW-SCdM"></iframe></div>
+                    <h2>CSS 포지션 속성3 - position:fixed; 그리고 static, relative, absolute, fixed 비교</h2>
+                    <div><iframe src="https://www.youtube.com/embed/bWYI-vackm8"></iframe></div>
+                    <h2>CSS 포지션 속성4 - absolute 지정 시 left, top, right, bottom의 기준</h2>
+                    <div><iframe src="https://www.youtube.com/embed/V69vk0Njnos"></iframe></div>
+                    <h2>CSS 포지션 속성5 - absolute와 fixed 차이</h2>
+                    <div><iframe src="https://www.youtube.com/embed/OQwyM9iHBpE"></iframe></div>
+                    <!-- 자바스크립트(제이쿼리) -->
+                    <h2>제이쿼리 라이브러리 연결하기</h2>
+                    <div><iframe src="https://www.youtube.com/embed/oxIgsUa_MHQ"></iframe></div>
+                    <h2>제이쿼리 기본 구문과 용어 정의</h2>
+                    <div><iframe src="https://www.youtube.com/embed/AYsaY4qQxYE"></iframe></div>
+                    <h2>제이쿼리 선택자 - 요소, this</h2>
+                    <div><iframe src="https://www.youtube.com/embed/anX4mrEyuBY"></iframe></div>
+                    <h2>제이쿼리 선택자 - 요소, 클래스, 아이디</h2>
+                    <div><iframe src="https://www.youtube.com/embed/yPIPB65pL8M"></iframe></div>
+                    <h2>제이쿼리 선택자 - 클래스, 하위</h2>
+                    <div><iframe src="https://www.youtube.com/embed/euMUWAIZxB0"></iframe></div>
+                    <h2>제이쿼리 선택자 - :eq(n), eq(n) 메서드</h2>
+                    <div><iframe src="https://www.youtube.com/embed/1ZpznWHDZ-I"></iframe></div>
+                    <h2>제이쿼리 이벤트 - ready, click, mouseenter, mouseleave</h2>
+                    <div><iframe src="https://www.youtube.com/embed/ujsnmUp2ZAE"></iframe></div>
+                    <h2>제이쿼리 이벤트 구문 - on() 메서드</h2>
+                    <div><iframe src="https://www.youtube.com/embed/egpNFp9CDLE"></iframe></div>
+                    <h2>제이쿼리 HTML 메서드 - text(), html()</h2>
+                    <div><iframe src="https://www.youtube.com/embed/byTsnGMbR8E"></iframe></div>
+                    <h2>제이쿼리 HTML 메서드 - css(), attr()</h2>
+                    <div><iframe src="https://www.youtube.com/embed/pDrWycoabSA"></iframe></div>
+                    <h2>제이쿼리 효과 메서드 - hide(), show()</h2>
+                    <div><iframe src="https://www.youtube.com/embed/h7OgWu29Oak"></iframe></div>
+                    <h2><mark>모달창 만들기 - hide(), show()</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/HChThiuMS7A"></iframe></div>
+                    <h2>제이쿼리 효과 메서드 - toggle()</h2>
+                    <div><iframe src="https://www.youtube.com/embed/9IA1WqYPNiU"></iframe></div>
+                    <h2>제이쿼리 효과 메서드 - toggle()</h2>
+                    <div><iframe src="https://www.youtube.com/embed/9IA1WqYPNiU"></iframe></div>
+                    <h2>제이쿼리 효과 메서드 - fadeToggle()</h2>
+                    <div><iframe src="https://www.youtube.com/embed/iiBPa3K5qLE"></iframe></div>
+                    <h2>제이쿼리 효과 메서드 - fadeIn(), fadeOut()</h2>
+                    <div><iframe src="https://www.youtube.com/embed/dx43ohkrkWU"></iframe></div>
+                    <h2>제이쿼리 효과 메서드 - slideDown(), slideUp()</h2>
+                    <div><iframe src="https://www.youtube.com/embed/oPW9uf2Qjjc"></iframe></div>
+                    <h2>제이쿼리 효과 메서드 - animate(), width, height</h2>
+                    <div><iframe src="https://www.youtube.com/embed/V_lP_KoWu7o"></iframe></div>
+                    <h2>제이쿼리 효과 메서드 - animate(), toggle</h2>
+                    <div><iframe src="https://www.youtube.com/embed/vK_YKa3boYc"></iframe></div>
+                    <h2>제이쿼리 효과 메서드 - animate(), opacity</h2>
+                    <div><iframe src="https://www.youtube.com/embed/oHWsav2KTg8"></iframe></div>
+                    <h2>제이쿼리 효과 메서드 - animate(), 대기열</h2>
+                    <div><iframe src="https://www.youtube.com/embed/zRQ2DEWZ1Jg"></iframe></div>
+                    <h2>제이쿼리 효과 메서드 - animate(), 콜백함수</h2>
+                    <div><iframe src="https://www.youtube.com/embed/lZkCwKiFo4A"></iframe></div>
+                    <!-- HTML -->
+                    <h2 class="mt-5">HTML 멀티미디어 요소 그룹핑 - figure, figcaption</h2>
+                    <div><iframe src="https://www.youtube.com/embed/20R_GHjeCdw"></iframe></div>
+                    <h2>HTML 제목과 문단 - h1~h6, p, br, hr, pre</h2>
+                    <div><iframe src="https://www.youtube.com/embed/StuTdwIShOE"></iframe></div>
+                    <h2>HTML 서식 - strong, b, em, i, del, ins, s, u, small, mark, sub, sup</h2>
+                    <div><iframe src="https://www.youtube.com/embed/xm9Ns37Vc7A"></iframe></div>
+                    <h2>HTML 인용문 - blockquote, q, abbr, address, cite, bdo</h2>
+                    <div><iframe src="https://www.youtube.com/embed/U6bEnKtgeNU"></iframe></div>
+                    <h2>HTML 기호 - &nbsp; &gt; &lt; &quot; &apos; &amp; &reg; &trade; &copy;</h2>
+                    <div><iframe src="https://www.youtube.com/embed/IXgt289jFq8"></iframe></div>
+                    <h2><mark>페이지 구현(Br_Architects) - img 태그</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/TNI44MmYZiY"></iframe></div>
+                    <!-- CSS -->
+                    <h2>CSS 색상 표기법 - 색상 이름, HEX, rgb(), rgba(), hsl(), hsla()</h2>
+                    <div><iframe src="https://www.youtube.com/embed/n3tj7CnSA7k"></iframe></div>
+                    <h2>CSS 그라디언트1 - linear-gradient(방향, 색1, 색2, ...)</h2>
+                    <div><iframe src="https://www.youtube.com/embed/kpacEsBqjrU"></iframe></div>
+                    <h2>CSS 그라디언트2 - linear-gradient(각도, 색1, 색2, ...)</h2>
+                    <div><iframe src="https://www.youtube.com/embed/xxsShi8_Cu8"></iframe></div>
+                    <h2>CSS 그라디언트3 - linear-gradient(색1, 색2, ...), 투명도, repeating-linear-gradient()</h2>
+                    <div><iframe src="https://www.youtube.com/embed/r4T9TJl375E"></iframe></div>
+                    <h2>CSS 그라디언트4 - radial-gradient(), repeating-radial-gradient()</h2>
+                    <div><iframe src="https://www.youtube.com/embed/-o5lFCflvlo"></iframe></div>
+                    <h2>CSS 텍스트 내부 공백 처리 방법 - white-space</h2>
+                    <div><iframe src="https://www.youtube.com/embed/RdPwZ9Yduv8"></iframe></div>
+                    <h2>CSS 줄임표(...) - text-overflow, overflow, white-space</h2>
+                    <div><iframe src="https://www.youtube.com/embed/Iw0VXR6Nkbo"></iframe></div>
+                    <h2>CSS 무료 폰트 다운 받아 사용하기 - www.dafont.com</h2>
+                    <div><iframe src="https://www.youtube.com/embed/VBeQLA3hBlo"></iframe></div>
+                    <h2><mark>페이지 구현(Br_Architects) - ① : 이미지, 텍스트, 폼(HTML)</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/Daq42ZSLekA"></iframe></div>
+                    <h2><mark>페이지 구현(Br_Architects) - ② : 이미지, 텍스트, 폼(CSS)</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/bUzZ9at9GlE"></iframe></div>
+                    <h2>CSS 테두리 스타일 속성 - border-style</h2>
+                    <div><iframe src="https://www.youtube.com/embed/TKfx8DuSuRI"></iframe></div>
+                    <h2>CSS 테두리 너비 속성 - border-width</h2>
+                    <div><iframe src="https://www.youtube.com/embed/eFOYeu2w7Ns"></iframe></div>
+                    <h2>CSS 테두리 색상 속성 - border-color</h2>
+                    <div><iframe src="https://www.youtube.com/embed/hVcmlMZJwII"></iframe></div>
+                    <h2>CSS 테두리 스타일 개별면 속성 - border-top-style</h2>
+                    <div><iframe src="https://www.youtube.com/embed/kewIfHE_hhI"></iframe></div>
+                    <h2>CSS 테두리 너비 개별면 속성 - border-top-width</h2>
+                    <div><iframe src="https://www.youtube.com/embed/4YFuep-MVLo"></iframe></div>
+                    <h2>CSS 테두리 색상 개별면 속성 - border-top-color</h2>
+                    <div><iframe src="https://www.youtube.com/embed/H-w-CabVa6w"></iframe></div>
+                    <h2>CSS 테두리 속성 - border</h2>
+                    <div><iframe src="https://www.youtube.com/embed/uLGD6MpwiQE"></iframe></div>
+                    <h2>CSS 둥근 모서리 속성 - border-radius</h2>
+                    <div><iframe src="https://www.youtube.com/embed/hVFkm13Uf0A"></iframe></div>
+                    <h2>CSS 애니메이션 이름과 시간 속성 - animation-name, animation-duration</h2>
+                    <div><iframe src="https://www.youtube.com/embed/H0k1-beLvUo"></iframe></div>
+                    <h2>CSS 애니메이션 @keyframes 규칙</h2>
+                    <div><iframe src="https://www.youtube.com/embed/e5gkoig_Zl0"></iframe></div>
+                    <h2>CSS 애니메이션 지연 속성 - animation-delay</h2>
+                    <div><iframe src="https://www.youtube.com/embed/rHDWP5TUoFg"></iframe></div>
+                    <h2>CSS 애니메이션 재생 횟수 속성 - animation-iteration-count</h2>
+                    <div><iframe src="https://www.youtube.com/embed/_JVjpsfk5pE"></iframe></div>
+                    <h2>CSS 애니메이션 방향 속성 - animation-direction</h2>
+                    <div><iframe src="https://www.youtube.com/embed/XgdAoO-Oy6g"></iframe></div>
+                    <h2><mark>CSS 애니메이션 슬라이드 효과 - 3장의 이미지, 오른쪽에서 왼쪽 방향</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/9Lpf6p1R6rQ"></iframe></div>
+                    <h2><mark>CSS 애니메이션 슬라이드 효과 - 3장의 이미지, 오른쪽에서 왼쪽 방향, 단위를 퍼센트로</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/GtoxbM1T8Js"></iframe></div>
+                    <h2><mark>CSS 애니메이션 페이드 효과 - 3장의 이미지</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/xc-KLObrNGs"></iframe></div>
+                    <h2><mark>CSS 포지션과 전환 효과 - 호버 시 버튼 색 바꾸기</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/LcFtiOwXzkQ"></iframe></div>
+                    <h2><mark>CSS 변환과 전환 효과 - 호버 시 박스 내의 이미지 크기 확대 조정</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/7GEt2Ly5XfY"></iframe></div>
+                    <h2><mark>페이지 구현(HTML) - 경남아너스빌 ①</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/7GEt2Ly5XfY"></iframe></div>
+                    <h2><mark>페이지 구현(CSS) - 경남아너스빌 ②</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/7GEt2Ly5XfY"></iframe></div>
+                    <h2>JS 연산자 - 산술(+,*), 할당(=)</h2>
+                    <div><iframe src="https://www.youtube.com/embed/qzsb_ZhLyoQ"></iframe></div>
+                    <h2>JS 연산자 - 할당(=, +=, -=, *=, /=)</h2>
+                    <div><iframe src="https://www.youtube.com/embed/5kpK4EAfMRY"></iframe></div>
+                    <h2>JS 연산자 - 산술(++, --)</h2>
+                    <div><iframe src="https://www.youtube.com/embed/hvzwDSSP9o0"></iframe></div>
+                    <h2>JS 연산자 - 비교(&gt;, &lt;, &gt;=, &lt;=, ==, !=)</h2>
+                    <div><iframe src="https://www.youtube.com/embed/FZkUBa3kvIE"></iframe></div>
+                    <h2>JS 연산자 - 논리(&&, ||, !)</h2>
+                    <div><iframe src="https://www.youtube.com/embed/kVxdCmvtfNY"></iframe></div>
+                    <h2>JS 날짜 객체 - new Date(), 시스템의 날짜와 시간 출력</h2>
+                    <div><iframe src="https://www.youtube.com/embed/6cwOgdkHMYA"></iframe></div>
+                    <h2>JS 조건문 - if, flag 값을 0 또는 1 중 하나 표시</h2>
+                    <div><iframe src="https://www.youtube.com/embed/j_ffBw77q30"></iframe></div>
+                    <h2>JS 조건문 - if~else, greeting 값을 morning 또는 afternoon 중 하나 표시</h2>
+                    <div><iframe src="https://www.youtube.com/embed/ZP7QAXrjtwQ"></iframe></div>
+                    <h2>JS 조건문 - if~else~if, 2개의 조건, greeting 값을 morning, afternoon 또는 evening 중 하나 표시</h2>
+                    <div><iframe src="https://www.youtube.com/embed/lGxT0UtJoZ4"></iframe></div>
+                    <h2>JS 조건문 - if~else~if, 6개의 조건, week 값을 월~일 중 하나 표시</h2>
+                    <div><iframe src="https://www.youtube.com/embed/1dA3D1oNBSk"></iframe></div>
+                    <h2>제이쿼리 기타 메서드 - index(), 요소의 순번과 배경색 지정하기</h2>
+                    <div><iframe src="https://www.youtube.com/embed/VjSwmPOHnyQ"></iframe></div>
+                    <h2><mark>내비게이션 ① - 2depth 트리 메뉴, slideDown(), slideUp()</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/Y38JAmsvJ2c"></iframe></div>
+                    <h2><mark>내비게이션 ② - 2depth 트리 메뉴, slideDown(), slideUp()</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/T4xiJ9DGCGc"></iframe></div>
+                    <h2><mark>내비게이션 ③ - 2depth 트리 메뉴, slideDown(), slideUp()</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/F625NzsrIzY"></iframe></div>
+                    <h2><mark>내비게이션 ④ - 아코디언 메뉴, slideDown(), slideUp()</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/ImzO3IFJXFs"></iframe></div>
+                    <h2><mark>내비게이션 ⑤ - 탭 메뉴, addClass(), removeClass()</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/KWcRe9FYz3Q"></iframe></div>
+                    <h2><mark>메인 이미지 슬라이드 효과 - 오른쪽에서 왼쪽 방향, setInterval(), 사용자 정의 함수, if, animate()</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/DhLNzFrOl3k"></iframe></div>
+                    <h2>JS 기타 메서드 - scrollTop()</h2>
+                    <div><iframe src="https://www.youtube.com/embed/vuohQ-Q5PTY"></iframe></div>
+                    <h2><mark>스크롤 모션 - 화면 스크롤 시 간단한 박스 움직임, scrollTop(), if, animate()</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/ZdhdFQzAbYE"></iframe></div>
+                    <h2><mark>제이쿼리 플러그인 - parallax-scroll(패럴렉스 스크롤)</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/Ivn4XShDZuI"></iframe></div>
+                    <h2><mark>CSS 패럴렉스 - ::after, content, background-attachment:fixed;</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/nSOrH3LnJTs"></iframe></div>
+                    <h2><mark>페이지 구현(HTML) - 스타벅스 ①</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/dKF9Tlz_FDk"></iframe></div>
+                    <h2><mark>페이지 구현(CSS) - 스타벅스 ②</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/B_cSCx-fc60"></iframe></div>
+                    <h2><mark>페이지 구현(JS) - 스타벅스 ③</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/boWbmUS7pSY"></iframe></div>
+                    <h2>제이쿼리 기타 메서드 - offset()</h2>
+                    <div><iframe src="https://www.youtube.com/embed/CkoFyj-WaUs"></iframe></div>
+                    <h2>HTML DOM 속성 - scrollTop</h2>
+                    <div><iframe src="https://www.youtube.com/embed/zgfRH72WmlQ"></iframe></div>
+                    <h2><mark>JS 사이드 메뉴 - 메뉴 항목 클릭 시 부드러운 섹션 이동, offset(), top, hash, animate(),
+                            scrollTop</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/WjfiDPI_Rbw"></iframe></div>
+                    <h2><mark>제이쿼리 플러그인 - Vegas2 이미지 슬라이드 쇼</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/7-n2PheNfA0"></iframe></div>
+                    <h2><mark>제이쿼리 플러그인 - Vide 풀 스크린 배경 비디오</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/0FjLGzHRyms"></iframe></div>
+                    <h2><mark>페이지 구현 - 현대자동차(BR_Architects) 리뉴얼 1차: 비디오, 고스트 버튼, 스크롤 모션, 패럴렉스</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/k4hvQJeNPLA"></iframe></div>
+                    <h2><mark>사이드 메뉴(SNB) - 삼양식품</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/A_9myiT3jmY"></iframe></div>
+                    <h2><mark>페이지 구현 - 현대자동차(BR_Architects) 리뉴얼 1차 추가: 사이드 메뉴(SNB), 탭 메뉴</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/RfBV6r0y5V4"></iframe></div>
+                    <h2><mark>제이쿼리 플러그인 - bxSlider 캐로셀, ① 옵션 사용하기</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/zyJ6tudCfo4"></iframe></div>
+                    <h2><mark>제이쿼리 플러그인 - bxSlider 캐로셀, ② 페이저, 이전/이후 버튼 수정</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/G-kwkdJMdWo"></iframe></div>
+                    <h2><mark>제이쿼리 플러그인 - bxSlider 캐로셀, ③ 여러 이미지 표시하기</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/U9NsYQJGiNQ"></iframe></div>
+                    <h2><mark>캐로셀(Carousel) - 인쓰리(HTML,CSS), bxSlider</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/a2WNW2oslsc"></iframe></div>
+                    <h2><mark>캐로셀(Carousel) - 인쓰리(JS), bxSlider</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/XdDtwiSbNW8"></iframe></div>
+                    <h2><mark>캐로셀(Carousel) - 비비고, Owl Carousel2</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/vNu_ymYmYtI"></iframe></div>
+                    <h2><mark>웹디자인기능사 - JUST 쇼핑몰 ① 자료 분석 및 레이아웃 설정</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/8f9OCU7FlaE"></iframe></div>
+                    <h2><mark>웹디자인기능사 - JUST 쇼핑몰 ② A영역: 로고, 내비게이션</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/-sAeetBCcjQ"></iframe></div>
+                    <h2><mark>웹디자인기능사 - JUST 쇼핑몰 ③ B영역: 메인 이미지 슬라이드</mark></h2>
+                    <div><iframe src="https://www.youtube.com/embed/TkWvr1oStXA"></iframe></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <p class="text-center my-5">&copy; 2021 WDS. All Rights Reserved.</p>
+    </div>
+</body>
+
+</html>

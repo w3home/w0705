@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 경로 설정</title>
+    <!-- 외부 CSS -->
+    <!-- 현재 문서(HTML)와 style.css 같은 폴더에 있을 때 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 현재 문서가 있는 폴더의 하위 폴더(css)에 style.css 파일이 있을 때 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 현재 문서가 있는 폴더의 상위 폴더에 style.css 파일이 있을 때 -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* 내부 CSS */
+        body {background:red;}
+    </style>
+</head>
+
+<!-- 인라인 CSS -->
+<body style="background:yellow;">
+
+</body>
+
+</html>

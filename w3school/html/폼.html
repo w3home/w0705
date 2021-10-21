@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼</title>
+    <style>
+        [type="text"] {width:200px; height:30px;}
+        .btn {
+            border:none; background:red; color:#fff; padding:3px 5px;
+            font-family: '굴림', gulim, sans-serif; font-size:14px;
+        }
+        textarea {width:300px; height:100px;}
+        #rule {resize:none;}
+    </style>
+</head>
+<body>
+    <h1>폼</h1>
+    <p>form 태그의 action 속성은 폼에서 작성한 값을 처리하는 서버 프로그램 주소를 지정하는 속성이다. method 속성은 서버에 값을 전달하는 방식으로 post와 get이 있다. get 방식은 웹브라우저의 주소표시줄에 전달 값이 노출되며, 전송할 수 있는 데이터 양이 적다. post 방식은 전송되는 데이터 값들이 노출되지 않으며 많은 양의 데이터를 전송할 수 있다.</p>
+    <p>fieldset 요소는 블록 레벨 요소이며, 폼 요소를 그룹화하는데 사용한다. legend 요소는 fieldset 안에 그룹의 제목을 지정하는데 사용한다.</p>
+
+    <h2>입력 양식(input)</h2>
+    <p>input은 인라인 요소이며 type 속성으로 다양한 폼 컨트롤을 생성할 수 있다.</p>
+    <form>
+        <fieldset>
+            <legend>회원 가입</legend>
+            <p>
+                <input type="search"> <button>버튼</button><br>
+            </p>
+            <p>
+                <label for="myid">아이디:</label>
+                <input type="text" maxlength="8" placeholder="아이디를 입력하세요." id="myid" required><br>
+                이메일: <input type="email"><br>
+                웹주소: <input type="url"><br>
+                전화번호: <input type="tel"><br>
+
+                <label for="mypw">비밀번호:</label>
+                <input type="password" id="mypw" title="8자 이상의 문자로 영문자, 숫자, 특수문자의 조합으로 기록해 주세요." required>
+                <input type="hidden">
+            </p>
+
+            <!-- 다중 선택 -->
+            <!-- checkbox의 value은 서버로 전송될 데이터이다. -->
+            <p>관심 분야:
+                <label><input type="checkbox" name="chk1" value="html" checked>HTML</label>
+                <label><input type="checkbox" name="chk1" value="css">CSS</label>
+                <label><input type="checkbox" name="chk1" value="Javascript">자바스크립트</label>
+            </p>
+
+            <!-- 하나만 선택 -->
+            <!-- radio의 value은 서버로 전송될 데이터이다. -->
+            <p>수신 동의 여부:
+                <label><input type="radio" name="receive" value="yes" checked>예</label>
+                <label><input type="radio" name="receive" value="no">아니요</label>
+            </p>
+
+            <p>
+                <input type="submit" value="전송하기" class="btn">
+                <input type="reset" value="취소하기" class="btn">
+                <input type="button" value="버튼" class="btn">
+                <input type="image" src="images/btn.gif" alt="바로가기">
+            </p>
+
+            <input type="file">
+        </fieldset>
+
+        <h2>글상자</h2>
+        <p>textarea는 인라인 요소로 게시판의 내용 입력이나 회원 약관 등 여러 줄로 된 텍스트 상자를 생성하는 요소이다.</p>
+        <p>
+            <label for="reply">방명록:</label><br>
+            <textarea id="reply" name="reply" placeholder="댓글을 달아주세요."></textarea>
+        </p>
+        <p>
+            <label for="rule">회칙:</label><br>
+            <textarea id="rule" name="rule" readonly>
+여러분을 환영합니다.
+
+네이버 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 다양한 네이버 서비스의 이용과 관련하여 네이버 서비스를 제공하는 네이버 주식회사(이하 ‘네이버’)와 이를 이용하는 네이버 서비스 회원(이하 ‘회원’) 또는 비회원과의 관계를 설명하며, 아울러 여러분의 네이버 서비스 이용에 도움이 될 수 있는 유익한 정보를 포함하고 있습니다.
+
+네이버 서비스를 이용하시거나 네이버 서비스 회원으로 가입하실 경우 여러분은 본 약관 및 관련 운영 정책을 확인하거나 동의하게 되므로, 잠시 시간을 내시어 주의 깊게 살펴봐 주시기 바랍니다.
+            </textarea>
+        </p>
+
+        <h2>선택</h2>
+        <p><label for="web">과목 선택:</label>
+            <select id="web">
+                <option value="html5">HTML5</option>
+                <option value="css3" selected>CSS3</option>
+                <option value="jquery">jQuery</option>
+            </select>
+        </p>
+        <p>
+            <label for="area">스터디 지역</label>
+            <select id="area">
+                <optgroup label="관악구">
+                    <option value="gwanak-bcd">봉천동</option>
+                    <option value="gwanak-sld">신림동</option>
+                    <option value="gwanak-nhd">남현동</option>
+                </optgroup>
+                <optgroup label="동대문구">
+                    <option value="ddm-jnd">전농동</option>
+                    <option value="ddm-dsn">답십리</option>
+                    <option value="ddm-ssd">신설동</option>
+                </optgroup>
+            </select>
+        </p>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $('#web').click(function(){
+                $(this).css({background:'yellow'});
+                location.href="https://www.naver.com";
+            });
+        });
+    </script>
+</body>
+</html>

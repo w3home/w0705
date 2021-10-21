@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+
+        /* 
+            animation                       속기
+            animation-name                  이름
+            animation-duration              진행 시간
+            값: 숫자s, (단위: 초)
+            animation-timing-function       시간 함수
+            값: ease(기본값), ease-in, ease-out, ease-in-out, linear
+                cubic-bezier(n, n, n, n) (단, n은 숫자), steps()
+            animation-delay                 지연 시간
+            값: 숫자s, (단위: 초)
+            animation-iteration-count       실행 횟수
+            값: infinite(무한반복), 숫자
+            animation-direction             방향
+            값: normal(기본값), reverse, alternate, alternate-reverse
+            animation-fill-mode             채우기 모드
+            값: none(기본값), forwards, backwards, both
+            animation-play-state            동작 상태
+            값: running(기본값), paused
+
+            @keyframes name {
+                0% {속성:값; ...}
+                100% {속성:값; ...}
+            }
+
+            @keyframes name {
+                from {속성:값; ...}
+                to {속성:값; ...}
+            }
+        */
+
+        div {
+            position:relative; width:100px; height:100px; background-color: red; margin:20px;
+            animation-duration: 4s;
+        }
+
+        .ex1 {animation-name: ex1;}
+        @keyframes ex1 {
+            from {background-color:red;}
+            to {background-color:yellow;}
+        }
+        
+        .ex2 {animation-name: ex2;}
+        @keyframes ex2 {
+            0% {background-color:red;}
+            25% {background-color:yellow;}
+            50% {background-color:blue;}
+            100% {background-color:green;}
+        }
+        
+        .ex3 {animation-name: ex3;}
+        @keyframes ex3 {
+            0% {background-color:red; left:0px; top:0px;}
+            25% {background-color:yellow; left:200px; top:0px;}
+            50% {background-color:blue; left:200px; top:200px;}
+            75% {background-color:green; left:0px; top:200px;}
+            100% {background-color:red; left:0px; top:0px;}
+        }
+        
+        .ex4 {animation-name: ex4; animation-delay: 2s;}
+        @keyframes ex4 {
+            0% {left:0px;}
+            50% {left:200px;}
+            100% {left:0px;}
+        }
+        
+        .ex5 {animation-name: ex5; animation-delay: -2s;}
+        @keyframes ex5 {
+            0% {left:0px;}
+            50% {left:200px;}
+            100% {left:0px;}
+        }
+        
+        .ex6 {animation-name: ex6; animation-iteration-count: 3;}
+        @keyframes ex6 {
+            0% {left:0px;}
+            50% {left:200px;}
+            100% {left:0px;}
+        }
+        
+        .ex7 {animation-name: ex7; animation-iteration-count: infinite;}
+        @keyframes ex7 {
+            0% {left:0px;}
+            50% {left:200px;}
+            100% {left:0px;}
+        }
+        
+        .ex8 {
+            animation-name: ex8;
+            animation-direction:reverse;
+        }
+        @keyframes ex8 {
+            0% {left:0px; top:0px;}
+            25% {left:200px; top:0px;}
+            50% {left:200px; top:200px;}
+            75% {left:0px; top:200px;}
+            100% {left:0px; top:0px;}
+        }
+        
+        .ex9 {
+            background:blue;
+            animation-name: ex9;
+            animation-direction:alternate;
+            animation-iteration-count: 2;
+        }
+        @keyframes ex9 {
+            0% {left:0px; top:0px;}
+            25% {left:200px; top:0px;}
+            50% {left:200px; top:200px;}
+            75% {left:0px; top:200px;}
+            100% {left:0px; top:0px;}
+        }
+        
+        .ex10 {
+            background:green;
+            animation-name: ex10;
+            animation-direction:alternate-reverse;
+            animation-iteration-count: 2;
+        }
+        @keyframes ex10 {
+            0% {left:0px; top:0px;}
+            25% {left:200px; top:0px;}
+            50% {left:200px; top:200px;}
+            75% {left:0px; top:200px;}
+            100% {left:0px; top:0px;}
+        }
+        
+        .ex11 {
+            background:orange;
+            animation-name: ex11;
+            animation-iteration-count: infinite;
+        }
+        @keyframes ex11 {
+            0% {left:0px;}
+            50% {left:200px;}
+            100% {left:0px;}
+        }
+        
+        .ex12 {
+            background:orange;
+            animation-name: ex12;
+            animation-duration: 2s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        @keyframes ex12 {
+            0% {left:0px;}
+            100% {left:200px;}
+        }
+        
+        .ex13 {
+            animation-name: ex13;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+        @keyframes ex13 {
+            0% {left:0px;}
+            100% {left:200px;}
+        }
+        
+        .ex14 {
+            animation-name: ex14;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+        }
+        @keyframes ex14 {
+            0% {left:0px;}
+            100% {left:200px;}
+        }
+        
+        .ex15 {
+            animation-name: ex15;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+        }
+        @keyframes ex15 {
+            0% {left:0px;}
+            100% {left:200px;}
+        }
+        
+        .ex16 {
+            animation-name: ex16;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes ex16 {
+            0% {left:0px;}
+            100% {left:200px;}
+        }
+        
+        .ex17 {
+            animation-name: ex17;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes ex17 {
+            0% {left:0px;}
+            100% {left:200px;}
+        }
+        
+        .ex18 {
+            animation-name: ex18;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(.38,1.54,.96,1.27);
+        }
+        @keyframes ex18 {
+            0% {left:0px;}
+            100% {left:200px;}
+        }
+        
+        .ex19 {
+            background:yellow;
+            animation-name: ex19;
+            animation-fill-mode:forwards;
+        }
+        @keyframes ex19 {
+            0% {left:0px;}
+            100% {left:200px; background:blue;}
+        }
+        
+        .ex20 {
+            background:yellow;
+            animation-name: ex20;
+            animation-delay:2s;
+            animation-fill-mode:backwards;
+        }
+        @keyframes ex20 {
+            0% {left:0px; background:black;}
+            100% {left:200px; background:blue;}
+        }
+        
+        .ex21 {
+            background:yellow;
+            animation-name: ex21;
+            animation-delay:2s;
+            animation-fill-mode:both;
+        }
+        @keyframes ex21 {
+            0% {left:0px; background:black;}
+            100% {left:200px; background:blue;}
+        }
+        
+        .ex22 {
+            background:yellow;
+            animation-name: ex21;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+        }
+        button:hover + .ex22 {
+            animation-play-state: running;
+        }
+        @keyframes ex22 {
+            0% {left:0px; background:black;}
+            100% {left:200px; background:blue;}
+        }
+        
+        .ex23 {
+            animation:ex23 1s ease-in 2s 4 alternate backwards;
+
+            /* animation-name: ex22;
+            animation-duration:1s;
+            animation-timing-function: ease-in;
+            animation-delay: 2s;
+            animation-iteration-count: 4;
+            animation-direction: alternate;
+            animation-fill-mode: backwards; */
+        }
+        @keyframes ex23 {
+            0% {left:0px; background:black;}
+            100% {left:200px; background:blue;}
+        }
+
+        </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+<body>
+    <h1>애니메이션</h1>
+    <p>animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, animation-play-state, animation, @keyframes 를 사용한다.</p>
+
+    <h2>from ~ to</h2>
+    <div class="ex1"></div>
+
+    <h2>0% ~ 100%</h2>
+    <div class="ex2"></div>
+    
+    <h2>left, top</h2>
+    <div class="ex3"></div>
+    
+    <h2>animation-delay</h2>
+    <p>음수 값을 사용하면 애니메이션이 2초 동안 이미 재생된 것처럼 시작된다.</p>
+    <div class="ex4"></div>
+    <div class="ex5"></div>
+    
+    <h2>animation-iteration-count</h2>
+    <p>속성의 값은 숫자 또는 infinite(무한반복)을 사용한다.</p>
+    <div class="ex6"></div>
+    <div class="ex7"></div>
+    
+    <h2>animation-direction</h2>
+    <div class="ex8"></div>
+    <div class="ex9"></div>
+    <div class="ex10"></div>
+    
+    <h2>animation-direction2</h2>
+    <div class="ex11"></div>
+    <div class="ex12"></div>
+    
+    <h2>animation-timing-function</h2>
+    <p>속성 값에는 ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier(n,n,n,n) 이다. ease는 느린 시작-빠름-느린 종료으로 기본값이다. ease-in은 느린 시작-빠른 종료, ease-out은 빠른 시작-느린 종료, ease-in-out은 시작과 끝이 느린, linear은 같은 속도, cubic-bezier(n,n,n,n) 이다.</p>
+    <div class="ex13">ease</div>
+    <div class="ex14">ease-in</div>
+    <div class="ex15">ease-out</div>
+    <div class="ex16">ease-in-out</div>
+    <div class="ex17">linear</div>
+    <div class="ex18">cubic-bezier</div>
+    
+    <h2>animation-fill-mode</h2>
+    <p>속성 값에는 none(기본값), forwards, backwards, both가 있다. forwards로 지정하면 요소는 마지막 키프레임에 설정된 스타일 값을 유지한다(단, animation-direction, animation-iteration-count에 따라 다름). backwards로 지정하면 요소는 첫 번째 키프레임에 의해 설정된 스타일 값이 지정되며, animation-delay로 지정한 시간 동안 스타일을 유지한다(단, animation-direction에 영향을 받는다). both는 forwards와 backwards에 대한 규칙을 모두 따른다.</p>
+    <div class="ex19">forwards</div>
+    <div class="ex20">backwards</div>
+    <div class="ex21">both</div>
+    
+    <h2>animation-play-state</h2>
+    <p>animation-play-state는 애니메이션의 동작 상태를 나타내는 속성으로 속성 값은 running(움직임), paused(일시정지)가 있다.</p>
+    <button>버튼</button>
+    <div class="ex22"></div>
+    
+    <h2>animation</h2>
+    <div class="ex23"></div>
+
+    <p style="height:300px;"></p>
+</body>
+</html>

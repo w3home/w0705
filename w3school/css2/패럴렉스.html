@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴렉스</title>
+    <style>
+        body {margin:0;}
+        .parallax {position:relative;}
+        h1, h2 {
+            margin:0;
+            width:300px; height:60px;
+            background:#333; color:#fff;
+            text-align:center; line-height:60px;
+            position:absolute; left:50%; top:50%;
+            transform:translate(-50%,-50%);
+        }
+
+        .parallax:before {content:''; display:block; height:400px; background:no-repeat 50% 50%/cover fixed;}        
+        .parallax1:before {
+            background-image:url('images/parallax1.jpg');
+            height:800px;
+        }
+        .parallax2:before {background-image:url('images/parallax2.jpg');}
+        .parallax3:before {
+            background-image:url('images/parallax3.jpg');
+            background-position:50% 20%;
+        }
+
+        .container {height:700px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="parallax1 parallax">
+            <h1>제목1</h1>
+        </div>
+        <div class="container">콘텐츠1</div>
+        <div class="parallax2 parallax">
+            <h2>제목2</h2>
+        </div>
+        <div class="container">콘텐츠2</div>
+        <div class="parallax3 parallax">
+            <h2>제목3</h2>
+        </div>
+        <div class="container">콘텐츠3</div>
+    </div>
+</body>
+</html>

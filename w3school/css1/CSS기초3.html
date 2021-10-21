@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta name="description" content="HTML, CSS학습하기">
+        <meta name="keywords" content="html5, css3">
+        <meta name="author" content="hong gil-dong">
+        <meta charset="utf-8">
+        <title>CSS의 속성</title>
+        <!-- 내부 CSS -->
+        <style>
+            body {margin:0;}
+            /* 
+                background: 배경색; (속기형)
+                background-color:배경색;
+            */
+            div {background:red;}
+            p {background:pink;}
+            /* 
+                div태그 중에서 클래스명이 snd인 요소에
+                가로 크기를 300px, 세로 크기를 50px으로 지정한다.
+            */
+            /* 
+                가로 가운데 배치
+                width와 margin:0 auto;로 지정한다.
+            */
+            div.snd {width:80%; margin:0 auto; height:50px;}
+
+            /* 안 여백: padding */
+            /* 
+                padding:10px;                   //상하좌우 모두 10px
+                padding:10px 20px;              //상하10px,좌우20px
+                padding:10px 20px 30px;         //상10px,좌우20px,하30px
+                padding:10px 20px 30px 40px;    //상10px,우20px,하30px,좌40px
+
+                padding-top:10px;       //상 10px
+                padding-right:10px;     //우 10px
+                padding-bottom:10px;    //하 10px
+                padding-left:10px;      //좌 10px
+            */
+            p.snd {padding:15px 0;}
+
+            /* 바깥 여백: margin */
+            /* 
+                margin:10px;                   //상하좌우 모두 10px
+                margin:10px 20px;              //상하10px,좌우20px
+                margin:10px 20px 30px;         //상10px,좌우20px,하30px
+                margin:10px 20px 30px 40px;    //상10px,우20px,하30px,좌40px
+
+                margin-top:10px;       //상 10px
+                margin-right:10px;     //우 10px
+                margin-bottom:10px;    //하 10px
+                margin-left:10px;      //좌 10px
+            */
+            
+            /* 테두리: border */
+            /* 
+                border:10px solid red;           //상하좌우 모두 10px 두께의 빨강 테두리
+
+                border-width:10px;
+                border-style:solid;
+                border-color:red;
+
+                border-top:10px solid red;       //상 10px 두께의 빨강 테두리
+
+                border-top-width:10px;
+                border-top-style:solid;
+                border-top-color:red;
+
+                border-right:10px solid red;     //우 10px 두께의 빨강 테두리
+                border-bottom:10px solid red;    //하 10px 두께의 빨강 테두리
+                border-left:10px solid red;      //좌 10px 두께의 빨강 테두리
+            */
+            
+            .p1 {border:5px solid #123456;}
+            .p2 {border:5px dashed #123456;}
+            .p3 {border:5px dotted #123456;}
+            .p4 {border:5px double #123456;}
+            .p5 {border:5px none #123456;}
+            .p6 {border:5px groove #06c;}
+            .p7 {border:5px ridge #f06;}
+            .p8 {border:5px inset #0c3;}
+            .p9 {border:5px outset #c63;}
+
+            p.snd {
+                /* border-top:4px solid brown;
+                border-bottom:4px solid brown; */
+
+                /* border:4px solid brown;
+                border-right:none;
+                border-left:none; */
+
+                /* border-width:10px;
+                border-color:red; */
+                /* border-style:solid; */
+                /* border-width:thin;
+                border-width:medium;
+                border-width:thick; */
+
+                /* border:4px solid brown; */
+                border-style:solid dashed;              /* 상하 solid, 좌우 dashed */
+                border-color:red green blue;     /* 상 red, 좌우 green, 하 blue */
+                border-width:2px 4px 6px 8px;           /* 상2px,우4px,하6px,좌8px */
+            }
+
+            /* 
+                float:left;
+                박스를 왼쪽에 배치하고, 나머지 콘텐츠는 그 주변을 흐르도록 한다.
+                float:right;
+                박스를 오른쪽에 배치하고, 나머지 콘텐츠는 그 주변을 흐르도록 한다.
+            */
+            .box h1 {float:left; background:#c00;}
+            .box span {float:right;}
+
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Box Model</h1>
+        <h2>가로크기, 세로크기, 바깥 여백, 안 여백</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus perferendis esse ab culpa, odio laborum est doloremque sint numquam commodi labore repellendus, sunt dignissimos soluta rerum molestias magnam mollitia consectetur.</p>
+        <p class="snd">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, tenetur quaerat! Nisi, nam recusandae delectus ab iusto quod vel enim velit pariatur voluptate, repellat, quasi libero blanditiis animi nemo omnis.</p>
+        <div class="snd">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit architecto eum laboriosam eaque, esse facilis, ad vero ea sapiente doloribus sequi, eos ratione delectus cum porro numquam explicabo modi beatae?</p>
+        </div>
+
+        <h2>테두리 스타일 종류</h2>
+        <p class="p1">solid(실선)</p>
+        <p class="p2">dashed(대시선)</p>
+        <p class="p3">dotted(점선)</p>
+        <p class="p4">double(이중 실선)</p>
+        <p class="p5">none(없음)</p>
+        <p class="p6">groove(홈)</p>
+        <p class="p7">ridge(산등성이)</p>
+        <p class="p8">inset</p>
+        <p class="p9">outset</p>
+
+        <h1>레이아웃(layout, 나열한 것)</h1>
+        <h2>float, clear</h2>
+
+        <div class="box">
+            <h1>금연일지</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, pariatur aliquid excepturi repudiandae voluptatum minus, deserunt provident labore debitis omnis recusandae corporis quaerat quibusdam veniam cupiditate! Repellat ex itaque aliquid ipsum dolore excepturi blanditiis provident nisi eveniet, molestias nesciunt aliquam vel veritatis, quidem modi quas?<span><img src="images/tabacco.jpg" alt="담배"></span> Laudantium inventore debitis blanditiis non vero fuga obcaecati explicabo. Aut assumenda quam quae perspiciatis totam inventore at enim dolores laboriosam autem harum cum, laborum illum magni quaerat ducimus expedita odio, error deleniti minima iure rerum quia id? Iste, cupiditate iure. Amet tempora, neque quidem corrupti deleniti recusandae minus enim similique atque reiciendis? Molestias, natus velit!</p>
+        </div>
+    </body>
+</html>

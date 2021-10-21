@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호버 효과</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <style>
+        div {margin:20px;}
+        .triple1 {
+            width:50px; height:50px;
+            border-top:50px solid red;
+            border-bottom:50px solid red;
+            border-left:50px solid blue;
+            border-right:50px solid blue;
+        }
+        .triple2 {
+            width:0px; height:0px;
+            border-top:50px solid red;
+            border-bottom:50px solid red;
+            border-left:50px solid blue;
+            border-right:50px solid blue;
+        }
+        .triple3 {
+            width:0px; height:0px;
+            border-top:50px solid red;
+            border-bottom:50px solid transparent;
+            border-left:80px solid transparent;
+            border-right:80px solid transparent;
+        }
+        .hover {
+            width:200px; height:30px; border-bottom:5px solid lightblue;
+            text-align:center; position:relative;
+            /* background:yellow; */
+        }
+        .hover:after {
+            content:'';
+            position:absolute; left:50%; top:100%;
+            transform:translateX(-50%);
+            width:0px; height:0px;
+            border-top:12px solid lightblue;
+            border-bottom:12px solid transparent;
+            border-left:12px solid transparent;
+            border-right:12px solid transparent;
+        }
+
+        button {border:none; width:200px; height:50px; background:red;}
+        .hvr-bubble-float-bottom:before {border-top-color:red;}
+    </style>
+</head>
+<body>
+    <h1>삼각형</h1>
+    <div class="triple1"></div>
+    <div class="triple2"></div>
+    <div class="triple3"></div>
+    <div class="hover">호버</div>
+    <button class="hvr-bubble-float-bottom">hvr-bubble-float-bottom</button>
+</body>
+</html>

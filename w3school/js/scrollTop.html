@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤</title>
+    <style>
+        div {position:relative; top:1000px; background:lightblue;}
+        .btn2 {position:relative; top:1500px; width:50px; height:50px; background:lightcoral; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $('.btn1').click(function(){
+                $('html,body').animate({scrollTop:1000});
+            });
+            $('.btn2').click(function(){
+                $('html,body').animate({scrollTop:0});
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>scrollTop</h1>
+    <button class="btn1">버튼1</button>
+    <div>섹션1</div>
+    <button class="btn2">Top</button>
+</body>
+</html>

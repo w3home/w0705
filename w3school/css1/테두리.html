@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테두리</title>
+    <style>
+        /* 
+            테두리
+            border: width style color;
+
+            border-width        테두리 두께
+            값: thin, medium, or thick, 수치(px, em)
+            border-style        테두리 종류
+            값: solid, dashed, dotted, double, none
+                groove, ridge, inset, outset
+
+            border-color        테두리 색
+
+            border-top: width style color;
+            border-right: width style color;
+            border-bottom: width style color;
+            border-left: width style color;
+
+            border-top-width
+
+            border-top-style
+            border-right-style
+            border-bottom-style
+            border-left-style
+
+            border-top-color
+
+            ----------- 테두리 반경 속성 -----------------
+
+            border-radius                       테두리 둥글게
+            //상하좌우 모서리 모두 10px
+            border-radius: 10px;
+            //좌상과 우하 10px, 우상과 좌하 20px
+            border-radius: 10px 20px;
+            //좌상 10px, 우상과 좌하 20px, 우하 30px
+            border-radius: 10px 20px 30px;
+
+            //좌상 10px, 우상 20px, 우하 30px, 좌하 40px
+            border-radius: 10px 20px 30px 40px;
+
+            border-top-left-radius: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 40px;
+
+            ---------------- 테두리 이미지 ---------------------
+
+            border-image: source slice width outset repeat
+            예) border-image:url('images/border.png') 27 round;
+
+            border-image-source
+            border-image-slice
+            값: 숫자(%), fill
+            border-image-width
+            border-image-outest
+            border-image-repeat
+            값: stretch, round, repeat
+            
+        */
+
+        p {
+            background:red; width:200px; 
+            /* height:50px; line-height:50px; */
+            padding:20px 0;
+        }
+        /* 상하좌우 모서리 모두 10px */
+        .br1 {border-radius:10px;}
+        /* 왼쪽상단과 오른쪽하단은 10px, 오른쪽상단과 왼쪽하단은 20px */
+        .br2 {border-radius:10px 20px;}
+        /* 왼쪽상단 10px, 오른쪽상단과 왼쪽하단은 20px, 오른쪽하단은 30px  */ 
+        .br3 {border-radius:10px 20px 30px;}
+        /* 왼쪽상단 10px, 오른쪽상단 20px, 오른쪽하단 30px, 왼쪽하단 40px */
+        .br4 {border-radius:10px 20px 30px 40px;}
+
+        /* width,height 크기의 1/2 이상 */
+        p {text-align:center;}
+        /* 원 */
+        .br5 {width:200px; height:200px; line-height:200px; border-radius:50%;}
+
+        /* 반원 */
+        .br6 {width:100px; height:200px; border-radius:100px 0 0 100px;}
+        .br7 {width:200px; height:100px; border-radius:100px 100px 0 0;}
+        .br8 {width:100px; height:200px; border-radius:0 100px 100px 0;}
+        .br9 {width:200px; height:100px; border-radius:0 0 100px 100px;}
+        
+        /* 1/4 원 */
+        .br10 {width:200px; height:200px; border-radius:100% 0 0 0;}
+        .br11 {width:200px; height:200px; border-radius:0 100% 0 0;}
+        .br12 {width:200px; height:200px; border-radius:0 0 100% 0;}
+        .br13 {width:200px; height:200px; border-radius:0 0 0 100%;}
+
+        /* 테두리 이미지 */
+        .bi {
+            width:436px; height:68px; 
+            border:20px solid black;
+            background:transparent;
+        }
+        .bi1 {
+            -webkit-border-image:url('images/border.png') 27 27 round;
+            border-image:url('images/border.png') 27 27 round;
+        }
+        .bi2 {border-image:url('images/border.png') 27 repeat stretch;}
+        .bi3 {border-image:url('images/border.png') 27 27 stretch;}
+
+        .border {width:400px; background:transparent;}
+        .border1 {
+            border-style:solid;
+            border-width:1px;
+        }
+        .border2 {border-bottom:1px solid red;}
+        .border3 {
+            border:1px solid #ccc;
+            border-radius:10px;
+        }
+        .border4 {
+            border-left:5px solid #6266fc;
+            background:#abadfe;
+        }
+        .border5 {
+            /* 상하 solid, 좌우 dotted */
+            border-style:solid dotted;  
+            /* 상solid 우dotted 하solid 좌dotted */
+            /* border-style:solid dotted solid dotted;  */
+
+            /* border-top-style:solid;
+            border-right-style:dotted;
+            border-bottom-style:solid;
+            border-left-style:dotted; */
+        }
+        .border6 {
+            /* 상 solid, 좌우 dashed, 하 dotted */
+            border-style: solid dashed dotted;
+            /* 상단좌측 10px, 상단우측 20px, 하단우측 30px, 하단좌측 40px */
+            /* border-radius: 10px 20px 30px 40px; */
+            border-top-left-radius: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 40px;
+        }
+        
+        .border7 {
+            border:10px solid red;
+            border-image:url('images/border.svg') 27 round;
+        }
+        .border8 {
+            border:10px solid red;
+            border-image:url('images/border.svg') 27 stretch;
+        }
+
+        .border9 {
+            border:10px solid red;
+            border-image:url('images/border.svg') 50 round;
+        }
+        .border10 {
+            border:10px solid red;
+            border-image:url('images/border.svg') 20% round;
+        }
+        .border11 {
+            border:20px solid red;
+            border-image:url('images/border.svg') 30% fill round;
+        }
+        .border12 {
+            border:10px solid transparent;
+            border-image-source:url('images/border.svg');
+            border-image-slice: 27;
+            border-image-width: 5px 10px 15px 20px;
+            border-image-repeat:round;
+        }
+        .border13 {
+            border:10px solid transparent;
+            border-image:url('images/border.svg') 27 round;
+        }
+        .border14 {
+            border:10px solid transparent;
+            border-image:url('images/border.svg') 27 repeat;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+<body>
+    <h1>테두리</h1>
+    <h2>테두리</h2>
+    <p class="border1 border">border-style:solid</p>
+    <p class="border2 border">border-bottom:1px solid red;</p>
+    <p class="border3 border">border:1px solid #ccc; border-radius:10px;</p>
+    <p class="border4 border">border-left:5px solid #6266fd;</p>
+    <p class="border5 border">border-top-style:solid;</p>
+    <p class="border6 border">border-radius:10px 20px 30px 40px;</p>
+    <p class="border7 border">border-image:url('images/border.png') 27 round;</p>
+    <p class="border8 border">border-image:url('images/border.png') 27 stretch;</p>
+
+    <p class="border9 border">border-image:url('images/border.png') 50 round;</p>
+    <p class="border10 border">border-image:url('images/border.png') 20% round;</p>
+    <p class="border11 border">border-image:url('images/border.png') 30% round;</p>
+    <p class="border12 border">border-image:url('images/border.png') 30% 20px round;</p>
+    <p class="border13 border">border-image:url('images/border.png') 27 round;</p>
+    <p class="border14 border">border-image:url('images/border.png') 27 repeat;</p>
+
+    <h2>모서리 둥글게(border-radius)</h2>
+    <p class="br1">border-radius:10px;</p>
+    <p class="br2">border-radius:10px 20px;</p>
+    <p class="br3">border-radius:10px 20px 30px;</p>
+    <p class="br4">border-radius:10px 20px 30px 40px;</p>
+
+    <p class="br5">border-radius:50px;</p>
+
+    <p class="br6">border-radius:100px 0 0 100px;</p>
+    <p class="br7">border-radius:100px 100px 0 0;</p>
+    <p class="br8">border-radius:0 100px 100px 0;</p>
+    <p class="br9">border-radius:0 0 100px 100px;</p>
+
+    <p class="br10">border-radius:200px 0 0 0;</p>
+    <p class="br11">border-radius:200px 0 0 0;</p>
+    <p class="br12">border-radius:200px 0 0 0;</p>
+    <p class="br13">border-radius:200px 0 0 0;</p>
+
+    <p class="bi1 bi">border-image:url(images/border.png) 27 27 round;</p>
+    <p class="bi2 bi">border-image:url(images/border.png) 27 repeat stretch;</p>
+    <p class="bi3 bi">border-image:url(images/border.png) 27 27 stretch;</p>
+</body>
+</html>

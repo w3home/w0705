@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뷰포트 단위</title>
+    <style>
+        /* 
+            vw를 px로 환산?
+            1vw = 1%
+            100vw = 뷰포트 크기의 100% = 1920px
+            5vw = 5% -> 1920 * 5 / 100 = 96px
+            100vw = 뷰포트 크기의 100% = 600px
+            5vw = 5% -> 600 * 5 / 100 = 30px
+
+            px를 vw로 환산?
+            px / 100%의 크기의 px * 100 = vw
+            96px / 1920px * 100 = 5vw
+        */
+        .p1 {font-size:5vw;}
+        .p2 {font-size:5vh;}
+        .p3 {font-size:5vmin;}
+        .p4 {font-size:5vmax;}
+    </style>
+</head>
+<body>
+    <h1>vw</h1>
+    <p class="p1">Hello.</p>
+    <h1>vh</h1>
+    <p class="p2">Hello.</p>
+    <h1>vmin</h1>
+    <p class="p3">Hello.</p>
+    <h1>vmax</h1>
+    <p class="p4">Hello.</p>
+</body>
+</html>

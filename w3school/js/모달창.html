@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>모달창</title>
+    <style>
+        div {
+            /* position:relative;
+            top:-400px; */
+            display: none;
+            width: 400px;
+            margin: 0 auto;
+            height: 300px;
+            padding: 20px;
+            background: yellow;
+        }
+
+        .closeBtn {
+            margin-top: 70px;
+            float: right;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $('.openBtn').click(function () {
+                // $('div').fadeIn();
+                $('div').show();
+                // $('div').css({display:'block'});
+                // $('div').animate({top:0});
+            });
+            $('.closeBtn').click(function () {
+                // $('div').fadeOut();
+                $('div').hide();
+                // $('div').css({display:'none'});
+                // $('div').animate({top:-400});
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button class="openBtn">열기</button>
+    <div>
+        <h1>모달창</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit delectus illo necessitatibus eligendi quis error temporibus nulla illum sed. Similique eligendi quod possimus tempora. Necessitatibus deserunt omnis tempora vel inventore!</p>
+        <button class="closeBtn">닫기</button>
+    </div>
+</body>
+
+</html>

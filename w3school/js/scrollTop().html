@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤</title>
+    <style>
+        h1 {position:fixed;}
+        div {height:2000px;}
+        p {position:absolute; left:0; top:100px;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //윈도우의 스크롤 값을 500으로 지정한다.
+            $(window).scrollTop(500);
+
+            //스크롤을 하면
+            $(window).scroll(function(){
+                //윈도우의 스크롤 값을 가져와서 st에 할당
+                var st = $(window).scrollTop();
+                $('h1').text(st);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>제목</h1>
+    <div></div>
+</body>
+</html>

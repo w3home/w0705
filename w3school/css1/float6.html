@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃</title>
+    <style>
+        body {margin:10px; font:12px/1.5 "굴림",Gulim;}
+        ul {
+            margin:0; padding:0; list-style-type:none;
+            background:#ddf;
+            width:525px; height:50px;
+            padding-left:5px;
+        }
+        li {display:inline;}
+        a {
+            float:left; width:100px; height:40px;
+            text-align:center; border-top:7px solid #77f;
+            color:#666; background:#ccf;
+            text-decoration:none;  /* 텍스트 꾸밈 없음 */
+            margin-right:5px;
+        }
+        a:hover {background:#eef; color:#000;}
+        span {display:block;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">회사소개<span>COMPANY</span></a></li>
+        <li><a href="#">제품안내<span>PRODUCT</span></a></li>
+        <li><a href="#">고객지원<span>CUSTOMER</span></a></li>
+        <li><a href="#">채용정보<span>RECRUIT</span></a></li>
+        <li><a href="#">커뮤니티<span>COMMUNITY</span></a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델</title>
+    <style>
+        /* 
+            ---------------- box model ----------------
+            width       가로 크기(너비, 폭)
+            height      세로 크기(높이)
+            padding     안쪽 여백
+            border      테두리
+            outline     외곽선
+            box-sizing  박스 크기
+            값: content-box: border와 padding이 width/height 포함X
+                border-box: border와 padding이 width/height 포함
+
+            margin      바깥 여백
+        */
+
+        div {
+            width:500px; height:200px; margin:40px;
+            background:yellow;
+
+        }
+        .box1, .box2 {
+            padding:20px;
+            border:10px solid yellow;
+            outline:10px solid yellow;
+        }
+        .box1 {box-sizing:content-box;}
+        .box2 {
+            box-sizing:border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>박스 모델</h1>
+    <div class="box1">
+        노란색 박스 크기:<br> 
+        width + padding * 2 + border * 2 + outline * 2 = 580<br>
+        height + padding * 2 + border * 2 + outline * 2 = 280
+    </div>
+    <div class="box2">
+        노란색 박스 크기:<br>
+        width + outline * 2 = 520<br>
+        height + outline * 2 = 220
+    </div>
+    <div class="box3">
+        노란색 박스 크기:<br>
+        width = 500<br>
+        height = 200
+    </div>
+</body>
+</html>

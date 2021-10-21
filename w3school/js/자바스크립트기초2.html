@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트(제이쿼리)</title>
+    <script>
+        /*  
+                단항 연산자: 증감
+                이항 연산자: 산술, 비교, 대입
+                삼항 연산자: 조건
+
+                괄호연산자: ( )
+                증감연산자: ++   --
+                논리연산자: !
+                산술연산자: +  -   *   /   %(나머지)
+                비교연산자: >  <   >=   <=   ==   !=
+                논리연산자: &&    ||
+                대입(할당) 연산자:  =    +=   -=    *=   /=    %=
+        */
+
+        /* 산술 연산 */
+        var A=10;
+        var B=3;
+        var result;
+
+        result = A + B;
+        document.write(result + "<br>");
+        result = A - B;
+        document.write(result + "<br>");
+        result = A * B;
+        document.write(result + "<br>");
+        result = A / B;
+        document.write(result + "<br>");
+        result = A % B;
+        document.write(result + "<br>");
+
+        /* 비교 연산 */
+        /* 비교 연산의 결과는 true 또는 false */
+
+        result = A > B;
+        document.write(result + "<br>");
+        result = A < B;
+        document.write(result + "<br>");
+        result = A >= B;    //크거나 또는 같다.
+        document.write(result + "<br>");
+        result = A <= B;    //작거나 또는 같다.
+        document.write(result + "<br>");
+        result = A == B;
+        document.write(result + "<br>");
+        result = A != B;
+        document.write(result + "<br>");
+
+        /* 대입 연산자 */
+        var num1 = 10;
+        var num2 = 20;
+
+        num1 += 5;      // num1 = num1 + 5 와 같은 문장이다.
+                        // num1 변수에 5를 더하여 num1 변수에 대입한다.
+        document.write(num1 + "<br>");
+
+        num1 -= 5;
+        document.write(num1 + "<br>");
+        num1 *= 5;
+        document.write(num1 + "<br>");
+        num1 /= 5;
+        document.write(num1 + "<br>");
+
+        num2 %= 3;
+        document.write(num2 + "<br>");
+
+        /* 증감 연산자 */
+        num1 ++;    // num1 = num1 + 1;
+                    // num1 += 1;
+        document.write(num1 + "<br>");
+        num2 --;    // num2 = num2 - 1;
+                    // num2 -= 1;
+        document.write(num2 + "<br>");
+
+        /* 논리 연산자 */
+        /* 
+            조건1 && 조건2 && 조건3     // 그리고
+              T        T        T            T
+              T        F        F            F
+              F        T        F            F
+              F        F        F            F
+              F        T        T            F
+
+            조건1 || 조건2 || 조건3     // 또는
+              T        T        T            T
+              T        F        T            T
+              F        T        T            T
+              F        F        T            T
+              F        F        F            F
+
+            age >= 20 && age < 30       //age가 20보다 크거나 같고
+                                          그리고, 30보다 작은
+        */
+
+        /* 
+            실행문;
+            객체.메서드(매개변수1, 매개변수2, ...);
+            형식:
+            window.prompt("텍스트"[, 기본값]);
+            prompt("텍스트"[, 기본값]);
+        */
+        // var gender = prompt("당신의 성별은?", "여성");
+        // var age = prompt("당신의 나이는?", 20);
+        // result = age >= 20 && age < 30 && gender == "여성";
+        // document.write(result);
+
+        // 사용자로 부터 국어, 영어, 수학 점수를 입력 받아
+        // var korNum = prompt("국어 점수는?", 0);
+        // var engNum = prompt("영어 점수는?", 0);
+        // var mathNum = prompt("수학 점수는?", 0);
+
+        /* var sum = korNum + engNum + mathNum;
+        var average = sum / 3; */
+        // var avg = (korNum + engNum + mathNum) / 3
+
+        // 평균이 70이상이고, 각 과목별 점수가 60점 이상
+        // result = avg >= 70 && korNum >= 60 && engNum >= 60 && mathNum >=60;
+        // document.write(result);
+
+        /* 문자 결합 연산자 */
+        var txt1 = "아름다운";
+        var txt2 = "우리강산";
+        document.write(txt1 + txt2 + "<br>");
+
+        var txt3 = "은하철도";
+        var txt4 = 999;
+        document.write(txt3 + txt4 + "<br>");
+
+        num1 = 200;
+        num2 = 300;
+        var txt5 = "1000";    // 문자열 1000
+        document.write(num1 + num2 + txt5 + "<br>");
+
+        var addText = "2002월드컵";
+        addText += " 대한민국";
+        addText += " 짝짝~짝짝짝~!!";
+        document.write(addText + "<br>");
+
+        /* 조건 연산자 */
+        /* 
+            형식:
+            조건식 ? 실행문1 : 실문행2
+
+            조건식의 결과가 true이면 실행문1을 실행
+            조건식의 결과가 false이면 실행문2를 실행
+        */
+
+        // num1 = 30;
+        // num2 = 20;
+        // num1 <= num2 ? alert("참이다") : alert("거짓이다.");
+
+        /* 
+            document.write(매개변수)        문서에 쓴다.
+            prompt(텍스트[, 기본값])        입력창
+            alert(매개변수)                 경고창(버튼X)
+            confirm(매개변수)               확인창(버튼o)
+        */
+
+        result = confirm("Do you like javascript");
+        var theText = result ? "good" : "no-good";
+        document.write(theText);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

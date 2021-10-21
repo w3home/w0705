@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>레이아웃</title>
+        <style>
+            body {margin:20px; font:12px "굴림",Gulim;}
+            #wrapper {width:550px;}
+            .skate {float:left; width:250px; padding:15px; background:#ccc;}
+            .football {float:left; width:210px; padding:15px; background:#eee;}
+            .olympic {
+                clear:both;
+                padding:10px; 
+                background:#8cc;
+            }
+            /* justify: 양쪽 맞춤 */
+            p {margin:0; text-align:justify; word-break: break-all;}
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <!-- 
+                1. 영문자와 숫자의 조합
+                2. 첫 글자는 영문자로
+                3. 영문의 대소를 구별
+             -->
+            <div class="skate">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo facere vero perspiciatis ratione ea voluptatem! Rerum, necessitatibus quisquam mollitia reprehenderit, accusamus perspiciatis animi omnis consectetur velit molestias aliquam voluptatem, non beatae porro doloribus quidem. Veniam corrupti vero praesentium soluta, provident nemo facere eos non! Vel expedita fugiat corporis soluta recusandae.</p>
+            </div>
+            <div class="football">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo facere vero perspiciatis ratione ea voluptatem! Rerum, necessitatibus quisquam mollitia reprehenderit, accusamus perspiciatis animi omnis consectetur velit molestias aliquam voluptatem, non beatae porro doloribus quidem. Veniam corrupti vero praesentium soluta, provident nemo facere eos non! Vel expedita fugiat corporis soluta recusandae.</p>
+            </div>
+            <div class="olympic">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo facere vero perspiciatis ratione ea voluptatem! Rerum, necessitatibus quisquam mollitia reprehenderit, accusamus perspiciatis animi omnis consectetur velit molestias aliquam voluptatem, non beatae porro doloribus quidem. Veniam corrupti vero praesentium soluta, provident nemo facere eos non! Vel expedita fugiat corporis soluta recusandae.</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤</title>
+    <style>
+        body {margin:0;}
+        h1 {position:fixed; top:0;}
+        div {position:absolute; left:100px; top:100px; width:100px; height:100px; background:yellow;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //div가 창의 위에서 부터 떨어진 위치 값을 가져와서 y에 저장
+            var y = $('div').offset().top;
+            //div의 창의 왼쪽에서 부터 떨어진 위치 값을 가져와서 x에 저장
+            var x = $('div').offset().left;
+            $('h1').text('x=' + x + ', y=' + y);
+
+            $('button').mouseenter(function(){
+                //div를 창으로 부터 위에서 200, 왼쪽에서 200 값으로 지정
+                $('div').offset({top:200, left:200});
+            });
+            $('button').mouseleave(function(){
+                $('div').offset({top:y, left:x});
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>박스의 위치</h1>
+    <button>버튼</button>
+    <div>박스</div>
+</body>
+</html>

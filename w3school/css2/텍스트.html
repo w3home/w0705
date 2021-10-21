@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서체</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+        /* 
+            < 텍스트 >
+            font: [weight] [style] [variant] size[/line-height] family;
+
+            font-weight     글자 굵기, bold, bolder, lighter, 100~900
+            font-style      기울임 여부, italic
+            font-variant    작은 대문자, small-caps
+            font-size       글자 크기, 숫자(px, %, em)
+            line-height     줄간격, 숫자(px, %, em)
+            font-family     글꼴
+
+            color           글자 색
+            text-align      인라인 요소의 가로 정렬, left, right, center, justify
+            text-indent     블록 레벨 요소의 문단의 첫 줄 들여쓰기
+            text-transform  영문의 대소문자, uppercase, lowercase, capitalize
+            text-decoration 텍스트 꾸밈, underline, overline, line-through, none
+            letter-spacing  글자간
+            word-spacing    단어간
+            white-spacing   공백
+
+            text-shadow     텍스트 그림자
+            box-shadow      박스 그림자
+            word-wrap       
+            text-overflow   
+            overflow
+            @font-face       웹폰트
+
+            red                 고유명사
+            #ff0000             16진수 6자(#000000 ~ #ffffff)
+            #f00                16진수 3자(#000 ~ #fff)
+            rgb(255, 0, 0)      rgb(0, 0, 0) ~ rgb(255, 255, 255)
+            rgba(255, 0, 0, 1)  rgba(0, 0, 0, 0) ~ rgba(255, 255, 255, 1)
+                                alpha(투명도): 0 ~ 1
+            hsl(0, 100%, 50%)   hsl(0, 0%, 0%) ~ hsl(360, 100%, 100%)
+            hsla(0, 100%, 50%)  hsla(0, 0%, 0%, 0) ~ hsla(360, 100%, 100%, 1)
+
+        */
+
+        body {
+            font: 12px 'Noto Sans KR', snas-serif;
+            /* font-size: 12px;
+            font-family: 'Noto Sans KR', sans-serif; */
+        }
+
+        h1 {
+            font: bold italic small-caps 25px/120% '굴림',Gulim;
+            font: bold italic small-caps 25px/1.2 '굴림',Gulim;
+
+            /* font-family: '굴림', Gulim;
+            font-size: 25px;
+            font-weight: bold;
+            font-style: italic;
+            font-variant: small-caps;
+            line-height: 120%; */
+            color: #808;
+        }
+
+        .fontWeight li:nth-of-type(1) {font-weight:100;}
+        .fontWeight li:nth-of-type(2) {font-weight:200;}
+        .fontWeight li:nth-of-type(3) {font-weight:300;}
+        .fontWeight li:nth-of-type(4) {font-weight:400;}
+        .fontWeight li:nth-of-type(5) {font-weight:500;}
+        .fontWeight li:nth-of-type(6) {font-weight:600;}
+        .fontWeight li:nth-of-type(7) {font-weight:700;}
+        .fontWeight li:nth-of-type(8) {font-weight:800;}
+        .fontWeight li:nth-of-type(9) {font-weight:900;}
+        .fontWeight li:nth-of-type(10) {font-weight:bold;}
+        .fontWeight li:nth-of-type(11) {font-weight:bolder;}
+        .fontWeight li:nth-of-type(12) {font-weight:lighter;}
+
+        .txtColor li:nth-of-type(1) {color:red;}
+        .txtColor li:nth-of-type(2) {color:#ff0000;}
+        .txtColor li:nth-of-type(3) {color:#f00;}
+        .txtColor li:nth-of-type(4) {color:rgb(255, 0, 0);}
+        .txtColor li:nth-of-type(5) {color:rgba(255, 0, 0, 1);}
+        .txtColor li:nth-of-type(6) {color:hsl(0, 100%, 50%);}
+        .txtColor li:nth-of-type(7) {color:hsla(0, 100%, 50%, 1);}
+
+        .left {text-align:left;}
+        .right {text-align:right;}
+        .center {text-align:center;}
+        .justify {text-align:justify;}
+
+        .verticalAlign img {vertical-align: middle;}
+        /* 텍스트를 숨기고 배경이미지를 삽입할 수 있다. */
+        .txtIndent {text-indent:-9999em;}
+        .txtIndent2 {text-indent:30px;}
+
+        .txtTransform li:nth-of-type(1) {text-transform: uppercase;}
+        .txtTransform li:nth-of-type(2) {text-transform: lowercase;}
+        .txtTransform li:nth-of-type(3) {text-transform: capitalize;}
+
+        a {text-decoration:none;}
+        .txtDecoration li {height:30px;}
+        li:nth-of-type(1) a:hover {text-decoration:underline;}
+        li:nth-of-type(2) a:hover {text-decoration:overline;}
+        li:nth-of-type(3) a:hover {text-decoration:line-through;}
+
+        .letterSpacing li:nth-of-type(1) {letter-spacing: 0;}
+        .letterSpacing li:nth-of-type(2) {letter-spacing: 10px;}
+        .letterSpacing li:nth-of-type(3) {letter-spacing: -1px;}
+
+        .wordSpacing li:nth-of-type(1) {word-spacing:0;}
+        .wordSpacing li:nth-of-type(2) {word-spacing:30px;}
+        .wordSpacing li:nth-of-type(3) {word-spacing:-3px;}
+
+        /* 말줄임(...) */
+        .nowrap {
+            white-space:nowrap;     /* 줄바꿈하지 않음 */
+            text-overflow:ellipsis; /* 말줄임(생략) */
+            overflow:hidden;        /* 박스의 영역을 벗어나면 숨김 */
+
+            background:yellow;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>서체(font)</h1>
+    <p>글자에 관련된 속성은 글꼴, 글자 크기, 글자 굵기, 기울임 여부, 줄 간격, 대소문자 여부, 글자 색상 등 일곱 가지가 있다. 그것들을 CSS로 따로 표현하는 법을 알아보고, 특히 그 중 색상을 제외한 여섯 가지 속성은 한꺼번에 표현하는 경우가 더 많으므로 그 방법도 알아보자.</p>
+
+    <h2>글자 굵기(font-weight)</h2>
+    <ul class="fontWeight">
+        <li>100</li>
+        <li>200</li>
+        <li>300</li>
+        <li>400</li>
+        <li>500</li>
+        <li>600</li>
+        <li>700</li>
+        <li>800</li>
+        <li>900</li>
+        <li>bold</li>
+        <li>bolder</li>
+        <li>lighter</li>
+    </ul>
+
+    <h2>색상</h2>
+    <ul class="txtColor">
+        <li>고유명사: black ~ white</li>
+        <li>#RRGGBB: #000000 ~ #ffffff</li>
+        <li>#RGB: #000 ~ #fff</li>
+        <li>rgb(Red, Green, Blue): 0~255</li>
+        <li>rgba(R, G, B, alpha): R,G,B는 0~255, alpha는 0~1</li>
+        <li>hsl(hue, saturation, lightness): h는 0~360도, s와 l은 0~100%</li>
+        <li>hsla(H, S, L, alpha): h는 0~360도, s와 l은 0~100%, alpha는 0~1</li>
+    </ul>
+
+    <h2>문단의 맞춤</h2>
+    <p>문단 관련 속성은 주로 글자나 단어보다는 문장들에 적용하면 좋은 속성들로 분류했다. 대표적으로 가로 정렬(text-align), 들여쓰기(text-indent), 변환(text-transform), 꾸밈(text-decoration), 자간(letter-spacing) 등이 있다.</p>
+    <p class="left">text-align 속성은 문단을 블록의 왼쪽(left), 가운데(center), 오른쪽(right), 양쪽(justify)으로 정렬시켜 준다. 블록 레벨 요소에만 사용할 수 있다.</p>
+    <p class="right">text-align 속성은 문단을 블록의 왼쪽(left), 가운데(center), 오른쪽(right), 양쪽(justify)으로 정렬시켜 준다. 블록 레벨 요소에만 사용할 수 있다.</p>
+    <p class="center">text-align 속성은 문단을 블록의 왼쪽(left), 가운데(center), 오른쪽(right), 양쪽(justify)으로 정렬시켜 준다. 블록 레벨 요소에만 사용할 수 있다.</p>
+    <p class="justify">text-align 속성은 문단을 블록의 왼쪽(left), 가운데(center), 오른쪽(right), 양쪽(justify)으로 정렬시켜 준다. 블록 레벨 요소에만 사용할 수 있다.</p>
+
+    <h2>수직 정렬(vertical-align)</h2>
+    <p class="verticalAlign">나는 자유다<img src="images/imfree.jpg" alt="나는 자유다"></p>
+
+    <h2>들여쓰기(text-indent)</h2>
+    <p class="txtIndent">text-indent 속성은 문단의 첫 줄을 들여쓰기한다. 값은 px, % 단위로 수치를 적용시킨다. 블록 레벨 요소에만 사용할 수 있다.</p>
+    <p class="txtIndent2">text-indent 속성은 문단의 첫 줄을 들여쓰기한다. 값은 px, % 단위로 수치를 적용시킨다. 블록 레벨 요소에만 사용할 수 있다.</p>
+
+    <h2>텍스트 변환(text-transform)</h2>
+    <p>text-transform 속성은 영문의 대소문자 변환한다. 속성 값은 다음과 같다.</p>
+    <ul class="txtTransform">
+        <li>소문자를 모두 대문자로: UPPERcase</li>
+        <li>대문자를 모두 소문자로: LOWERcase</li>
+        <li>첫 글자만 대문자로: capitaLIZE</li>
+    </ul>
+
+    <h2>텍스트 꾸밈(text-decoration)</h2>
+    <p>text-decoration 속성은 텍스트에 밑줄(underline), 윗줄(overline), 취소선(line-through)을 표시하거나, 없애는(none) 속성이다.</p>
+    <ul class="txtDecoration">
+        <li><a href="#">밑줄</a></li>
+        <li><a href="#">윗줄</a></li>
+        <li><a href="#">취소선</a></li>
+    </ul>
+
+    <h2>자간(letter-spacing)</h2>
+    <p>letter-spacing 속성은 글자와 글자 사이의 간격을 지정한다. 속성 값은 px, % 단위의 수치로 지정한다.</p>
+    <ul class="letterSpacing">
+        <li>letter spacing</li>
+        <li>letter spacing</li>
+        <li>letter spacing</li>
+    </ul>
+
+    <h2>단어 간격(word-spacing)</h2>
+    <p>word-spacing 속성은 단어와 단어 사이의 간격을 지정한다. 속성 값은 px, % 단위의 수치로 지정한다.</p>
+    <ul class="wordSpacing">
+        <li>word spacing</li>
+        <li>word spacing</li>
+        <li>word spacing</li>
+    </ul>
+
+    <h2>공백 처리(white-spacing)</h2>
+    <p class="nowrap">white-spacing 속성은 요소 내부의 공백을 처리하는 방법을 지정한다. 속성 값은 nowrap(줄을 바꾸지 않는다.), normal(줄을 바꾼다.)으로 지정한다.</p>
+    <p>white-spacing 속성은 요소 내부의 공백을 처리하는 방법을 지정한다. 속성 값은 nowrap(줄을 바꾸지 않는다.), normal(줄을 바꾼다.)으로 지정한다.</p>
+
+</body>
+
+</html>

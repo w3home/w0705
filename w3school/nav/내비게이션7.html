@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션</title>
+    <style>
+        /* reset */
+        * {margin:0; padding:0; box-sizing:border-box;}
+        ul {list-style:none;}
+        a {text-decoration:none; color:#333;}
+        body {font-size:14px;}
+
+        /* nav */
+        #nav {
+            width:1200px; height:30px; background:lightblue;
+            text-align:center;
+        }
+        /* 1depth: main menu */
+        .main {height:30px; font-size:16px; background: #008b8b;}
+        .main > li {float:left; width:160px;}
+        .main > li > a {
+            display:block; width:100%; 
+            padding:5px 0; color:#fff;
+        }
+        .main > li > a:hover {
+            background:#ccc; color:#333;
+        }
+        /* 2depth: sub menu */
+        .sub {display:none; padding-top:15px;}
+        .sub a {display:block; width:100%; padding:3px 0; color:#fff;}
+        .sub a:hover {background: #145973; color:#fff;}
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.main > li > a').mouseenter(function(){
+                $('.sub').stop().slideDown();
+                $('#nav').stop().animate({height:150});
+            });
+            $('#nav').mouseleave(function(){
+                $('.sub').stop().slideUp();
+                $('#nav').stop().animate({height:30});
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="nav">
+        <ul class="main">
+            <li><a href="#">mainmenu1</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">mainmenu2</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">mainmenu3</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">mainmenu4</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

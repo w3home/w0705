@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로/세로 크기</title>
+    <style>
+        div {width:100px; height:100px; background:yellow;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //div의 가로 크기를 가져와서 w에 저장
+            var w = $('div').width();
+            //div의 세로 크기를 가져와서 h에 저장
+            var h = $('div').height();
+            $('h1').text('width=' + w + ', height=' + h);
+
+            $('button').mouseenter(function(){
+                //div의 가로 크기를 200px으로 지정
+                $('div').width(200);
+                //div의 세로 크기를 200px으로 지정
+                $('div').height(200);
+            });
+            $('button').mouseleave(function(){
+                $('div').width(w);
+                $('div').height(h);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>가로/세로 크기</h1>
+    <button>버튼</button>
+    <div>박스</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>제이쿼리</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            /* 
+                A.append(B)
+                B.appendTo(A)
+            */
+            // $('<li>목록2</li>').appendTo('#list3');
+            $('.obj1').clone().appendTo('#list3');
+
+            $('#list3 li').eq(0).remove();
+            // $('#list3 li').eq(0).empty();
+
+            /* 
+                css({속성: 값, 속성: 값, ...})      CSS 속성 지정
+                attr({속성: 값, 속성: 값, ...})     HTML 속성 지정
+            */
+
+            $('#list3 li').eq(0).attr({class:'obj2'});
+            $('.obj2').css({backgroundColor:'yellow'});
+
+            /* 
+                addClass('클래스명')        클래스 추가
+                removeClass('클래스명')     클래스 제거
+                toggleClass('클래스명')     클래스 추가/제거
+            */
+
+            $('#list3 li').eq(0).addClass('obj3');
+            $('#list3 li').eq(0).removeClass('obj3');
+            $('#list3 li').eq(0).toggleClass('obj3');
+            $('.obj3').css({color:'red'});
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>탐색 선택자 및 HTML 조작</h1>
+        <h2>HTML 조작</h2>
+        <ul id="list3">
+            <li class="obj1">목록2</li>
+            <li>목록3</li>
+            <li>목록4</li>
+            <li>목록5</li>
+        </ul>
+    </div>
+</body>
+
+</html>

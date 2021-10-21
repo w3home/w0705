@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변형</title>
+    <style>
+
+        /* 
+            transfrom:translate(x축, y축);          이동
+            transfrom:translate(x축);               x축 이동
+            transfrom:translateX(x축);              x축 이동
+            transfrom:translateY(y축);              y축 이동
+
+            transfrom:scale(가로크기, 세로크기);    크기 조정
+            transfrom:scale(크기);                  가로/세로 동일 크기 조정
+            transfrom:scaleX(가로크기);             크기 조정
+            transfrom:scaleY(세로크기);             크기 조정
+
+            transfrom:rotate(각도);                 회전(deg)
+            transfrom:rotateX(각도);                x축 회전(deg)
+            transfrom:rotateY(각도);                y축 회전(deg)
+
+            transfrom:skew(x축각도, y축각도);       기울기(deg)
+            transfrom:skew(x축각도);                x축 기울기(deg)
+            transfrom:skewX(x축각도);               x축 기울기(deg)
+            transfrom:skewY(y축각도);               y축 기울기(deg)
+
+            transfrom-origin                        변형 요소의 위치를 변경
+            값: %, px, left, right, top, bottom, center
+            perspective                             관점(원근감)
+            값: px
+            backface-visibility                     뒷면 가시성
+            값: visible, hidden
+        */
+
+
+        div {width:300px; height:200px;}
+        .out {
+            position:relative; background:rgba(0,0,0,0.5);
+            perspective: 700px;
+        }
+        .in {
+            position:absolute; left:0px; top:0px; 
+            background:rgba(255,0,0,1);
+            transition:.7s;
+        }
+
+        .out:hover .transform1 {transform: translate(5px,5px);}
+        .out:hover .transform2 {transform: rotate(5deg);}
+
+        /* 
+            transfrom-origin: x축 y축;
+            transfrom-origin: 50% 50%;          // 요소의 중심이 기준
+            transfrom-origin: center center;
+            transfrom-origin: 0% 0%;
+            transfrom-origin: left top;
+            transfrom-origin: 100% 100%;
+            transfrom-origin: right bottom;
+        */
+        .transform2-1 {
+            /* transform-origin: 0% 100%; */
+            transform-origin: left bottom;
+        }
+
+        .out:hover .transform2-1 {transform: rotate(5deg);}
+        .out:hover .transform2-2 {
+            transform: rotateX(180deg);
+            backface-visibility: hidden;
+        }
+        .out:hover .transform2-3 {transform: rotateY(180deg);}
+
+        .out:hover .transform3 {transform: scale(1.1);}
+        .transform4 {transform-origin: 100% 0%;}
+        .out:hover .transform4 {transform: skewX(5deg);}
+        
+        .out:hover .transform5 {transform: skewY(5deg);}
+        .out:hover .transform6 {
+            /* 
+                matrix(scaleX, skewY, skewX, scaleY, translateX, translateY);
+            */
+            transform: matrix(1.1, -0.1, 0, 1.1, 25, 0);
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+<body>
+    <h1>변환</h1>
+    <h2>이동</h2>
+    <div class="out">original
+        <div class="in transform1">x축 50px 오른쪽 이동<br> y축 100px 아래로 이동</div>
+    </div>
+
+    <h2>회전</h2>
+    <div class="out">original
+        <div class="in transform2">5deg(시계 방향)</div>
+    </div>
+
+    <h2>회전 + 변형의 기준</h2>
+    <p>transform-origin 속성은 변형 요소의 위치를 변경하는 속성으로 속성 값은 px, % 단위를 사용하거나 left, right, center, top, bottom를 사용할 수 있다. </p>
+    <div class="out">original
+        <div class="in transform2-1">5deg(시계 방향)</div>
+    </div>
+
+    <h2>3D x축 회전</h2>
+    <div class="out">original
+        <div class="in transform2-2">5deg(시계 방향)</div>
+    </div>
+
+    <h2>3D y축 회전</h2>
+    <div class="out">original
+        <div class="in transform2-3">5deg(시계 방향)</div>
+    </div>
+
+    <h2>크기 조정</h2>
+    <div class="out">original
+        <div class="in transform3">가로/세로 모두 10% 확대</div>
+    </div>
+
+    <h2>기울기1</h2>
+    <div class="out">original
+        <div class="in transform4">x축으로 5deg 기울어짐</div>
+    </div>
+
+    <h2>기울기2</h2>
+    <div class="out">original
+        <div class="in transform5">y축으로 5deg 기울어짐</div>
+    </div>
+
+    <h2>혼합</h2>
+    <p>matrix() 메서드는 요소를 크기 조정, 기울기, 이동하는 함수를 포함하는 6개의 매개변수를 사용한다. 형식은 matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())이다.</p>
+    <div class="out">original
+        <div class="in transform6">y축으로 5deg 기울어짐</div>
+    </div>
+
+</body>
+</html>

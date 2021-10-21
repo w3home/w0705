@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta name="description" content="HTML, CSS 학습 하기">
+        <meta name="keywords" content="html5, css3">
+        <meta name="author" content="hong gil-dong">
+        <meta charset="utf-8">
+        <title>HTML 시작하기</title>
+        <link rel="stylesheet" href="main.css">
+        <style>
+            /* 선택자 {속성:값; 속성:값;} */
+            ul.nav li {list-style:none; float:left; margin-left:20px;}
+            h1 {clear:both;}
+        </style>
+    </head>
+    <body>
+
+        <h2>내비게이션바</h2>
+        <ul class="nav">
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+        </ul>
+
+        <h2>단락</h2>
+        <p>단락을 정의하는 p요소는 블록 레벨 요소이므로 줄 바꿈이 일어납니다.</p>
+        <p><strong>p 요소</strong>는 텍스트와 인라인 요소를 포함할 수 있지만 같은 블록 요소는<br>포함할 수 없다.</p>
+
+        <hr>
+
+        <h2>블록 레벨 요소</h2>
+        <p>줄바꿈이 된다. width(가로크기)는 100%. 블록레벨요소 안에 인라인요소를 넣을 수 있다. html, body, h1~h6, p, br, addresss</p>
+
+        <h2>인라인 요소</h2>
+        <p>줄바꿈이 안된다. width는 내용 크기. strong, em, abbr, del, ins, sub, sup, img, a</p>
+        <strong>강하게 강조해야할 글자</strong>
+        <a href="#" title="임시주소">임시주소: 현재 페이지</a>
+        <a href="http://www.naver.com">웹주소: 네이버</a>
+        <a href="mailto:whyeil@naver.com">이메일</a>
+        <a href="tel://010-3009-4023">전화번호</a>
+
+        <hr>
+
+
+
+        <h2>이미지 연결</h2>
+        <img src="../asset/instagram.png" width="200" height="200" alt="인스타그램">
+        <img src="../asset/facebook.png" alt="페이스북">
+        <img src="../asset/map.png" alt="아이콕스 위치, 오목교역 2번 출구에서 직진, 방송회관 사거리에서 우회전, 한국시티은행 옆 현대드림타워빌딩 13층">
+
+        <hr>
+
+        <h2>이미지 맵</h2>
+        <p>하나의 이미지에 <strong>여러 개의 링크</strong>를 적용할 수 있다.</p>
+        <img src="../asset/workplace.jpg" alt="workplace" usemap="#workmap">
+        <map name="workmap">
+            <area shape="rect" coords="293,175,333,248" alt="phone" href="../asset/cellphone.jpg">
+            <area shape="circle" coords="342,300,47" alt="coffee" href="../asset/coffeehouse2.jpg">
+            <area shape="poly" coords="35,45,275,45,265,190,275,350,35,350,45,190" alt="computer" href="../asset/mac.jpg">
+        </map>
+
+        <hr>
+
+        <h2>링크</h2>
+        <a href="http://validator.w3.org" title="마크업 유효성 검사">w3c 유효성 검사</a>
+        <a href="https://www.w3schools.com/html/default.asp" target="_blank">
+            <img src="../asset/w3school.png" alt="w3school 로고">
+        </a>
+
+        <hr>
+
+
+    </body>
+</html>

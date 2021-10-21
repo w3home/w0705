@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong&effect=fire|neon|outline|emboss|shadow-multiple');
+        /* @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Sofia&family=Trirong'); */
+        /* ----------- 텍스트 -----------*/
+        /* 
+            text-shadow     그림자
+            box-shadow      그림자
+            text-align      맞춤, justify
+            word-break      줄바꿈, break-all
+            word-wrap       줄바꿈, break-word
+            @font-face      웹폰트
+        */
+
+        /* 
+            text-shadow: x위치 y위치 [흐림효과][색];
+            x위치: 양수면 오른쪽으로, 음수면 왼쪽으로
+            y위치: 양수면 아래쪽으로, 음수면 위쪽으로
+        */
+        /* 
+            box-shadow: x위치 y위치 [흐림효과][퍼짐][색] inset;
+            x위치: 양수면 오른쪽으로, 음수면 왼쪽으로
+            y위치: 양수면 아래쪽으로, 음수면 위쪽으로
+        */
+
+        /* 
+            @font-face {
+                font-family: 이름;
+                src: url(파일명);
+            }
+            예)
+            @font-face {
+                font-family: gakseoltang;
+                src: url('font/210 각설탕R.ttf');
+            }
+        */
+
+
+        h1 {
+            font-size:50px;
+            text-shadow:7px 7px 5px #f00;
+        }
+        .txtShadow {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:50px;
+            text-shadow:2px 2px #246, 4px 4px #357, 6px 6px #468, 8px 8px #579, 10px 10px #68a, 12px 12px #79b, 14px 14px #8ac;
+        }
+        .boxShadow {
+            width:300px;
+            height:200px;
+            margin-left:50px;
+            padding: 20px;
+            /* background:yellow; */
+            text-shadow: 1px 2px #ccc;
+            box-shadow: 0px 0px 7px 5px #ccc inset;
+        }
+        .wordWrap {word-wrap:break-word;}
+        .wordBreak {text-align:justify; word-break:break-all;}
+
+        @font-face {
+            font-family: gakseoltang;
+            src: url('font/210 각설탕R.ttf')
+        }
+        @font-face {
+            font-family: candogtfb;
+            src: url('font/can dog tfb.ttf')
+        }
+        .fontFace1 {
+            font-family: gakseoltang, 'Brush Script MT', cursive;
+            /* font-family: '210 각설탕'; */
+        }
+        .fontFace2 {
+            font-family: candogtfb;
+            /* font-family: '210 각설탕'; */
+        }
+
+        html {font-size:10px;}
+        body {font-size:100%;}
+        /* .fontSize {font-size:2em;} */
+        .fontSize li:nth-of-type(1) {font-size:32px;}
+        .fontSize li:nth-of-type(2) {font-size:2em;}
+        .fontSize li:nth-of-type(3) {font-size:2rem;}
+
+        .googleFont {font-size:30px;}
+        .googleFont li:nth-of-type(1) {font-family: 'Audiowide', cursive;}
+        .googleFont li:nth-of-type(2) {font-family: 'Sofia', cursive;}
+        .googleFont li:nth-of-type(3) {font-family: 'Trirong', serif;}
+
+    </style>
+</head>
+<body>
+    <h1>텍스트 관련 속성</h1>
+    <h2 class="txtShadow">텍스트 그림자</h2>
+    <p class="boxShadow">text-shadow: 1px 2px #ccc; 은 글자에 우측으로 1px, 아래쪽으로 2px 위치에  연회색으로 그림자를 지정한다.</p>
+
+    <h2>word-wrap</h2>
+    <p class="wordWrap">영문을 띄어쓰기 없이 길게 입력하면 width값을 주어도 박스 밖으로 튀어 나오게 되는데 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 이것을 가로 폭에 맞추어 적당히 잘라 다음 줄로 내려오도록 하려면 word-wrap 속성을 break-word로 지정한다.</p>
+
+    <h2>word-break</h2>
+    <p>word-break: break-all로 지정하면 영문 단어 중간을 적당히 끊어 다음 줄로 줄바꿈 한다.</p>
+    <p class="wordBreak">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, cum, enim voluptatum voluptas adipisci consequuntur sapiente laudantium possimus inventore repellat illum libero? Illo, similique non. Autem vitae ea obcaecati dignissimos.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, cum, enim voluptatum voluptas adipisci consequuntur sapiente laudantium possimus inventore repellat illum libero? Illo, similique non. Autem vitae ea obcaecati dignissimos.</p>
+
+    <h2>웹 폰트</h2>
+    <p class="fontFace1">@font-face는 시스템에 설치된 글꼴이 아닌 경우, 사용자들이 같은 글꼴로 볼 수 있도록 웹 폰트를 설정하는 속성이다.</p>
+    <p class="fontFace2">@font-face는 시스템에 설치된 글꼴이 아닌 경우, 사용자들이 같은 글꼴로 볼 수 있도록 웹 폰트를 설정하는 속성이다.</p>
+
+    <h2>글자 크기</h2>
+    <ul class="fontSize">
+        <li>32px</li>
+        <li>2em</li>
+        <li>2rem</li>
+    </ul>
+
+    <h2>구글 폰트</h2>
+    <ul class="googleFont">
+        <li class="font-effect-fire">Audiowide Font</li>
+        <li class="font-effect-neon">Audiowide Font</li>
+        <li class="font-effect-outline">Audiowide Font</li>
+        <li class="font-effect-emboss">Audiowide Font</li>
+        <li class="font-effect-shadow-multiple">Audiowide Font</li>
+        <li>Sofia Font</li>
+        <li>Trirong Font</li>
+    </ul>
+</body>
+</html>

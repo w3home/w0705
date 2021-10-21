@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션</title>
+    <style>
+        body {margin:0;}
+        /* 
+            블록 레벨 요소의 가로 크기는 width:100%;
+            세로 크기(높이, height)는 요소의 내용 크기
+
+            포지션이 absolute나 fixed를 지정하면
+            요소의 가로 크기(너비, width)는 요소의 내용 크기
+        */
+        .nav1 {
+            background:yellow;
+            position:fixed; width:100%;
+            z-index:1;
+        }
+        .top1 {
+            position:fixed;
+            right:0; bottom:0;
+            width:70px; height:70px;
+            background:yellow;
+        }
+        .box {height:2000px;}
+
+        .mainTitle {
+            position:relative;
+            top:50px;
+            /* 가로 가운데 배치 */
+            width:1500px; margin:0 auto;
+            height:400px;
+            background:lightblue;
+        }
+        .mainTitle h1 {
+            /* 가로 가운데 배치2 */
+            position:absolute;
+            width:300px;
+            left:50%; margin-left:-150px;
+            /* 세로 가운데 배치 */
+            height:50px; line-height:50px;
+            top:50%; margin-top:-25px;
+            text-align:center;
+
+            background:yellow;
+        }
+
+        p {
+            position:absolute; margin:0;
+            width:70px; 
+            height:70px; line-height:70px;
+            top:50%; margin-top:-35px;
+            text-align:center;
+        }
+        .prevBtn {
+            background:lightcoral;
+            left:50px;
+        }
+        .nextBtn {
+            background:lightcoral;
+            /* left:calc(100% - 120px); */
+            right:50px;
+        }
+
+        .pager {
+            position:absolute;
+            list-style:none; padding:0;
+            bottom:0; 
+            left:50%; margin-left:-50px;
+            background:red;
+            width:100px; height:20px;
+            text-align:center;
+        }
+        .pager li {
+            display:inline-block;
+            width:20px; height:20px;
+            background:black; color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav1">상단 고정 메뉴바입니다.</div>
+    <div class="top1">탑버튼</div>
+    <div class="mainTitle">
+        <h1>메인 타이틀</h1>
+        <ul class="pager">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <p class="prevBtn">이전버튼</p>
+        <p class="nextBtn">다음버튼</p>
+    </div>
+    <div class="box">높이를 지정하기 위한 박스</div>
+</body>
+</html>

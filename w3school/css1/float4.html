@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>레이아웃</title>
+        <style>
+            body {margin:20px; font:12px "굴림",Gulim;}
+            #container {width:600px; padding:10px; background:#fdd;}
+            h1 {text-align: center; padding:10px;}
+            .green {float:left; width:250px; padding:15px; background:#dda;}
+            .coffee {float:right; width:250px; padding:15px; background:#ba7;}
+            /* justify: 양쪽 맞춤 */
+            p {margin:0; text-align:justify; word-break: break-all;}
+
+            #container::after {content:""; display:block; clear:both;}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>녹차와 커피</h1>
+            <div class="green">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo facere vero perspiciatis ratione ea voluptatem! Rerum, necessitatibus quisquam mollitia reprehenderit, accusamus perspiciatis animi omnis consectetur velit molestias aliquam voluptatem, non beatae porro doloribus quidem. Veniam corrupti vero praesentium soluta, provident nemo facere eos non! Vel expedita fugiat corporis soluta recusandae.</p>
+            </div>
+            <div class="coffee">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo facere vero perspiciatis ratione ea voluptatem! Rerum, necessitatibus quisquam mollitia reprehenderit, accusamus perspiciatis animi omnis consectetur velit molestias aliquam voluptatem, non beatae porro doloribus quidem. Veniam corrupti vero praesentium soluta, provident nemo facere eos non! Vel expedita fugiat corporis soluta recusandae.</p>
+            </div> <!--//.coffee -->
+        </div> <!--//#container -->
+    </body>
+</html>

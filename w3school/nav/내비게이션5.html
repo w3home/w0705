@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션</title>
+    <style>
+        @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+        /* reset */
+        * {margin:0; padding:0; box-sizing: border-box;}
+        ul {list-style:none;}
+        a {text-decoration:none; color:#fff;}
+        body {font:14px/1.6 NanumSquare, sans-serif;}
+
+        /* nav */
+        #nav {
+            position:absolute; left:100px; top:25px;
+            background:yellow;
+        }
+
+        /* 1depth: main menu */
+        .main {width:150px; text-align:center;}
+        .main > li {
+            position:relative;
+            background:#333;
+        }
+        .main a {
+            display:block; 
+            width:100%;
+            padding:5px 0;
+            border-bottom:1px solid #ccc;
+        }
+        .main > li > a:hover {background:#ccc; color:#333;}
+        .main > li:hover .sub {display:block;}
+
+        /* 2depth: sub menu */
+        .sub {
+            display:none;
+            position:absolute;
+            left:150px; top:-30px;
+            width:130px;
+            padding:5px 0 80px;
+            background:rgb(184, 56, 9);
+        }
+        .sub a {
+            padding:2px 0;
+            border-bottom:none;
+        }
+        .sub a:hover {
+            background:rgb(151, 5, 34);
+        }
+    </style>
+</head>
+<body>
+    <!-- navigation -->
+    <div id="nav">
+        <ul class="main">
+            <li><a href="#">mainmenu1</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">mainmenu2</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">mainmenu3</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">mainmenu4</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

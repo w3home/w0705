@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>제이쿼리</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#list1 li:odd').css({ background: 'yellow' });
+            $('#list1 li:even').css({ background: 'gray' });
+            $('#list1 li:first').css({ background: 'red' });
+            $('#list1 li:last').css({ background: 'green' });
+
+            /* :eq(n) 선택자 */
+            // $('li:eq(1)').css({ fontStyle: 'italic' });
+            /* eq(n) 메소드 */
+            $('#list1 li').eq(1).css({ fontStyle: 'italic' });
+
+            $('#list1 li:lt(2)').css({border:'2px dotted aqua'});
+            $('#list1 li:gt(2)').css({border:'2px dotted purple'});
+
+            $('#list2 li:nth-child(2n)').css({background:'orange'});
+
+            $('#list2 li:contains("목록11")').css({color:'red'});
+            // $("#list2 li:contains('목록11')").css({color:'red'});
+
+            $('#list2 li:has("span")').css({color:'aqua'});
+
+            $('#list2 li').filter('.theObj').css({fontSize:20});
+            $('#list2').find('a').css({backgroundColor:'red'});
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>탐색 선택자 및 HTML 조작</h1>
+        <h2>탐색 선택자</h2>
+        <ul id="list1">
+            <li>목록0</li>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+            <li>목록4</li>
+            <li>목록5</li>
+            <li>목록6</li>
+        </ul>
+        <ul id="list2">
+            <li>목록7</li>
+            <li class="theObj">목록8</li>
+            <li><span>목록9</span></li>
+            <li>목록10</li>
+            <li>목록11</li>
+            <li>목록12</li>
+            <li><a href="#">목록13</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

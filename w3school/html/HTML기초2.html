@@ -1,0 +1,204 @@
+<!-- 문서 형식: HTML5 -->
+<!-- 형식: <태그명 속성> -->
+<!doctype html>
+<!-- 형식: <태그명 속성="값"> -->
+<html lang="ko">
+    <!-- 문서의 정보 -->
+    <head>
+        <!-- 형식: <태그명 속성="값" 속성="값"> -->
+        <!-- 설명글, 키워드, 제작자, 인코딩방식 -->
+        <meta name="description" content="HTML, CSS학습하기">
+        <meta name="keywords" content="html5, css3">
+        <meta name="author" content="hong gil-dong">
+        <meta charset="utf-8">
+        <!-- 형식: <시작태그명>내용</종료태그명> -->
+        <!-- 웹브라우저의 제목 표시줄에 표시되는 내용 -->
+        <title>HTML 문서의 제목</title>
+        <!-- 외부 CSS 연결 -->
+        <link rel="stylesheet" href="main.css">
+        <style>
+            /* 내부 CSS */
+            /* 형식: 선택자 {속성:값; 속성:값; ...} */
+            ul.nav li {list-style:none; float:left; margin-left:20px;}
+            /* 형식: 선택자 {속성:값;} */
+            h1 {clear:both;}
+        </style>
+    </head>
+
+    <!-- 문서의 내용 -->
+    <body>
+
+        <h2>내비게이션바</h2>
+        <ul class="nav">
+            <li><a href="#contents1">제목과 단락</a></li>
+            <li><a href="#contents2">블록레벨요소와 인라인요소</a></li>
+            <li><a href="#contents3">문자엔티티</a></li>
+            <li><a href="#contents4">텍스트요소</a></li>
+            <li><a href="#contents5">이미지</a></li>
+            <li><a href="#contents6">하이퍼링크</a></li>
+            <li><a href="#contents7">목록</a></li>
+        </ul>
+
+        <!-- 콘텐츠 제목 -->
+        <h1 id="contents1">제목</h1>
+        <h2>제목</h2>
+        <h3>제목</h3>
+        <h4>제목</h4>
+        <h5>제목</h5>
+        <h6>제목</h6>
+
+        <h2>단락</h2>
+        <p>단락을 정의하는 p요소는 블록 레벨 요소이므로 줄 바꿈이 일어납니다.</p>
+        <p><strong>p 요소</strong>는 텍스트와 인라인 요소를 포함할 수 있지만 같은 블록 요소는<br>포함할 수 없다.</p>
+
+        <!-- 구분선 -->
+        <hr>
+
+        <h2 id="contents2">블록 레벨 요소</h2>
+        <ul>
+            <li>줄바꿈이 된다.(세로 배치)</li>
+            <li>가로 크기는 100%</li>
+            <li>블록레벨요소 또는 인라인요소를 넣을 수 있다.(단, 예외가 있다.)</li>
+            <li>html, body, h1~h6, p, br, ul, li</li>
+        </ul>
+
+        <h2>인라인 요소</h2>
+        <ul>
+            <li>줄바꿈이 안된다.(가로 배치)</li>
+            <li>가로 크기는 내용의 크기</li>
+            <li>인라인요소는 넣을 수 있고, 블록레벨요소는 넣을 수 없다.(단, 예외가 있다.)</li>
+            <li>img, a, strong, em, b, i</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="contents3">문자 엔티티</h2>
+        <p>&copy;</p>
+        <p>&reg;</p>
+        <p>&trade;</p>
+        <p>&lt;</p>
+        <p>&gt;</p>
+        <p>&quot;</p>
+        <p>&apos;</p>
+        <p>&amp;</p>
+
+        <hr>
+
+        <h2 id="contents4">텍스트 요소</h2>
+        <strong>강한 중요성을 나타내는 텍스트</strong>
+        <b>중요성이 없는 굵게 표시할 텍스트</b>
+        <em>화면 판독기로 읽을 필요가 있는 강조할 텍스트</em>
+        <i>다른 언어, 생각, 배의 이름과 같은 전문 용어</i>
+        <p><small>Copyright 2021 HGD. All rights reserved.</small></p>
+
+        <hr>
+
+        <h2 id="contents5">이미지 연결</h2>
+        <!-- <시작태그명 속성="값" 속성="값" ...> -->
+        <img src="images/facebook.png" alt="페이스북">
+        <img src="instagram.png" width="200" height="200" alt="인스타그램">
+        <img src="map.png" alt="아이콕스 위치, 오목교역 2번 출구에서 직진, 방송회관 사거리에서 우회전, 한국시티은행 옆 현대드림타워빌딩 13층">
+        
+        <hr>
+
+        <h2 id="contents6">하이퍼 링크</h2>
+        <p>a 태그 내에 인터랙티브 콘텐츠(input, button, a)를 제외하고 어떤 요소든 포함할 수 있다.</p>
+        <!-- 
+            형식: <a href="http://웹주소">내용</a> -> 현재 페이지로 열린다.
+            형식: <a href="http://웹주소" target="_black">내용</a> -> 새 페이지로 열린다.
+            형식: <a href="mailto:이메일주소">내용</a>
+            형식: <a href="tel:전화번호">내용</a>
+            형식: <a href="파일명">내용</a> 
+        -->
+        <a href="http://validator.w3.org" title="마크업 유효성 검사">w3c 유효성 검사</a>
+        <a href="mailto:hong@naver.com">이메일: hong@naver.com</a>
+        <a href="tel:010-1111-2222">전화: 010-1111-2222</a>
+        <a href="#">현재 문서</a>
+        <a href="https://www.w3schools.com/html/default.asp" target="_blank"><img src="w3school.png" alt="w3school 로고"></a>
+
+        <hr>
+
+        <h2 id="contents7">목록</h2>
+        <p>ul태그에는 li태그만 사용할 수 있다.</p>
+        <ul>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>
+                <h3>목록3</h3>
+                <p>목록안에 목록을 사용할 수 있다.</p>
+                <ul>
+                    <li>하위목록1</li>
+                    <li>하위목록2</li>
+                    <li>하위목록3</li>
+                </ul>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h1>반응형 웹</h1>
+        <h2>프로젝트를 통해 배워 보기</h2>
+        <p>다양한 디바이스 UI 호환을 위한 반응형 웹</p>
+        <section>
+            <h2>HTML5 마크업</h2>
+            <p>HTML5 마크업에 대해 알아봅시다.</p>
+            <section>
+                <h3>HTML5 구조 요소들</h3>
+                <p>추가된 구조 요소들1</p>
+                <p>추가된 구조 요소들2</p>
+            </section>
+            <section>
+                <h3>HTML5 폼 요소들</h3>
+                <p>추가된 폼 요소들1</p>
+                <p>추가된 폼 요소들2</p>
+            </section>
+        </section>
+
+        <section>
+            <h2>CSS3</h2>
+            <p>CSS3에 대해 알아봅시다.</p>
+            <section>
+                <h3>CSS3 적용 part1</h3>
+                <p>CSS3 디자인1-1</p>
+                <p>CSS3 디자인1-2</p>
+            </section>
+            <section>
+                <h3>CSS3 적용 part2</h3>
+                <p>CSS3 디자인1-1</p>
+                <p>CSS3 디자인1-2</p>
+            </section>
+        </section>
+
+        <h1>신간소개</h1>
+        <article>
+            <header>
+                <h1>article 태그 사용</h1>
+            </header>
+            <ul>
+                <li>독립적인 콘텐츠를 지정할 때 사용한다.</li>
+                <li>독립적으로 배포 또는 재사용이 가능한 모든 내용</li>
+                <li>뉴스의 기사, 블로그 포스트</li>
+            </ul>
+            <footer>작성자: 홍길동</footer>
+        </article>
+
+        <aside>
+            <h1>aside 태그 사용</h1>
+            <ul>
+                <li>주 콘텐츠를 제외하고 일부 콘텐츠를 정의할 때 사용한다.</li>
+                <li>주 콘텐츠와 간접적으로 관련이있어야 한다.</li>
+            </ul>
+        </aside>
+
+        <h2>figure, figcaption</h2>
+        <p>figure 태그는 이미지를 그룹핑, figcaption 태그는 figure 그룹핑한 이미지에 대한 설명글을 달때 사용한다.</p>
+        <figure>
+            <img src="newbook1.gif" alt="안드로이드로 용돈벌기">
+            <img src="newbook2.gif" alt="아이폰로 용돈벌기">
+            <figcaption>아이콕스에서 새로 나온 책들</figcaption>
+        </figure>
+
+        <h2>mark</h2>
+        <p>텍스트를 <mark>노란 배경색</mark>으로 강조하여 표시할 때 사용한다.</p>
+    </body>
+</html>

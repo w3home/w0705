@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 이미지</title>
+    <style>
+        /* reset */
+        * {margin:0; padding:0; box-sizing:border-box;}
+        ul {list-style:none;}
+
+        /* slide */
+        #slide {position:relative; width:1200px; height:300px; overflow:hidden;}
+        #slide li {position:absolute;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            var num = 0;
+
+            start();
+
+            function start(){
+                $('#slide li').eq(num-1).css({left:1200});
+                setInterval(function(){slide();},2000);
+            }
+
+            function slide(){
+                if(num == 2) {
+                    num = 0;
+                } else {
+                    num = num + 1;
+                }
+                $('#slide li').eq(num-1).animate({left:-1200},1000,function(){
+                    $('#slide li').eq(num-1).css({left:1200});
+                });
+                $('#slide li').eq(num).animate({left:0},1000);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="slide">
+        <ul>
+            <li><img src="https://placeimg.com/1200/300/arch" alt="이미지1"></li>
+            <li><img src="https://placeimg.com/1200/300/tech" alt="이미지1"></li>
+            <li><img src="https://placeimg.com/1200/300/nature" alt="이미지1"></li>
+        </ul>
+    </div>
+</body>
+</html>

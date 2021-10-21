@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전환</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <style>
+        /* 
+            transition: [property] duration [timimg-function] [delay],  [property] duration [timimg-function] [delay], ...;
+
+            transition-property             속성 이름
+            값: width, height, background, margin, ... => all(또는 생략)
+            transition-duration             숫자s
+            transition-timing-function     시간 함수
+            값: ease, ease-in, ease-out, ease-in-out, linear
+            transition-delay                숫자s
+        */
+
+        div {
+            width:100px; height:30px; background:yellow; margin:20px;
+
+            /* transition:width 1s 2s, height 1s 2s; */
+            transition:1s;
+            /* transition-property: width, height;
+            transition-duration: 1s;
+            transition-delay: 2s; */
+        }
+        div:nth-of-type(1) {transition-timing-function: ease;}
+        div:nth-of-type(2) {transition-timing-function: ease-in;}
+        div:nth-of-type(3) {transition-timing-function: ease-out;}
+        div:nth-of-type(4) {transition-timing-function: ease-in-out;}
+        div:nth-of-type(5) {transition-timing-function: linear;}
+
+        div:hover {width:400px; height:100px;}
+
+    </style>
+</head>
+<body>
+    <h1>전환(transition)</h1>
+    <p>transition-property는 전환 대상(속성)을 지정, transition-duration은 전환 시간을 말하며 s(초) 단위로 지정한다. transition-timing-function는 속도 변화(시간 함수)을 지정하며 속성 값은 linear(등속), ease(느리게 시작했다가 빨라졌다 다시 느려짐), ease-in(점점 빨라짐), ease-out(점점 느려짐), ease-in-out(처음과 끝이 느림) 등이 있다. transition-delay는 지연 시간을 말하며 s(초)단위로 지정한다.</p>
+    <div>ease</div>
+    <div>ease-in</div>
+    <div>ease-out</div>
+    <div>ease-in-out</div>
+    <div>linear</div>
+</body>
+</html>

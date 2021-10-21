@@ -1,0 +1,116 @@
+@charset "utf-8";
+@import url(https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css);
+* {
+    box-sizing: border-box;
+}
+body {
+    margin:0;
+    font-family: 'D2Coding', monospace;
+    font-size:14px;
+}
+h1 {font-size:2vw;}
+h2 {font-size:1.5vw;}
+h3 {font-size:0.9vw; font-weight:700;}
+ul {padding-left:1vw; list-style:none;}
+ul li {overflow:hidden; white-space: nowrap; text-overflow:ellipsis;}
+.sample ul li {overflow:visible; white-space: normal; text-overflow:clip;}
+.row > ul > li:before {content:"· ";}
+a {text-decoration:none; color:#333;}
+img {max-width:100%;}
+video {width:100%;}
+mark {background:rgba(255,255,0,0.5)}
+.letter p {font-size:0.8vw; line-height:1.5;}
+.carousel {min-height:9vw;}
+.carousel-indicators {bottom:-2vw;}
+
+.navbar {
+    height:45px;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.16),  0px 2px 10px 0px rgba(0,0,0,0.12);
+}
+.nav-link:hover, .navbar-brand:hover {background:#000;}
+.navbar li.active {background:#04aa6d;}
+.navbar.sticky {
+    z-index:1;
+	position:fixed;
+	top:0;
+    left:50%;
+    transform: translateX(-50%);
+    width:100%;
+}
+
+#coding {
+    position:relative;
+}
+#tagList {
+    position:absolute;
+    left:0;
+    top:0;
+    display:flex;
+    flex-direction: column;
+    background:#e1e1e1;
+    width:200px;
+    height:100vh;
+    padding:20px;
+    overflow:auto;
+}
+
+#tagList.sticky {
+    z-index:1;
+	position:fixed;
+	top:45px;
+}
+
+#tagList h1 {
+    font-size:1.5em;
+    font-weight:400;
+}
+#tagList h2 {
+    font-size:1.2em;
+    margin-top:20px;
+}
+#tagList a {
+    text-decoration:none;
+    font-size:1.1em;
+    color:#333;
+}
+#tagList a:hover {
+    background:#ccc;
+}
+.langContents {
+    position:relative;
+    left:200px;
+    padding:30px;
+    width:calc(100% - 200px);
+}
+
+#tabs2 ul ul {margin-left:205px; margin-top:-24px;}
+#tabs2 i {margin-right:10px; font-size:1.2vw;}
+#tabs2 a {font-size:1.2vw;}
+
+#tabs2-1 div {position:relative; height:0; padding-top:52.65%;}
+#tabs2-1 div iframe {position:absolute; left:0; top:0; width:100%; height:100%; border:none;}
+
+/*#tabs2-1 .process3 {counter-reset:num; font-family: 'D2Coding', monospace;}
+#tabs2-1 .process3 > ul > li::before {counter-increment:num; content: counter(num) ". "; font-size:0.9em; width:20px; display:inline-block; text-align:right; margin-right:10px;}
+#tabs2-1 .process3 > ul > li {margin-bottom:20px;}
+#tabs2-1 .process3 ul li {white-space: normal;}
+#tabs2-1 .process3 ul a {background:rgba(3, 122, 106, 0.2); word-break: break-all;}
+#tabs2-1 .process3 span {display:inline-block; width:100px; margin-left:17px;}*/
+
+#accordion h2 {border:none; outline:none; background:none; color:#000;}
+#accordion div {position:relative; height:0; padding-bottom:56.25%; border:none; overflow:hidden;}
+#accordion iframe {position:absolute; left:0; top:0; width:100%; height:100%; border:none;}
+
+#tabs6 .stu a::after {content:attr(href); font-size:0.8em;}
+#tabs6 .stu ul {counter-reset:num;}
+#tabs6 .stu li::before {counter-increment:num; content: counter(num, decimal-leading-zero) ". "; font-size:0.9em;}
+
+@media screen and (max-width:576px) {
+   h1 {font-size:5vw;}
+   h2 {font-size:4vw;}
+   h3 {font-size:4vw; font-weight:700;}
+   li {font-size:3.5vw;}
+   p {font-size:3vw;}
+   #accordion h2 {font-size:3.5vw !important;}
+   #tabs2 a {font-size:4vw;}
+}

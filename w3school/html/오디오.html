@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오디오</title>
+    <style>
+        button {cursor: pointer;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // 문서가 준비되면 함수를 실행
+        $(function(){
+
+            //----------------- 뮤직 플레이어 ---------------------
+            // 하나의 버튼으로 play와 stop을 제어
+
+            // .aud1 첫 번째 오디오를 가져와서 aud에 할당
+            var aud1 = $('.aud1').get(0);
+
+            // flag는 두 가지 상태(오디오가 on/off)를 나타내는 변수
+            // flag가 0이면 오디오가 off, flag가 1이면 오디오가 on
+            var flag = 0;
+            // Paly/Stop 버튼을 클릭하면 함수를 실행
+            $('.toggleBtn').click(function(){
+                // flag가 0과 같으면
+                if (flag == 0) {
+                    // aud1 오디오를 실행
+                    aud1.play();
+                    flag = 1;
+                } else {
+                    // aud1 오디오를 일시정지
+                    aud1.pause();
+                    flag = 0;
+                }
+            });
+
+            //----------------- 뮤직 플레이어2 ---------------------
+            // 두 개의 버튼으로 play와 stop을 각각 제어
+
+            // .aud2 첫 번째 오디오를 가져와서 aud에 할당
+            var aud2 = $('.aud2').get(0);
+
+            // play 버튼을 클릭하면 함수를 실행
+            $('.playBtn').click(function(){
+                // aud2 오디오를 실행
+                aud2.play();
+            });
+
+            // stop 버튼을 클릭하면 함수를 실행
+            $('.stopBtn').click(function(){
+                // aud2 오디오를 처음 위치로 불러옴
+                aud2.load();
+                // aud2 오디오를 일시정지
+                aud2.pause();
+            });
+
+            //----------------- 버튼 효과음 ---------------------
+            var aud3 = $('.aud3').get(0);
+            $('.effectBtn').mouseenter(function(){
+                aud3.play();
+            });
+
+        }); // $(docement).ready()
+    </script>
+</head>
+<body>
+    <h1>오디오</h1>
+    <p>audio 태그는 오디오 요소를 삽입하는 태그이다.</p>
+    <h2>audio+source, 컨트롤바</h2>
+    <audio controls>
+        <source src="audio/drumbass.mp3" type="audio/mpeg">
+        <source src="audio/drumbass.ogg" type="audio/ogg">
+        <source src="audio/drumbass.wav" type="audio/wav">
+        당신의 브라우저는 오디오 태그를 지원하지 않습니다.
+    </audio>
+
+    <h2>audio, 컨트롤바</h2>
+    <audio src="audio/drumbass.mp3" controls></audio>
+
+    <h2>컨트롤바 + 무한 반복</h2>
+    <audio controls loop>
+        <source src="audio/drumbass.mp3" type="audio/mpeg">
+        <source src="audio/drumbass.ogg" type="audio/ogg">
+        <source src="audio/drumbass.wav" type="audio/wav">
+        당신의 브라우저는 오디오 태그를 지원하지 않습니다.
+    </audio>
+
+    <h2>뮤직 플레이어</h2>
+    <audio class="aud1">
+        <source src="audio/drumbass.mp3" type="audio/mpeg">
+        <source src="audio/drumbass.ogg" type="audio/ogg">
+        <source src="audio/drumbass.wav" type="audio/wav">
+        당신의 브라우저는 오디오 태그를 지원하지 않습니다.
+    </audio>
+    <button class="toggleBtn">Play/Stop</button>
+
+    <h2>뮤직 플레이어2</h2>
+    <audio class="aud2">
+        <source src="audio/drumbass.mp3" type="audio/mpeg">
+        <source src="audio/drumbass.ogg" type="audio/ogg">
+        <source src="audio/drumbass.wav" type="audio/wav">
+        당신의 브라우저는 오디오 태그를 지원하지 않습니다.
+    </audio>
+    <audio class="aud2">
+        <source src="audio/사르르.mp3" type="audio/mpeg">
+        당신의 브라우저는 오디오 태그를 지원하지 않습니다.
+    </audio>
+    <button class="playBtn">Play</button>
+    <button class="stopBtn">Stop</button>
+
+    <h2>버튼 효과음</h2>
+    <audio class="aud3">
+        <source src="audio/사르르.mp3" type="audio/mpeg">
+        당신의 브라우저는 오디오 태그를 지원하지 않습니다.
+    </audio>
+    <button class="effectBtn">버튼에 마우스를 올려보세요.</button>
+
+</body>
+</html>

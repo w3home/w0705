@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>제이쿼리</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        /* 
+            변수 이름 규칙
+            1. 첫 글자: 영문자, $, _
+            2. 글자: 영문자, $, _, 숫자
+            3. 영문의 대소를 구별한다. (카멜표기법)
+            4. 예약어는 변수X
+
+            자바스크립트의 예약어: 
+            var, if, else, true, false, this, function
+
+
+            hide()            숨김
+            show()            보임
+            toggle()          숨기/보임
+            slideUp()         올라가서 숨김
+            slideDown()       내려와서 보임
+            slideToggle()     올라가서 숨김/내려와서 보임
+            fadeIn()          서서히 보임(opacity:1)
+            fadeOut()         서서히 숨김(opacity:0)
+            fadeToggle()      서서히 보임/숨김
+            fadeTo()          원하는 만큼 투명도 지정
+
+            객체.메서드(매개변수1, 매개변수2);
+            $('선택자').hide();
+            $('선택자').hide(속도);
+            $('선택자').hide(속도, 콜백함수);
+            속도: 'slow', 'fast',  숫자(밀리초): 1000(ms)
+            콜백함수: 메서드가 모두 완료된 후에 실행될 함수 
+
+            $('선택자').fadeTo(속도, 투명도, 콜백함수);
+
+        */
+
+        $(function(){
+            // #btn1을 클릭하면 .box1을 숨긴다.
+            $('#btn1').click(function(){
+                $('.box1').hide('slow');
+            });
+            $('#btn2').click(function(){
+                $('.box1').show(1000);
+            });
+            $('#btn3').click(function(){
+                $('.box1').toggle(500);
+            });
+
+            //#btn4를 클릭하면
+            $('#btn4').click(function(){
+                //this는 클릭한 #btn4이다.
+                //$(this).parent()는 $(this)의 부모인 p이다.
+                //$(this).parent().next()는 p의 다음 형제인 p이다.
+                $(this).parent().next().slideUp(500);
+            });
+            $('#btn5').click(function(){
+                $(this).parent().next().slideDown('fast');
+            });
+            $('#btn6').click(function(){
+                $(this).parent().next().slideToggle('normal');
+            });
+
+            $('#btn7').click(function(){
+                $(this).parent().next().fadeOut(1000);
+            });
+            $('#btn8').click(function(){
+                $(this).parent().next().fadeIn('slow');
+            });
+            $('#btn9').click(function(){
+                $(this).parent().next().fadeToggle('normal');
+            });
+
+            /* 
+                객체.메서드(매개변수1, 매개변수2, 매개변수3);
+                $('선택자').fadeTo(속도, 투명도[, 콜백함수]);
+                투명도(opacity): 0 ~ 1
+            */
+
+            $('#btn10').click(function(){
+                $(this).parent().next().fadeTo('slow',0.3)
+            });
+            $('#btn11').click(function(){
+                $(this).parent().next().fadeTo('slow',1)
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>효과 메서드</h1>
+
+        <h2>show/hide/toggle 효과</h2>
+        <p>
+            <button id="btn1">hide</button>
+            <button id="btn2">show</button>
+            <button id="btn3">toggle</button>
+        </p>
+        <p class="box1">선택 요소를 숨기거나 노출하고 싶을 경우 사용합니다.<br>hide(시간)/show(시간) 시간은 fast, normal, slow 등으로 입력할 수 있으며, 1000분의 1초 단위의 숫자로 표기할 수도 있습니다.</p>
+
+        <h2>slideUp/slideDown/slideToggle 효과</h2>
+        <p>
+            <button id="btn4">slideUp</button>
+            <button id="btn5">slideDown</button>
+            <button id="btn6">slideToggle</button>
+        </p>
+        <p>slideUp은 선택 요소를 위로 미끄러지듯 말아 올리면서 숨깁니다.<br>반면, slideDown은 선택 요소를 아래로 미끄러지듯 말아 내리면서 노출시킵니다.</p>
+
+        <h2>fadeIn/fadeOut/fadeToggle/fadeTo 효과</h2>
+        <p>
+            <button id="btn7">fadeOut</button>
+            <button id="btn8">fadeIn</button>
+            <button id="btn9">fadeToggle</button>
+            <button id="btn10">fadeTo</button>
+            <button id="btn11">fadeTo</button>
+        </p>
+        <p>fadeOut은 선택 요소를 천천히 사라지게 만듭니다.<br>fadeIn은 선택 요소를 천천히 나타나게 합니다. fadeTo는 선택 요소를 원하는 만큼만 보이거나 숨길 수 있습니다.</p>
+    </div>
+</body>
+</html>

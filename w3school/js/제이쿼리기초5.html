@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>제이쿼리</title>
+        <!-- 제이쿼리 라이브러리 CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            /* 
+                데이터의 종류
+                1. 숫자(number): 1, 1.2, ...
+                2. 문자열(string): 'a', "b", '가', "나", ...
+                3. 논리(logical) 값: true, false
+                4. 객체(object): {}, []
+                5. 함수(function): function(){실행문;}
+                6. undefined
+
+                변수?
+                var num;
+
+                $('선택자')
+                $('*')
+                $('태그')
+                $('#아이디')
+                $('.클래스')
+                $('부모 하위')
+                $('부모>자식')
+                $('선택자1, 선택자2, ...')
+
+                $('선택자:eq(n)')
+                $('선택자').eq(n)
+                $(this)
+
+                탐색 메소드
+                객체.find()
+                객체.siblings()
+                객체.prev()
+                객체.next()
+
+                HTML/CSS 메소드
+                html()
+                text()
+                css()
+                attr()
+                addClass()
+                removeClass()
+                toggleClass()
+
+
+                이벤트? 웹 브라우저 내에서 벌어지는 모든 행위
+                버튼 클릭이나 마우스의 움직임
+
+                ready           준비
+
+                click           클릭
+
+                mouseenter      마우스가 들어갈 때
+                mouseleave      마우스가 벗어날 때
+
+                on
+
+                객체.메서드(매개변수1, ...);
+                객체.이벤트메서드(함수);
+                
+                객체.click(function(){
+                    실행문;
+                });
+
+                객체.on(click, function(){
+                    실행문;
+                });
+
+                객체.hover(function(){
+                    실행문1;
+                }, function(){
+                    실행문2;
+                });
+
+
+                이벤트 핸들러? 이벤트가 발생했을 때 
+                함수 또는 실행문이 수행되도록
+                해당 이벤트를 지정해두는 요소
+
+                on()
+
+                객체.메서드();
+                $(document).ready();
+                
+                $(document).ready(function(){
+                    실행문;
+                });
+
+                $(function(){
+                    실행문;
+                });
+                
+            */
+           
+            $(document).ready(function(){
+                /* 
+                    #btn1인 버튼을 클릭하면
+                    함수의 실행문을 실행한다.
+                */
+                // $('#btn1').click(function(){
+                //     $('#textZone').css({color:'blue'});
+                // });
+                $('#btn1').on('click', function(){
+                    $('#textZone').css({color:'blue'});
+                });
+
+                /* #btn2에 마우스를 올릴 때 */
+                $('#btn2').mouseover(function(){
+                    $('#textZone').css({backgroundColor:'yellow'});
+                });
+                $('#btn2').focus(function(){
+                    $('#textZone').css({backgroundColor:'yellow'});
+                });
+                $('#btn3').on('mouseover focus', function(){
+                    $('#textZone').css({color:'green', fontWeight:'bold'});
+                });
+                $('#btn3').on('mouseout', function(){
+                    $('#textZone').css({color:'black', fontWeight:'normal'});
+                });
+
+                $('#listWrap').mouseenter(function(){
+                    $('.list1').css({display:'block'});
+                });
+                $('#listWrap').mouseleave(function(){
+                    $('.list1').css({display:'none'});
+                });
+
+                // $('.hover').hover(function(){
+                //     $(this).css({color:'aqua'});
+                // }, function(){
+                //     $(this).css({color:'red'});
+                // });
+
+                $('li').mouseenter(function(){
+                    /* this는 마우스가 들어간 li */
+                    $(this).css({backgroundColor:'aqua'});
+                });
+                $('li').mouseleave(function(){
+                    $(this).css({backgroundColor:'transparent'});
+                });
+
+            }); //document.ready();
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <h1>이벤트</h1>
+            <p id="textZone">웹 브라우저에서 버튼을 클릭한다거나 마우스를 움직이거나 하는 모든 행위를 '이벤트'라고 합니다. 그리고 이벤트발생 시 함수의 실행문이 수행되도록 이벤트를 저정하는 것을 '이벤트 헨들러'라고 합니다.</p>
+
+            <h2>click 메서드</h2>
+            <p><button id="btn1">click</button></p>
+
+            <h2>mouseover/mouseout/focus 메서드</h2>
+            <p><button id="btn2">mouseover</button></p>
+
+            <h2>on 메서드</h2>
+            <p><button id="btn3">on</button></p>
+
+            <h2>mouseenter/mouseleave 메서드</h2>
+            <div id="listWrap">
+                <h3>관련 사이트</h3>
+                <ul class="list1">
+                    <li><a href="#">목록1</a></li>
+                    <li><a href="#">목록2</a></li>
+                    <li><a href="#">목록3</a></li>
+                    <li><a href="#">목록4</a></li>
+                </ul>
+            </div>
+
+            <h2>hover 메서드/this 선택자</h2>
+            <ul>
+                <li><a href="#">hover</a></li>
+                <li><a href="#">hover</a></li>
+                <li><a href="#">hover</a></li>
+            </ul>
+        </div> <!-- //#wrap -->
+    </body>
+</html>
